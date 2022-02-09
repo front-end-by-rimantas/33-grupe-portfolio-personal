@@ -1,0 +1,1 @@
+geriausiu atveju patvarkyti README
