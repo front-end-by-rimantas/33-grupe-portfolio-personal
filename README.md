@@ -4,7 +4,7 @@
 ![Eco Status](https://img.shields.io/badge/ECO-Friendly-green.svg)
 [![Discord](https://discord.com/api/guilds/571393319201144843/widget.png)](https://discord.gg/dRwW4rw)
 
-# Braintech portfolio
+# Personal portfolio
 
 _33 group website project_
 
@@ -14,7 +14,7 @@ Site published at: https://front-end-by-rimantas.github.io/33-grupe-portfolio/
 
 Design: https://preview.colorlib.com/theme/personal/index.html
 
-## Project personal
+## Project features
 
 -   Github pages
 -   multi-page
