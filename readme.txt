@@ -1,1 +1,2 @@
 geriausiu atveju patvarkyti README
+sveiki
