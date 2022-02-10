@@ -15,17 +15,25 @@ header {
     background-color: #fff;
 }
 
-.header-container {
-    background-color: red;
+.top-menu {
+    font-size: 1em;
+    background-color: bisque;
+    justify-content: space-between;
 }
 .logo-top {
     background-color: yellow;
 }
-.top-menu {
-    font-size: 1em;
-    background-color: bisque;
-    justify-content:space-around;
+.navigation-container {
+    background-color: green;
 }
+.navigation-bar {
+    justify-content: space-around;
+}
+.navigation-bar > a {
+    background-color: pink;
+    font-size: 12px;
+}
+
 /* header end */
 
 /* hero start */
