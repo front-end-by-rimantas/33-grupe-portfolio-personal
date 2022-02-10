@@ -11,6 +11,21 @@
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 
 /* header start */
+header {
+    background-color: #fff;
+}
+
+.header-container {
+    background-color: red;
+}
+.logo-top {
+    background-color: yellow;
+}
+.top-menu {
+    font-size: 1em;
+    background-color: bisque;
+    justify-content:space-around;
+}
 /* header end */
 
 /* hero start */
