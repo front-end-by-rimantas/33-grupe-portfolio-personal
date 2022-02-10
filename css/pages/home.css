@@ -11,6 +11,21 @@
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 
 /* header start */
+
+
+.header-container {
+    justify-content:;
+    background-color: red;
+}
+.logo-top {
+    background-color: yellow;
+}
+.top-menu {
+    font-size: 1em;
+    background-color: bisque;
+    justify-content:flex-end;
+}
+
 /* header end */
 
 /* hero start */
@@ -18,6 +33,13 @@
 
 /* top logos start */
 /* top logos end */
+
+/*top henu start*/
+
+
+
+
+/*top henu end*/
 
 /* about cards start */
 /* about cards end */
