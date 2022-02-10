@@ -6,7 +6,6 @@
 
 # Personal portfolio
 
-What Is It?
 
 _33 group website project_
 
