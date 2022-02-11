@@ -6,6 +6,7 @@
 
 # Personal portfolio
 
+
 _33 group website project_
 
 This project is for educational porpuses only. Pull request are welcome, but priority for project authors! Thank you for your cooperation!
@@ -27,7 +28,7 @@ Design: https://preview.colorlib.com/theme/personal/index.html
 -   JS import-export
 
 ## Authors
-
+Getting Started:
 Aleksandr : [Github](https://github.com/al2bovek)
 Alina: [Github](https://github.com/Mandrijauskaite)
 Inga: [Github](https://github.com/inga-lin)
