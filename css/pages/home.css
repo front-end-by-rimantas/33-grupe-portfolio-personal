@@ -11,11 +11,12 @@
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 /* header start */
 header {
+    margin-top: -100px;
     background-color: #fff;
 }
 .logo-top > div {
     height: 10vh;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
 .navigation-bar {
@@ -30,8 +31,37 @@ header {
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
+    position: relative;
     color: #222;
 }
+.navigation-bar > a:hover {
+    color: #8490ff;
+}
+.top-menu-arrows {
+    margin-right: 3%;
+
+}
+.top-menu-arrows::after {
+    position: absolute;
+    display: inline-block;
+    top: -2.5vh;
+    left: 13%;
+    /* left: 20px; */
+    width: 40px;
+    height: 30px;
+    content: "^";
+    transform: rotate(180deg) scaleX(1.6);
+    color: #8490ff;
+}
+.navigation-bar > .menu-level-one, .navigation-bar > .menu-level-two {
+    display: none;
+    text-transform: lowercase;
+}
+.navigation-bar > .menu-level-one:hover, .navigation-bar > .menu-level-two:hover {
+    display: block;
+    text-transform: lowercase;
+}
+
 .navigation-bar > .top-menu-home-link {
     color: #8490ff;
 }
