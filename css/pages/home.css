@@ -14,24 +14,19 @@
 header {
     background-color: #fff;
 }
-
-.top-menu {
-    font-size: 1em;
-    background-color: bisque;
-    justify-content: space-between;
-}
-.logo-top {
-    background-color: yellow;
-}
-.navigation-container {
-    background-color: green;
+.logo-top > div {
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
 }
 .navigation-bar {
+    height: 10vh;
     justify-content: space-around;
+    align-items: center;
 }
 .navigation-bar > a {
-    background-color: pink;
-    font-size: 12px;
+    font-size: 0.8em;
+    text-decoration: none;
 }
 
 /* header end */
