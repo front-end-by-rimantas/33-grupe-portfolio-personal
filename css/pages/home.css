@@ -9,7 +9,15 @@
 @import '../components/button.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
-
+/* top logos start */
+.logo {
+    position: relative;
+    width: 133px;
+    height: 30px;
+    margin-left: 382px;
+    top: 20px;
+}
+/* top logos end */
 /* header start */
 header {
     background-color: #fff;
@@ -40,10 +48,48 @@ header {
 /* header end */
 
 /* hero start */
+.a, .b, .c {
+    font-family: "Poppins", sans-serif;
+    color: #222222;
+    text-transform: uppercase;
+}
+.a {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    }
+.b {
+    font-size: 60px;
+    font-weight: 600;
+    }
+.c {
+    color: #777777;
+    text-transform: none;
+    font-size: 14px;
+    font-weight: 300;
+    
+    }
+.herobutton {
+    width: 168px;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 13.5px;
+    
+    
+}
 /* hero end */
 
-/* top logos start */
-/* top logos end */
+
 
 /* about cards start */
 /* about cards end */
