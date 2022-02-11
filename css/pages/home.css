@@ -19,6 +19,32 @@
 }
 /* top logos end */
 /* header start */
+header {
+    background-color: #fff;
+}
+.logo-top > div {
+    height: 10vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navigation-bar {
+    height: 10vh;
+    padding: 0 5%;
+    justify-content: space-around;
+    align-items: center;
+}
+.navigation-bar > a {
+    padding: 0 2%;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #222;
+}
+.navigation-bar > .top-menu-home-link {
+    color: #8490ff;
+}
+
 /* header end */
 
 /* hero start */
