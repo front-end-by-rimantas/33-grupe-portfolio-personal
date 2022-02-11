@@ -9,15 +9,6 @@
 @import '../components/button.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
-/* top logos start */
-.logo {
-    position: relative;
-    width: 133px;
-    height: 30px;
-    margin-left: 382px;
-    top: 20px;
-}
-/* top logos end */
 /* header start */
 header {
     background-color: #fff;
