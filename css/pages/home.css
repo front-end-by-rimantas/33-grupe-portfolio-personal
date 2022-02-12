@@ -53,7 +53,7 @@ header > div {
     visibility: hidden;
     position: absolute;
     width: 300%; 
-    line-height: 10px;
+    line-height: 20px;
     margin-top: 5vh;
     margin-left: -200%;
     padding: 10px;
@@ -64,40 +64,30 @@ header > div {
     transition: all 0.5s ease 1s;
 }
 .top-menu-inner a {
-    /* width: 100%; */
     padding: 10px;
     text-transform: capitalize;
-    background-color: burlywood;
 }
 .top-menu-hidden:hover > div {
     visibility: visible;
 }
-.top-menu-arrows::after {
-    display: inline-block;
+.top-menu-hidden > a::after {
     position: absolute;
     margin-left: 10%;
     content: "^";
     transform: rotate(180deg) scaleX(1.6);
 }
-.menu-level-two {
+.top-menu-hidden-nested > a {
+    display: block;
+}
+.top-menu-hidden-nested {
     width: 100%;
 }
-.menu-level-two > a::after {
-    display: inline-block;
-    position: absolute;
-    margin-left: 10%;
-    content: "^";
-    transform: rotate(90deg) scale(1.2, 1.2);
-}
-.top-menu-inner-second {
-    visibility: hidden;
-}
-.top-menu-inner-second:hover {
+.top-menu-hidden-nested > div {
     display: flex;
     visibility: hidden;
     position: absolute;
-    width: 300%; 
-    line-height: 10px;
+    width: 100%; 
+    line-height: 20px;
     margin-top: 5vh;
     margin-left: -200%;
     padding: 10px;
@@ -107,11 +97,55 @@ header > div {
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
     transition: all 0.5s ease 1s;
 }
+.top-menu-hidden-nested > a::after {
+    position: absolute;
+    margin-left: 50%;
+    content: "^";
+    transform: rotate(90deg) scale(1.2, 1.2);
+}
+.top-menu-hidden-nested:hover > div {
+    visibility: visible;
+}
+.top-menu-inner-nested {
+    left: 100%;
+    top: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .navigation-bar > .top-menu-home {
     color: #8490ff;
 }
 
 /* header end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
