@@ -1,0 +1,25 @@
+.choose {
+    text-align: center;
+}
+
+.choose-row2{
+    background-color: #F9F9FF;
+}
+.choose-row , .choose-row > p{
+    text-align: center;
+}
+
+.choose-box > p{
+    border-top: 1px solid black ;
+    margin: 0;
+    padding: 24px 20px;
+}
+
+.choose-box > p:last-child{
+    border-bottom: 1px solid black ;
+}
+
+.price {
+    margin: 0;
+    padding: 24px 20px;
+}
