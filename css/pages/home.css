@@ -36,8 +36,8 @@ header > div {
     padding: 0 2%;
     font-size: 0.8em;
     font-weight: 500;
-    text-decoration: none;
     color: #222;
+    text-decoration: none;
     text-transform: uppercase;
 }
 .navigation-bar a:hover {
@@ -52,10 +52,10 @@ header > div {
     display: flex;
     visibility: hidden;
     position: absolute;
-    width: 150px; 
+    width: 300%; 
     line-height: 10px;
     margin-top: 5vh;
-    margin-left: -120%;
+    margin-left: -200%;
     padding: 10px;
     flex-direction: column;
     align-items: flex-start;
@@ -63,13 +63,14 @@ header > div {
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
     transition: all 0.5s ease 1s;
 }
-.top-menu-inner  a {
+.top-menu-inner a {
+    /* width: 100%; */
     padding: 10px;
     text-transform: capitalize;
+    background-color: burlywood;
 }
 .top-menu-hidden:hover > div {
     visibility: visible;
-    /* transition: all 1s ease 1s; */
 }
 .top-menu-arrows::after {
     display: inline-block;
@@ -78,9 +79,38 @@ header > div {
     content: "^";
     transform: rotate(180deg) scaleX(1.6);
 }
+.menu-level-two {
+    width: 100%;
+}
+.menu-level-two > a::after {
+    display: inline-block;
+    position: absolute;
+    margin-left: 10%;
+    content: "^";
+    transform: rotate(90deg) scale(1.2, 1.2);
+}
+.top-menu-inner-second {
+    visibility: hidden;
+}
+.top-menu-inner-second:hover {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    width: 300%; 
+    line-height: 10px;
+    margin-top: 5vh;
+    margin-left: -200%;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+    transition: all 0.5s ease 1s;
+}
 .navigation-bar > .top-menu-home {
     color: #8490ff;
 }
+
 /* header end */
 
 
