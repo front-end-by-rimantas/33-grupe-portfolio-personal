@@ -9,9 +9,16 @@
 @import '../components/button.css';
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
+body {
+    background-color: #F9F9FF;/*To remove*/
+}
 /* header start */
 header {
+    height: 10px;
     margin-top: -100px;
+}
+header > div {
+    width: 100%;
     background-color: #fff;
 }
 .logo-top > div {
@@ -26,6 +33,9 @@ header {
     align-items: center;
     font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
+.navigation-bar li {
+    list-style: none;
+}
 .navigation-bar a {
     padding: 0 2%;
     font-size: 0.8em;
@@ -34,7 +44,7 @@ header {
     position: relative;
     color: #222;
 }
-.navigation-bar > a {
+.navigation-bar > li > a {
     text-transform: uppercase;
 }
 .navigation-bar a:hover {
@@ -48,6 +58,8 @@ header {
     display: inline-block;
     position: absolute;
     width: 23%;
+    margin-left: 125%;
+    margin-top: -3.6vh;
     content: "^";
     transform: rotate(180deg) scaleX(1.6);
 }
@@ -55,30 +67,35 @@ header {
     display: none;
     position: absolute;
     width: 15%;
+    margin-top: 20vh;
     margin-left: 5%;
-    margin-top: 25vh;
-    padding: 5px;
+    padding: 10px;
     background-color: #8490ff;
-    
 }
 .top-menu-arrows:hover + .menu-hidden {
     display: inline-block;
-    /* transition: 3s; */
     background-color: #fff;
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
 }
-.menu-top-inner-flex-wrapper {
+.menu-hidden > ul {
     display: flex;
     flex-direction: column;
 }
-.menu-hidden a {
-    padding: 5px 10px;
-    margin: 6px;
+.menu-hidden > ul > li {
+    margin: 5px;
 }
-.top-menu-pages-link + .menu-hidden {
+.menu-hidden a {
+    /* transition: all .3s ease 0s; */
+    /* opacity: 0.4; */
+}
+.menu-hidden:hover a {
+    /* transition: 3s ease-in; */
+    /* opacity: 1; */
+}
+.top-menu-pages + .menu-hidden {
     margin-left: 15%;
 }
-.navigation-bar > .top-menu-home-link {
+.navigation-bar > .top-menu-home {
     color: #8490ff;
 }
 /* header end */
