@@ -112,8 +112,7 @@ header > div {
 .top-menu-hidden-nested > a::after {
     position: absolute;
     margin-left: 50%;
-    content: "^";
-    transform: rotate(90deg) scale(1.2, 1.2);
+    content: "\003e";
 }
 /*~~~~~~~~~Multi level End~~~~~~~~~*/
 /*~~~~~~~~~Responsive meniu~~~~~~~~~*/
@@ -122,9 +121,13 @@ header > div {
     nav {
         display: block;
     }
+    .top-menu-button {
+        display: none;
+    }
 }
 @media (max-width: 1198px) {
     header > div {
+        margin-top: 10px;
         padding-top: 10px;
         padding-left: 5px;
     }
@@ -133,13 +136,24 @@ header > div {
     header > div {
         padding-top: 20px;
     }
+/*~~~~~~~~~Small size screen menu icon Beginning~~~~~~~~~*/
+    .top-menu-button {
+        float:right;
+    }
+    .top-menu-button::before {
+            position: absolute;
+            content: "|||";
+            right: 25px;
+            top: 25px;
+            transform: rotate(90deg) scale(1.5,1.5);
+    }
 }
-@media (max-width: 776px) {
+/*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
+@media (max-width: 767px) {
     header > div {
         padding-top: 30px;
     }
 }
-
 
 
 /* header end */
