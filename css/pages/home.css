@@ -43,16 +43,19 @@ header > div {
 .navigation-bar a:hover {
     color: #8490ff;
 }
+
+/*~~~~~~~~~Multi level Beginning~~~~~~~~~*/
 .top-menu-hidden {
     position: relative;
     width: 10%;
     line-height: 0; /*don't remove, extra margin from bellow*/
 }
-.top-menu-hidden > div {
+
+/*Base for multi layer box*/
+.top-menu-inner {       
     display: flex;
     visibility: hidden;
     position: absolute;
-    width: 300%; 
     line-height: 20px;
     margin-top: 5vh;
     margin-left: -200%;
@@ -61,14 +64,31 @@ header > div {
     align-items: flex-start;
     background-color: #fff;
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-    transition: all 0.5s ease 1s;
+    transition: all 0.5s ease 0.5s;
 }
-.top-menu-inner a {
-    padding: 10px;
-    text-transform: capitalize;
+
+
+.top-menu-hidden > .top-menu-inner {
+    width: 300%; 
 }
 .top-menu-hidden:hover > div {
     visibility: visible;
+}
+
+
+.top-menu-hidden-nested > .top-menu-inner {
+    width: 100%; 
+    left: 100%;
+    top: 3vh;
+}
+.top-menu-hidden-nested:hover > div {
+    visibility: visible;
+}
+
+
+.top-menu-inner a {
+    padding: 10px;
+    text-transform: capitalize;
 }
 .top-menu-hidden > a::after {
     position: absolute;
@@ -76,26 +96,11 @@ header > div {
     content: "^";
     transform: rotate(180deg) scaleX(1.6);
 }
-.top-menu-hidden-nested > a {
+.top-menu-hidden-nested > a {/*makes it like the other div element in the block*/
     display: block;
 }
 .top-menu-hidden-nested {
     width: 100%;
-}
-.top-menu-hidden-nested > div {
-    display: flex;
-    visibility: hidden;
-    position: absolute;
-    width: 100%; 
-    line-height: 20px;
-    margin-top: 5vh;
-    margin-left: -200%;
-    padding: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-    transition: all 0.5s ease 1s;
 }
 .top-menu-hidden-nested > a::after {
     position: absolute;
@@ -103,17 +108,7 @@ header > div {
     content: "^";
     transform: rotate(90deg) scale(1.2, 1.2);
 }
-.top-menu-hidden-nested:hover > div {
-    visibility: visible;
-}
-.top-menu-inner-nested {
-    left: 100%;
-    top: 3vh;
-}
-
-
-
-
+/*~~~~~~~~~Multi level End~~~~~~~~~*/
 
 
 
