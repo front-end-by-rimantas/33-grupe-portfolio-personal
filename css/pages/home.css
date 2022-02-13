@@ -16,9 +16,9 @@ body {
 header {
     margin-top: -100px;
 }
-nav {
+/* nav {
     display: none;
-}
+} */
 header > div {
     /* padding-top: 50px; */
     width: 100%;
@@ -118,9 +118,9 @@ header > div {
 /*~~~~~~~~~Responsive meniu~~~~~~~~~*/
 
 @media (min-width: 991px ) {
-    nav {
+    /* nav {
         display: block;
-    }
+    } */
     .top-menu-button {
         display: none;
     }
@@ -138,22 +138,33 @@ header > div {
     }
 /*~~~~~~~~~Small size screen menu icon Beginning~~~~~~~~~*/
     .top-menu-button {
+        position: relative;
+        width: 20px;
+        height: 20px;
         float:right;
+        top: 20px;
+        right:20px;
+        background-color: red;
     }
     .top-menu-button::before {
             position: absolute;
             content: "|||";
-            right: 25px;
-            top: 25px;
-            transform: rotate(90deg) scale(1.5,1.5);
+            font-size: 16px;
+            top: 1px;
+            left: 5px;
+            transform: rotate(90deg) scale(1.5,1.2);
     }
-}
 /*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
+/*~~~~~~~~~Side Bar~~~~~~~~~*/
+
+}
 @media (max-width: 767px) {
     header > div {
         padding-top: 30px;
     }
 }
+
+
 
 
 /* header end */
