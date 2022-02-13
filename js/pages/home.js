@@ -17,7 +17,7 @@ const resizeTopMenu1199 = function () {
 const hideNavigation = function () {
     const maxWidth990 = window.matchMedia('(max-width: 990px)');
     const e = document.getElementsByClassName(`navigation-bar`);
-    if (maxWidth990.matches|| window.innerWidth < 990) {
+    if (maxWidth990.matches || window.innerWidth < 990) {
         e[0].className = `hidden navigation-bar`;
     } else {
         e[0].className = `visible-flex navigation-bar`;
@@ -31,17 +31,27 @@ window.onload = function () {
 /*~~~~~~~~~Respond to resizing~~~~~~~~~*/
 window.addEventListener('resize', resizeTopMenu1199);
 window.addEventListener('resize', hideNavigation);
-
-// function openSideMenu() {
-//     const navTag = document.getElementsByTagName(`nav`);
-//     navTag[0].className = `col-5 menu-top-sidebar`;
-//     console.log("valio")
-//     // document.getElementsByTagName(`nav`).style.width = `250px`;
-// }
-// function closeSideMenu() {
-//     document.getElementsByTagName(`nav`).style.width = `0`;
-// }
-
+/*~~~~~~~~~Side Menu~~~~~~~~~*/
+function openSideMenu() {
+    const nav = document.getElementsByTagName(`nav`);
+    const navBar = nav[0].firstElementChild;
+    const hid = document.getElementsByClassName(`top-menu-hidden`);
+    const inner = document.getElementsByClassName(`top-menu-inner`);
+    const hidNested = document.getElementsByClassName(`top-menu-hidden-nested`);
+    nav.className = `col-4`;
+    navBar.className = `navigation-bar-side`;
+    hid.className = `top-menu-hidden-side`;
+    inner.className = `top-menu-inner-side`;
+    hidNested.className = `top-menu-hidden-nested-side`;
+    console.log(hid)
+}
+function closeSideMenu() {
+    const nav = document.getElementsByTagName(`nav`);
+    const wrapper = nav[0].firstElementChild;
+    nav.className = `col-8 ml-2`;
+    wrapper.className = `hidden navigation-bar`;
+}
+// openSideMenu();
 /* header end */
 
 /* hero start */

@@ -116,6 +116,29 @@ header > div {
 }
 /*~~~~~~~~~Multi level End~~~~~~~~~*/
 /*~~~~~~~~~Responsive meniu~~~~~~~~~*/
+.navigation-bar-side {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2vh;
+    /* row-gap: 2vh; */
+    width: 20%;
+    height: 100vh;
+    /* margin-left: -260px; */
+    margin-left: -36%;
+    background-color: pink;
+}
+.top-menu-hidden-side {
+    background-color: red;
+}
+
+
+
+
+
+
 
 @media (min-width: 991px ) {
     /* nav {
