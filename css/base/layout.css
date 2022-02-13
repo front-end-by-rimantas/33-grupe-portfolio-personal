@@ -47,7 +47,6 @@
     float: left;
     margin-left: var(--half-gap);
     margin-right: var(--half-gap);
-    background-color: rgb(114, 236, 236);/*cia pridejau*/
 }
 .row > .reverse {
     float: right;
@@ -595,7 +594,6 @@
   .row > .col-xxl-12 {
     width: var(--col12);
   }
-
   .row > .ml-xxl-0 {
     margin-left: var(--ml0);
   }
@@ -632,7 +630,6 @@
   .row > .ml-xxl-11 {
     margin-left: var(--ml11);
   }
-
   .row .visible-xxl {
     display: inline-block;
   }
