@@ -1,28 +1,62 @@
 .choose {
     text-align: center;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
 }
-
+.choose-row2{
+    /*--half-gap:  0px;*/
+}
 .choose-column {
     background-color: #F9F9FF;
-    padding: 20px 20px;
+    padding: 20px 5px;
+    
 }
-.choose-row , .choose-row > p{
+ 
+.choose-row > h1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.choose-row > .pp {
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.choose-row , .choose-row > p {
     text-align: center;
 }
 
-.choose-box > p{
-    border-top: 1px solid #EEEEEE ;
-    margin: 0;
-    padding: 24px 20px;
+.choose-row > h4 {
+    padding-top: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
-.choose-box > p:last-child{
-    border-bottom: 1px solid #EEEEEE ;
+.choose-row > .choose-row-p {
+    height: 45px;
+    margin-top: 5px;
+}
+
+.choose-box > p {
+    border-top: 1px solid #EEEEEE ;
+    margin: 0;
+    padding: 10px 0px;
+    height: 45px;
+}
+
+.choose-box > p:last-child {
+    border-bottom: 1px solid #EEEEEE;
 }
 
 .price {
     margin: 0;
-    padding: 24px 20px;
+    padding: 20px 5px;
+    font-size: 25px;
+}
+
+.price > h2 {
+    font-weight: 600;
 }
 
 .circle {
@@ -35,7 +69,7 @@
     margin-top: 20px;
 }
 
-.circle2{
+.circle2 {
     background-color: #EDEFFF;
     height: 80px;
     width: 80px;
@@ -46,11 +80,13 @@
 }
 
 .circle2 > h2 {
-    color: red;
+    color: rgb(12, 12, 12);
     font-size: 40px;
-    position: absolute;
-    left: 20px;
-    top: 15px;
-    font-weight: normal;
-    /*font-family: ;*/
+    text-align: center;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.price > a {
+    display: none;
 }
