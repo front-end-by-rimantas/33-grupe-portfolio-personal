@@ -4,7 +4,6 @@
 
 /* header start */
 
-
 /*~~~~~~~~~Responsive meniu 1000-1199px~~~~~~~~~*/
 const resizeTopMenu1199 = function () {
     const mediaQuery = window.matchMedia('(min-width: 1199px)');
@@ -40,7 +39,8 @@ window.addEventListener('resize', hideNavigation);
 
 // eslint-disable-next-line no-unused-vars
 function openSideMenu() {
-    const nav = document.getElementsByTagName(`nav`);
+    // const nav = document.getElementsByTagName(`nav`);
+    const nav = document.getElementsByClassName(`navigation-bar`);
     const navBar = document.getElementsByClassName(`navigation-bar`);
     const hid = document.getElementsByClassName(`top-menu-hidden`);
     const inner = document.getElementsByClassName(`top-menu-inner`);
@@ -84,7 +84,6 @@ function closeSideMenu() {
     menuOn[0].classList.remove(`hidden`);
 }
 // openSideMenu();
-
 /* header end */
 
 /* hero start */
