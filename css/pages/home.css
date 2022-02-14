@@ -398,7 +398,67 @@ nav > div .top-menu-home {
 /* about progress-bars end */
 
 /* services start */
-/* services end */
+.myoffered{
+    width: 100%;
+    color: #222222;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.4;
+}   
+.pastraipa{
+    width: 100%;
+    text-align: center;
+    color: #777777;
+    font-size: 18px;
+     line-height: 1.5;
+    padding-top: 15px;  
+}
+.meniu{
+    align-items: center;
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 70px; 
+     margin: 0;
+}
+.meniu > a{
+     line-height: 3;
+     margin-top: 10px;
+     
+}
+.meniu h4{
+    
+    margin-bottom:0px;
+    padding-top: 20px;
+    line-height: 1.5em;
+    font-size: 19px;
+}
+.meniu h4:hover{
+    color: #8490ff;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+.meniu p{
+    margin-top: 0;
+    margin-bottom:80px;
+    padding-top: 10PX;
+    color: #777777;
+    font-size: 15px;
+    line-height: 1.7em;
+}
+.meniu img{
+    width: 35px;
+    height: 35px;
+ } 
+.path:hover{
+    color: #8490ff;
+    
+}
+.meniu:hover{
+    color: #8490ff;
+    transition-duration: 0.2s;
+        
+     
+}
 
 /* why choose us start */
 /* why choose us end */
