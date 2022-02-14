@@ -307,7 +307,6 @@ nav > div .top-menu-home {
     
     }
 .herobutton {
-
     width: 168px;
     height: 42px;
     line-height: 42px;
@@ -324,9 +323,12 @@ nav > div .top-menu-home {
     font-size: 14px;
     transition: all 0.3s ease 0s;
     position: relative;
-    
-    
-}
+    }
+    .herobutton:hover,
+	:focus,
+	:active {
+	box-shadow: 0 9px 30px -1px rgba(132, 144, 255, 0.6);
+    }
 .img1 {
     position: relative;
     width: 100%;
@@ -394,6 +396,16 @@ nav > div .top-menu-home {
     transition: all 0.3s ease 0s;
     position: relative;
     }
+    .herobutton2:hover,
+	:focus,
+	:active {
+	box-shadow: 0 9px 30px -1px rgba(132, 144, 255, 0.6);
+    }
+    
+    
+       
+    
+    
     
 /* about cards end */
 
