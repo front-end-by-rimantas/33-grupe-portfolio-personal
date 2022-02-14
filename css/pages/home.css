@@ -61,81 +61,58 @@ body {
     background-color: cornflowerblue;
 }
 
-#over > * {
-    /* background-color: red; */
+/*~~~~~~~~~Multi level Start~~~~~~~~~*/
+.navigation-bar > * {
     display: inline-block;
     height: 20px;
     border: 1px solid wheat;
 }
-.navigation-bar > div {
-    /* background-color: aquamarine; */
-}
-/*~~~~~~~~~Multi level Start~~~~~~~~~*/
 .top-menu-hidden {
     position: relative;
 }
-
-
-/*Base for multi layer box*/
-
+.top-menu-hidden > a::after {
+    position: absolute;
+    margin-left: 5%;
+    content: "^";
+    transform: rotate(180deg) scaleX(1.6);
+}
 .top-menu-inner {       
     display: flex;
     visibility: hidden;
-    position: absolute;
-    line-height: 20px;
-    margin-top: 5vh;
-    margin-left: -200%;
+    position: relative;
+    width: 200%;
+    top: 20px;
+    right: 100%;
     padding: 10px;
     flex-direction: column;
     align-items: flex-start;
     background-color: #fff;
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-    transition: all 0.5s ease 0.5s;
-}
-
-.top-menu-hidden-nested:hover {
-    background-color: burlywood;
-}
-
-.top-menu-hidden > .top-menu-inner {
-    width: 400%; 
-    /* width: ; */
+    transition: all 0.3s ease 0.3s;
 }
 .top-menu-hidden:hover > div {
     visibility: visible;
-    /* padding-right: 50px ; */
-}
-.top-menu-hidden-nested > .top-menu-inner {
-    width: 100%; 
-    left: 100%;
-    top: 3vh;
 }
 .top-menu-hidden-nested:hover > div {
     visibility: visible;
-
 }
 .top-menu-inner a {
+    width: 180%;
     padding: 10px;
     text-transform: capitalize;
 }
-.top-menu-hidden > a::after {
-    position: absolute;
-    left: 110%;
-    content: "^";
-    transform: rotate(180deg) scaleX(1.6);
-}
-.top-menu-hidden-nested > a {/*makes it like the other div element in the block*/
+.top-menu-hidden-nested > a {
     display: block;
-    background-color: deepskyblue;
-}
-.top-menu-hidden-nested {
-    width: 100%;
-    background-color: aquamarine;
 }
 .top-menu-hidden-nested > a::after {
     position: absolute;
-    left: 100%;
     content: "\003e";
+    left: 80%;
+}
+#top-menu-inner-nested {
+    position: absolute;
+    width: 100%;
+    top: 50px;
 }
 /*~~~~~~~~~Multi level End~~~~~~~~~*/
 /*~~~~~~~~~Responsive meniu~~~~~~~~~*/
