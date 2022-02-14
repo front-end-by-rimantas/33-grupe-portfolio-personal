@@ -299,7 +299,7 @@ nav > div .top-menu-home {
     
     }
 
-.img1 {
+.imgThisIsMe {
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -312,7 +312,7 @@ nav > div .top-menu-home {
 
 /* about cards start */
 
-.img2 {
+.imgAboutMe {
     max-width: 100%;
     height: auto;
 }
