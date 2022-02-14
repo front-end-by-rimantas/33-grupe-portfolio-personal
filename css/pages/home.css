@@ -274,26 +274,26 @@ nav > div .top-menu-home {
     background-color: #F9F9FF;
     height: 735px;
    }
-.a, .b, .c {
+.title-a, .mainTitle-a, .text-a {
     font-family: "Poppins", sans-serif;
     color: #222222;
     text-transform: uppercase;
     text-align: left;
 }
-.a {
+.title-a {
     margin-top: 130px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
     
     }
-.b {
+.mainTitle-a {
     position: relative;
     margin-top: 20px;
     font-size: 53px;
     font-weight: 600;
     }
-.c {
+.text-a {
     position: relative;
     margin-top: 20px;
     color: #777777;
@@ -316,26 +316,24 @@ nav > div .top-menu-home {
 
 
 /* about cards start */
- .second {
-    color: #fff;
-    }
+ 
 .imgAboutMe {
     max-width: 100%;
     height: auto;
 }
-.a2, .b2, .c2 {
+.title-b, .mainTitle-b, .text-b {
     font-family: "Poppins", sans-serif;
     color: #222222;
     text-transform: uppercase;
     text-align: left;
 }
-.a2 {
+.title-b {
     margin-top: 30px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
     }
-.b2 {
+.mainTitle-b {
     position: relative;
     margin-top: 30px;
     font-size: 36px;
@@ -343,7 +341,7 @@ nav > div .top-menu-home {
     width: 370px;
     line-height: 1.2em;
     }
-.c2 {
+.text-b {
     position: relative;
     margin-top: 30px;
     color: #777777;
