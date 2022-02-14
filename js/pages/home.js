@@ -3,24 +3,28 @@
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
 /* header start */
+
 /*~~~~~~~~~Responsive meniu 1000-1199px~~~~~~~~~*/
 const resizeTopMenu1199 = function () {
     const mediaQuery = window.matchMedia('(min-width: 1199px)');
-    const e = document.getElementsByTagName(`nav`);
+    const nav = document.getElementsByTagName(`nav`);
+    const header = document.getElementsByTagName(`header`);
     if (mediaQuery.matches) {
-        e[0].className = `col-7 ml-3`;
+        nav[0].className = `col-7 ml-3`;
+        header[0].className = `container`;
     } else {
-        e[0].className = `col-8 ml-2`;
+        nav[0].className = `col-8 ml-2`;
+        header[0].className = `container-fluid`;
     }
 };
 /*~~~~~~~~~Hide menu~~~~~~~~~*/
 const hideNavigation = function () {
     const maxWidth990 = window.matchMedia('(max-width: 990px)');
-    const e = document.getElementsByClassName(`navigation-bar`);
+    const navBar = document.getElementsByClassName(`navigation-bar`);
     if (maxWidth990.matches || window.innerWidth < 990) {
-        e[0].className = `hidden navigation-bar`;
+        navBar[0].className = `hidden navigation-bar`;
     } else {
-        e[0].className = `visible-flex navigation-bar`;
+        navBar[0].className = `visible-flex navigation-bar`;
     }
 };
 /*~~~~~~~~~Load functions after reload~~~~~~~~~*/
@@ -31,25 +35,50 @@ window.onload = function () {
 /*~~~~~~~~~Respond to resizing~~~~~~~~~*/
 window.addEventListener('resize', resizeTopMenu1199);
 window.addEventListener('resize', hideNavigation);
-/*~~~~~~~~~Side Menu~~~~~~~~~*/
+/*~~~~~~~~~Sidebar Menu~~~~~~~~~*/
+
+// eslint-disable-next-line no-unused-vars
 function openSideMenu() {
     const nav = document.getElementsByTagName(`nav`);
-    const navBar = nav[0].firstElementChild;
+    const navBar = document.getElementsByTagName(`nav`)[0].firstElementChild;
     const hid = document.getElementsByClassName(`top-menu-hidden`);
     const inner = document.getElementsByClassName(`top-menu-inner`);
-    const hidNested = document.getElementsByClassName(`top-menu-hidden-nested`);
-    nav.className = `col-4`;
-    navBar.className = `navigation-bar-side`;
-    hid.className = `top-menu-hidden-side`;
-    inner.className = `top-menu-inner-side`;
-    hidNested.className = `top-menu-hidden-nested-side`;
-    console.log(hid)
+    const menuOn = document.getElementsByClassName(`top-side-menu-on`);
+    const menuOff = document.getElementsByClassName(`top-side-menu-off`);
+
+    nav[0].className = `nav-side`;
+    navBar.classList.add(`navigation-bar-side`); //first child
+    navBar.classList.remove(`navigation-bar`);
+    console.log(navBar.classList)
+    for (let i = 0; i < 2; i++) {
+        hid[0].classList.add(`top-menu-hidden-side`);
+        hid[0].classList.remove(`top-menu-hidden`);
+        inner[0].classList.add(`top-menu-inner-side`);
+        inner[0].classList.remove(`top-menu-inner`);
+    }
+    menuOn[0].classList.add(`hidden`);
+    menuOff[0].classList.remove(`hidden`);
 }
+// eslint-disable-next-line no-unused-vars
 function closeSideMenu() {
     const nav = document.getElementsByTagName(`nav`);
-    const wrapper = nav[0].firstElementChild;
-    nav.className = `col-8 ml-2`;
-    wrapper.className = `hidden navigation-bar`;
+    const navBar = document.getElementsByTagName(`nav`)[0].firstElementChild;
+    const hid = document.getElementsByClassName(`top-menu-hidden`);
+    const inner = document.getElementsByClassName(`top-menu-inner`);
+    const menuOn = document.getElementsByClassName(`top-side-menu-on`);
+    const menuOff = document.getElementsByClassName(`top-side-menu-off`);
+
+    nav[0].className = `col-8 ml-2`;
+    navBar.classList.remove(`navigation-bar-side`); //first child
+    navBar.classList.add(`navigation-bar`);
+    for (let i = 0; i < 2; i++) {
+        hid[0].classList.remove(`top-menu-hidden-side`);
+        hid[0].classList.add(`top-menu-hidden`);
+        inner[0].classList.remove(`top-menu-inner-side`);
+        inner[0].classList.add(`top-menu-inner`);
+    }
+    menuOn[0].classList.remove(`hidden`);
+    menuOff[0].classList.add(`hidden`);
 }
 // openSideMenu();
 /* header end */

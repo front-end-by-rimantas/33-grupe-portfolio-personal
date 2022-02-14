@@ -13,17 +13,31 @@ body {
     background-color: #F9F9FF;/*To remove*/
 }
 /* header start */
+/*To make margin-top height responsive, white background header */
 header {
     margin-top: -100px;
 }
-/* nav {
-    display: none;
-} */
 header > div {
-    /* padding-top: 50px; */
     width: 100%;
     background-color: #fff;
 }
+nav a {
+    padding: 0 2%;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+nav a:hover {
+    color: #8490ff;
+}
+
+nav > div .top-menu-home {
+    color: #8490ff;
+}
+
 .logo-top > div {
     height: 10vh;
     justify-content: flex-start;
@@ -34,24 +48,8 @@ header > div {
     padding: 0 5%;
     justify-content: space-between;
     align-items: center;
-    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-.navigation-bar a {
-    padding: 0 2%;
-    font-size: 0.8em;
-    font-weight: 500;
-    color: #222;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.navigation-bar a:hover {
-    color: #8490ff;
-}
-
-.navigation-bar > .top-menu-home {
-    color: #8490ff;
-}
-/*~~~~~~~~~Multi level Beginning~~~~~~~~~*/
+/*~~~~~~~~~Multi level Start~~~~~~~~~*/
 .top-menu-hidden {
     position: relative;
     width: 10%;
@@ -116,22 +114,40 @@ header > div {
 }
 /*~~~~~~~~~Multi level End~~~~~~~~~*/
 /*~~~~~~~~~Responsive meniu~~~~~~~~~*/
-.navigation-bar-side {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2vh;
-    /* row-gap: 2vh; */
-    width: 20%;
+
+/*~~~~~~~~~Sidebar~~~~~~~~~*/
+.nav-side {
+    /* margin-left: 35%; */
+    position: fixed;
+    width: 100%;
     height: 100vh;
-    /* margin-left: -260px; */
-    margin-left: -36%;
-    background-color: pink;
+
 }
-.top-menu-hidden-side {
-    background-color: red;
+.navigation-bar-side {
+    display: inline-block;
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    margin-left: -2%;
+    background-color: black;
+    z-index: 99;
+    opacity: 0.9;
+    padding: 2vh 2%;
+}
+.navigation-bar-side > * {
+    float: left;
+    width: 100%;
+    margin-top: 3vh;
+    border: 1px solid white;
+}
+.navigation-bar-side a {
+    display: block;
+
+    background-color: royalblue;
+    color: white;
+}
+.top-menu-hidden-side > div {
+    display: none;
 }
 
 
@@ -141,9 +157,6 @@ header > div {
 
 
 @media (min-width: 991px ) {
-    /* nav {
-        display: block;
-    } */
     .top-menu-button {
         display: none;
     }
@@ -159,8 +172,9 @@ header > div {
     header > div {
         padding-top: 20px;
     }
-/*~~~~~~~~~Small size screen menu icon Beginning~~~~~~~~~*/
-    .top-menu-button {
+/*~~~~~~~~~Small size screen menu icon Start~~~~~~~~~*/
+    .top-side-menu-on {
+        /* display: none; */
         position: relative;
         width: 20px;
         height: 20px;
@@ -169,14 +183,35 @@ header > div {
         right:20px;
         background-color: red;
     }
-    .top-menu-button::before {
-            position: absolute;
-            content: "|||";
-            font-size: 16px;
-            top: 1px;
-            left: 5px;
-            transform: rotate(90deg) scale(1.5,1.2);
+    .top-side-menu-on::before {
+        position: absolute;
+        content: "|||";
+        font-size: 0.8em;
+        top: 1px;
+        left: 5px;
+        transform: rotate(90deg) scale(1.5,1.2);
     }
+    .top-side-menu-off {
+        position: relative;
+        float:right;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right:20px;
+        background-color: red;
+    }
+    .top-side-menu-off::before {
+        /* display: block; */
+        /* font-family: 'Font Awesome\ 5 Free'; */
+        /* content: "\f09a"; */
+        position: absolute;
+        content: "X";
+        font-weight: 900;
+        left: 5px;
+        transform: scale(1.5,1.2);
+    }
+
+
 /*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
 /*~~~~~~~~~Side Bar~~~~~~~~~*/
 
