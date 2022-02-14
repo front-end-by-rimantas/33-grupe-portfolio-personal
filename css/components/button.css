@@ -16,7 +16,7 @@
     transition: all 0.3s ease 0s;
     position: relative;
     }
-    .herobutton:hover,
+    .herobutton, .herobutton2:hover,
 	:focus,
 	:active {
 	box-shadow: 0 9px 30px -1px rgba(132, 144, 255, 0.6);
