@@ -40,16 +40,16 @@ window.addEventListener('resize', hideNavigation);
 // eslint-disable-next-line no-unused-vars
 function openSideMenu() {
     const nav = document.getElementsByTagName(`nav`);
-    const navBar = document.getElementsByTagName(`nav`)[0].firstElementChild;
+    const navBar = document.getElementsByClassName(`navigation-bar`);
     const hid = document.getElementsByClassName(`top-menu-hidden`);
     const inner = document.getElementsByClassName(`top-menu-inner`);
     const menuOn = document.getElementsByClassName(`top-side-menu-on`);
     const menuOff = document.getElementsByClassName(`top-side-menu-off`);
-
     nav[0].className = `nav-side`;
-    navBar.classList.add(`navigation-bar-side`); //first child
-    navBar.classList.remove(`navigation-bar`);
-    console.log(navBar.classList)
+    navBar[0].classList.add(`navigation-bar-side`);
+    navBar[0].classList.remove(`hidden`);
+    navBar[0].classList.remove(`navigation-bar`);
+    console.log(hid)
     for (let i = 0; i < 2; i++) {
         hid[0].classList.add(`top-menu-hidden-side`);
         hid[0].classList.remove(`top-menu-hidden`);
@@ -62,23 +62,25 @@ function openSideMenu() {
 // eslint-disable-next-line no-unused-vars
 function closeSideMenu() {
     const nav = document.getElementsByTagName(`nav`);
-    const navBar = document.getElementsByTagName(`nav`)[0].firstElementChild;
-    const hid = document.getElementsByClassName(`top-menu-hidden`);
-    const inner = document.getElementsByClassName(`top-menu-inner`);
+    const navBar = document.getElementsByClassName(`navigation-bar-side`);
+    const hid = document.getElementsByClassName(`top-menu-hidden-side`);
+    const inner = document.getElementsByClassName(`top-menu-inner-side`);
     const menuOn = document.getElementsByClassName(`top-side-menu-on`);
     const menuOff = document.getElementsByClassName(`top-side-menu-off`);
 
     nav[0].className = `col-8 ml-2`;
-    navBar.classList.remove(`navigation-bar-side`); //first child
-    navBar.classList.add(`navigation-bar`);
-    for (let i = 0; i < 2; i++) {
-        hid[0].classList.remove(`top-menu-hidden-side`);
+    nav[0].classList.remove(`nav-side`);
+    navBar[0].classList.add(`navigation-bar`);
+    navBar[0].classList.add(`hidden`);
+    navBar[0].classList.remove(`navigation-bar-side`);
+    for (let i = 0; i < hid[0].classList.length; i++) {
         hid[0].classList.add(`top-menu-hidden`);
-        inner[0].classList.remove(`top-menu-inner-side`);
+        hid[0].classList.remove(`top-menu-hidden-side`);
         inner[0].classList.add(`top-menu-inner`);
+        inner[0].classList.remove(`top-menu-inner-side`);
     }
-    menuOn[0].classList.remove(`hidden`);
     menuOff[0].classList.add(`hidden`);
+    menuOn[0].classList.remove(`hidden`);
 }
 // openSideMenu();
 /* header end */
