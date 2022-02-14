@@ -7,13 +7,11 @@
 /*~~~~~~~~~Responsive meniu 1000-1199px~~~~~~~~~*/
 const resizeTopMenu1199 = function () {
     const mediaQuery = window.matchMedia('(min-width: 1199px)');
-    const nav = document.getElementsByTagName(`nav`);
-    const header = document.getElementsByTagName(`header`);
+    // const nav = document.getElementsByTagName(`nav`);
+    const header = document.getElementsByClassName(`header`);
     if (mediaQuery.matches) {
-        nav[0].className = `col-7 ml-3`;
         header[0].className = `container`;
     } else {
-        nav[0].className = `col-8 ml-2`;
         header[0].className = `container-fluid`;
     }
 };
@@ -50,7 +48,6 @@ function openSideMenu() {
     navBar[0].classList.add(`navigation-bar-side`);
     navBar[0].classList.remove(`hidden`);
     navBar[0].classList.remove(`navigation-bar`);
-    console.log(hid)
     for (let i = 0; i < 2; i++) {
         hid[0].classList.add(`top-menu-hidden-side`);
         hid[0].classList.remove(`top-menu-hidden`);
@@ -62,15 +59,15 @@ function openSideMenu() {
 }
 // eslint-disable-next-line no-unused-vars
 function closeSideMenu() {
-    const nav = document.getElementsByTagName(`nav`);
-    const navBar = document.getElementsByClassName(`navigation-bar-side`);
+    // const nav = document.getElementsByTagName(`nav`);
+    const navBar = document.getElementsByClassName(`navigation-bar`);
     const hid = document.getElementsByClassName(`top-menu-hidden-side`);
     const inner = document.getElementsByClassName(`top-menu-inner-side`);
     const menuOn = document.getElementsByClassName(`top-side-menu-on`);
     const menuOff = document.getElementsByClassName(`top-side-menu-off`);
 
-    nav[0].className = `col-8 ml-2`;
-    nav[0].classList.remove(`nav-side`);
+    // nav[0].className = `col-8 ml-2`;
+    // nav[0].classList.remove(`nav-side`);
     navBar[0].classList.add(`navigation-bar`);
     navBar[0].classList.add(`hidden`);
     navBar[0].classList.remove(`navigation-bar-side`);
