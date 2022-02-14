@@ -4,17 +4,6 @@
 
 /* header start */
 
-/*~~~~~~~~~Responsive meniu 1000-1199px~~~~~~~~~*/
-// const resizeTopMenu1199 = function () {
-//     const mediaQuery = window.matchMedia('(min-width: 1199px)');
-//     // const nav = document.getElementsByTagName(`nav`);
-//     const topContainer = document.getElementsByClassName(`top-menu-container`);
-//     if (mediaQuery.matches) {
-//         topContainer[0].className = `container top-menu-container`;
-//     } else {
-//         topContainer[0].className = `container-fluid top-menu-container`;
-//     }
-// };
 /*~~~~~~~~~Hide menu~~~~~~~~~*/
 // const hideNavigation = function () {
 //     const maxWidth990 = window.matchMedia('(max-width: 990px)');
@@ -26,12 +15,12 @@
 //     }
 // };
 /*~~~~~~~~~Load functions after reload~~~~~~~~~*/
-window.onload = function () {
-    resizeTopMenu1199();
-    hideNavigation();
-};
+// window.onload = function () {
+//     resizeTopMenu1199();
+//     hideNavigation();
+// };
 /*~~~~~~~~~Respond to resizing~~~~~~~~~*/
-window.addEventListener('resize', resizeTopMenu1199);
+// window.addEventListener('resize', resizeTopMenu1199);
 // window.addEventListener('resize', hideNavigation);
 /*~~~~~~~~~Sidebar Menu~~~~~~~~~*/
 
