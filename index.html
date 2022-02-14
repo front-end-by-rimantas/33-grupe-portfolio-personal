@@ -21,47 +21,50 @@
 
 <body>
      <!-- header start -->
-     <header class="container-fluid top-header" id="top-header">
-         <div class="row visible-flex top-nav-container">
-            <div class="col-2 logo-top">
-                <div class="visible-flex">
+     <header id="top-header">
+         <div class="container top-menu-container">
+            <div class="row" id="top-menu-nav-container">
+                <!-- <div class="col-2 logo-top"> -->
+                    <!-- <div class="row visible-flex" id="top-menu-nav-container"> -->
+                        <!-- <div class="col-2 logo-top visible-flex" id="logo-top"> -->
+                <div class="col-2 logo-top" id="logo-top">
                     <a href="#"><img src="./img/logo-top-left-corner.png"></a>
-                </div>
-            </div> 
-            <nav class="col-7 ml-3 col-lg-8 ml-lg2 top-main-nav">
-                <div class="visible-flex navigation-bar">
-                    <a class="top-menu-home" href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Pricing</a>
-                    <div class="top-menu-hidden">
-                        <a href="#">Blog</a>
-                        <div class="top-menu-inner">
-                            <a href="#">Blog Home</a>
-                            <a href="#">Blog Single</a>
-                        </div>
-                    </div>
-                    <div class="top-menu-hidden">
-                        <a href="#">Pages</a>
-                        <div class="top-menu-inner">
-                            <a href="#">Elements</a>
-
-                            <div class="top-menu-hidden-nested">
-                                <a href="#">Level 2</a>
-                                <div class="top-menu-inner">
-                                    <a href="#">Items One</a>
-                                    <a href="#">Items Two</a>
-                                </div>
+                </div> 
+                <nav class="col-7 ml-3 col-lg-8 ml-lg-2 top-main-nav">
+                    <div class="visible-flex navigation-bar">
+                        <a class="top-menu-home" href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Portfolio</a>
+                        <a href="#">Pricing</a>
+                        <div class="top-menu-hidden">
+                            <a href="#">Blog</a>
+                            <div class="top-menu-inner">
+                                <a href="#">Blog Home</a>
+                                <a href="#">Blog Single</a>
                             </div>
-                            
                         </div>
+                        <div class="top-menu-hidden">
+                            <a href="#">Pages</a>
+                            <div class="top-menu-inner">
+                                <a href="#">Elements</a>
+
+                                <div class="top-menu-hidden-nested">
+                                    <a href="#">Level 2</a>
+                                    <div class="top-menu-inner">
+                                        <a href="#">Items One</a>
+                                        <a href="#">Items Two</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <a href="#">Contact</a>
                     </div>
-                    <a href="#">Contact</a>
-                </div>
-            </nav>
-            <div class="top-side-menu-on" onclick="openSideMenu()"></div>
-            <div class="hidden top-side-menu-off" onclick="closeSideMenu()"></div>
+                </nav>
+                <div class="top-side-menu-on" onclick="openSideMenu()"></div>
+                <div class="hidden top-side-menu-off" onclick="closeSideMenu()"></div>
+            </div>
         </div>
     </header>
     <!-- header end -->
