@@ -9,6 +9,7 @@
 @import '../components/button.css';
 @import '../components/choose.css';
 
+
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 body {
     background-color: #F9F9FF;/*To remove*/
@@ -267,16 +268,7 @@ nav > div .top-menu-home {
 
 /* header end */
 
-
-
-
-
-
-
-
 /* hero start */
-
-
 .a, .b, .c {
     font-family: "Poppins", sans-serif;
     color: #222222;
@@ -306,27 +298,8 @@ nav > div .top-menu-home {
     font-weight: 300;
     
     }
-.herobutton {
 
-    width: 168px;
-    height: 42px;
-    line-height: 42px;
-    padding-left: 28px;
-    padding-right: 28px;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 500;
-    color: #fff;
-    background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    position: relative;
-    
-    
-}
-.img1 {
+.imgThisIsMe {
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -338,7 +311,8 @@ nav > div .top-menu-home {
 
 
 /* about cards start */
-.img2 {
+
+.imgAboutMe {
     max-width: 100%;
     height: auto;
 }
@@ -357,41 +331,23 @@ nav > div .top-menu-home {
 .b2 {
     position: relative;
     margin-top: 30px;
-    font-size: 33px;
+    font-size: 36px;
     font-weight: 600;
     width: 370px;
+    line-height: 1.2em;
     }
 .c2 {
     position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
     color: #777777;
     text-transform: none;
     height: 68px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
-    width: 370px;
+    width: 444px;
     
     }
-.herobutton2 {
-    margin-top: 80px;
-    width: 185px;
-    height: 42px;
-    line-height: 42px;
-    padding-left: 25px;
-    padding-right: 25px;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 500;
-    color: #fff;
-    background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    position: relative;
-    
-    
-}
+
 /* about cards end */
 
 /* about progress-bars start */
