@@ -476,4 +476,68 @@ nav > div .top-menu-home {
 /* bottom logos end */
 
 /* footer start */
+
+.aboutme{ 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background-color: #04091e; 
+}  
+.aboutme h3{
+    color: #fff;
+    margin-top: 10px;
+    font-size: 18px; 
+    text-decoration: none; 
+}
+.aboutme p{
+    padding-top: 22px;
+    color: #777777;
+    line-height: 22px;
+    font-size: 14px; 
+}
+.aboutme .heart{
+    padding-top: 3px;
+}
+.aboutme .email{
+    height: 500px;
+    width: 30px; 
+}
+.aboutme .Colorlib{
+    color: #8490ff;
+}
+.aboutme .email .box{
+    font-size: 15px;
+    color:  #f9f9ff;
+    margin-top: 20px;
+    padding-left: 15px;
+    position: relative;
+    display: inline block;
+    width: 398px;
+    height: 43px;
+}
+.aboutme .email .button{
+    cursor: pointer;
+    display: inline;
+    background-color: #8490ff;
+    margin-top: -43px;
+    margin-left: 395px;
+    border: #62bdfc;
+    width: 47px;
+    height: 43px;  
+}
+.aboutme .email .button .submit{
+    padding-top: 10px;
+    margin-right: 5px;
+}
+.aboutme .fa{
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 7px;
+    color: #fff;
+}
+.aboutme .fa:hover{
+    color: #8490ff;
+
+}
 /* footer end */
