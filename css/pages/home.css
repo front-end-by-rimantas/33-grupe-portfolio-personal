@@ -12,12 +12,12 @@
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 body {
-    background-color: #F9F9FF;/*To remove*/
+    background-color: #fff;
 }
 /* header start */
 /*To make margin-top height responsive, white background header */
 header {
-    margin-top: -100px;
+    margin-top: -115px;
 }
 header > div {
     width: 100%;
@@ -269,6 +269,11 @@ nav > div .top-menu-home {
 /* header end */
 
 /* hero start */
+.first {
+    margin-top: -115px;
+    background-color: #F9F9FF;
+    height: 735px;
+   }
 .a, .b, .c {
     font-family: "Poppins", sans-serif;
     color: #222222;
@@ -311,7 +316,9 @@ nav > div .top-menu-home {
 
 
 /* about cards start */
-
+ .second {
+    color: #fff;
+    }
 .imgAboutMe {
     max-width: 100%;
     height: auto;
