@@ -4,6 +4,7 @@
 
 /* header start */
 
+
 /*~~~~~~~~~Responsive meniu 1000-1199px~~~~~~~~~*/
 const resizeTopMenu1199 = function () {
     const mediaQuery = window.matchMedia('(min-width: 1199px)');
@@ -83,6 +84,7 @@ function closeSideMenu() {
     menuOn[0].classList.remove(`hidden`);
 }
 // openSideMenu();
+
 /* header end */
 
 /* hero start */
