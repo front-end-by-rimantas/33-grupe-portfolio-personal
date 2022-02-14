@@ -48,27 +48,23 @@ body {
 .navigation-bar a:hover {
     color: #8490ff;
 }
-
 .navigation-bar > .top-menu-current {
     color: #8490ff;
 }
-
 .navigation-bar {
+    gap: 5px;
+    /* justify-content: space-around; */
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
     font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    background-color: cornflowerblue;
 }
-
-/*~~~~~~~~~Multi level Start~~~~~~~~~*/
 .navigation-bar > * {
-    display: inline-block;
     height: 20px;
-    border: 1px solid wheat;
 }
+/*~~~~~~~~~Multi level Start~~~~~~~~~*/
 .top-menu-hidden {
     position: relative;
+    margin-right: -35px;
 }
 .top-menu-hidden > a::after {
     position: absolute;
@@ -83,7 +79,7 @@ body {
     width: 200%;
     top: 20px;
     right: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     flex-direction: column;
     align-items: flex-start;
     background-color: #fff;
