@@ -143,26 +143,19 @@ body {
     background-color: royalblue;
     color: white;
 }
-
-
-
 @media (min-width: 991px ) {
     .top-menu-button {
         display: none;
     }
 }
-@media (max-width: 1198px) {
-}
+
 @media (max-width: 990px) {
-    header > div {
-        padding-top: 20px;
-    }
 /*~~~~~~~~~Small size screen menu icon Start~~~~~~~~~*/
     .top-side-menu-on {
         position: relative;
+        float: right;
         width: 20px;
         height: 20px;
-        float: right;
         top: 20px;
         right:20px;
         background-color: red;
@@ -185,9 +178,6 @@ body {
         background-color: red;
     }
     .top-side-menu-off::before {
-        /* display: block; */
-        /* font-family: 'Font Awesome\ 5 Free'; */
-        /* content: "\f09a"; */
         position: absolute;
         content: "X";
         font-weight: 900;
