@@ -11,7 +11,7 @@ _33 group website project_
 
 This project is for educational porpuses only. Pull request are welcome, but priority for project authors! Thank you for your cooperation!
 
-Site published at: https://front-end-by-rimantas.github.io/33-grupe-portfolio/
+Site published at: https://github.com/front-end-by-rimantas/33-grupe-portfolio-personal
 
 Design: https://preview.colorlib.com/theme/personal/index.html
 
