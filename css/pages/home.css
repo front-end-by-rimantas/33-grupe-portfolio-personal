@@ -15,16 +15,31 @@ body {
     background-color: #fff;
 }
 /* header start */
-/*To make margin-top height responsive, white background header */
-header {
-    margin-top: -115px;
-}
-header > div {
+
+#top-header {
+    position: fixed;
     width: 100%;
+    margin-top: 0;
     background-color: #fff;
+    z-index: 99;
 }
-nav a {
-    padding: 0 2%;
+.top-menu-container {
+    margin-top: 0;
+    padding: 0;
+}
+#top-menu-nav-container {
+    display: flex;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+#logo-top {
+    width: 133px;
+    height: 30px;
+}
+.top-menu-container a {
     font-size: 0.8em;
     font-weight: 500;
     color: #222;
@@ -32,142 +47,80 @@ nav a {
     text-transform: uppercase;
     font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-nav a:hover {
+.navigation-bar a:hover {
     color: #8490ff;
 }
-
-nav > div .top-menu-home {
+.navigation-bar > .top-menu-current {
     color: #8490ff;
-}
-
-.logo-top > div {
-    height: 10vh;
-    justify-content: flex-start;
-    align-items: center;
 }
 .navigation-bar {
-    height: 10vh;
-    padding: 0 5%;
+    gap: 5px;
+    /* justify-content: space-around; */
     justify-content: space-between;
     align-items: center;
     font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-
+.navigation-bar > * {
+    height: 20px;
+}
 /*~~~~~~~~~Multi level Start~~~~~~~~~*/
 .top-menu-hidden {
     position: relative;
-    width: 10%;
-    line-height: 0; /*don't remove, extra margin from bellow*/
-
-}
-
-/*Base for multi layer box*/
-.top-menu-inner {       
-    display: flex;
-    visibility: hidden;
-    position: absolute;
-    line-height: 20px;
-    margin-top: 5vh;
-    margin-left: -200%;
-    padding: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-    transition: all 0.5s ease 0.5s;
-}
-
-
-.top-menu-hidden > .top-menu-inner {
-    width: 300%; 
-}
-.top-menu-hidden:hover > div {
-    visibility: visible;
-}
-
-
-.top-menu-hidden-nested > .top-menu-inner {
-    width: 100%; 
-    left: 100%;
-    top: 3vh;
-}
-.top-menu-hidden-nested:hover > div {
-    visibility: visible;
-}
-
-
-.top-menu-inner a {
-    padding: 10px;
-    text-transform: capitalize;
-}
-
-/*Base for multi layer box*/
-.top-menu-inner {       
-    display: flex;
-    visibility: hidden;
-    position: absolute;
-    line-height: 20px;
-    margin-top: 5vh;
-    margin-left: -200%;
-    padding: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-    transition: all 0.5s ease 0.5s;
-}
-
-
-.top-menu-hidden > .top-menu-inner {
-    width: 300%; 
-}
-.top-menu-hidden:hover > div {
-    visibility: visible;
-}
-
-
-.top-menu-hidden-nested > .top-menu-inner {
-    width: 100%; 
-    left: 100%;
-    top: 3vh;
-}
-.top-menu-hidden-nested:hover > div {
-    visibility: visible;
-}
-
-
-.top-menu-inner a {
-    padding: 10px;
-    text-transform: capitalize;
+    margin-right: -35px;
 }
 .top-menu-hidden > a::after {
     position: absolute;
-    margin-left: 10%;
+    margin-left: 5%;
     content: "^";
     transform: rotate(180deg) scaleX(1.6);
 }
-.top-menu-hidden-nested > a {/*makes it like the other div element in the block*/
-    display: block;
+.top-menu-inner {       
+    display: flex;
+    visibility: hidden;
+    position: relative;
+    width: 200%;
+    top: 20px;
+    right: 100%;
+    /* padding: 10px; */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+    transition: all 0.3s ease 0.3s;
 }
-.top-menu-hidden-nested {
-    width: 100%;
+.top-menu-hidden:hover > div {
+    visibility: visible;
+}
+.top-menu-hidden-nested:hover > div {
+    visibility: visible;
+}
+.top-menu-inner a {
+    width: 180%;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.top-menu-hidden-nested > a {
+    display: block;
 }
 .top-menu-hidden-nested > a::after {
     position: absolute;
-    margin-left: 50%;
-
     content: "\003e";
+    left: 80%;
+}
+#top-menu-inner-nested {
+    position: absolute;
+    width: 100%;
+    top: 50px;
 }
 /*~~~~~~~~~Multi level End~~~~~~~~~*/
 /*~~~~~~~~~Responsive meniu~~~~~~~~~*/
 
 /*~~~~~~~~~Sidebar~~~~~~~~~*/
-.nav-side {
-    /* margin-left: 35%; */
-    position: fixed;
-    width: 100%;
+.top-main-nav-side {
+    position: absolute;
     height: 100vh;
-
+    top:0;
+    left: 0px;
 }
 .navigation-bar-side {
     display: inline-block;
@@ -185,86 +138,28 @@ nav > div .top-menu-home {
     width: 100%;
     margin-top: 3vh;
     border: 1px solid white;
-
 }
 .navigation-bar-side a {
     display: block;
-
     background-color: royalblue;
     color: white;
-}
-/* .top-menu-hidden-side > div {
-    display: none;
-} */
-
-
-
-@media (min-width: 991px ) {
-    .top-menu-button {
+} 
+/* @media (min-width: 991px) {
+    .top-side-menu-on {
         display: none;
     }
-}
-@media (max-width: 1198px) {
-    header > div {
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-left: 5px;
-    }
-}
-@media (max-width: 990px) {
-    header > div {
-        padding-top: 20px;
-    }
-/*~~~~~~~~~Small size screen menu icon Start~~~~~~~~~*/
-    .top-side-menu-on {
-        /* display: none; */
-        position: relative;
-        width: 20px;
-        height: 20px;
-        float:right;
-        top: 20px;
-        right:20px;
-        background-color: red;
-    }
-    .top-side-menu-on::before {
-        position: absolute;
-        content: "|||";
-        font-size: 0.8em;
-        top: 1px;
-        left: 5px;
-        transform: rotate(90deg) scale(1.5,1.2);
-    }
     .top-side-menu-off {
-        position: relative;
-        float:right;
-        width: 20px;
-        height: 20px;
-        top: 20px;
-        right:20px;
-        background-color: red;
+        display: none;
     }
-    .top-side-menu-off::before {
-        /* display: block; */
-        /* font-family: 'Font Awesome\ 5 Free'; */
-        /* content: "\f09a"; */
-        position: absolute;
-        content: "X";
-        font-weight: 900;
-        left: 5px;
-        transform: scale(1.5,1.2);
+    .top-main-nav {
+        display: inline-block;
     }
+}
 
 
+}
 /*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
 /*~~~~~~~~~Side Bar~~~~~~~~~*/
-
-}
-@media (max-width: 767px) {
-    header > div {
-        padding-top: 30px;
-    }
-}
-
 
 /* header end */
 
@@ -359,7 +254,67 @@ nav > div .top-menu-home {
 /* about progress-bars end */
 
 /* services start */
-/* services end */
+.myoffered{
+    width: 100%;
+    color: #222222;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.4;
+}   
+.pastraipa{
+    width: 100%;
+    text-align: center;
+    color: #777777;
+    font-size: 18px;
+     line-height: 1.5;
+    padding-top: 15px;  
+}
+.meniu{
+    align-items: center;
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 70px; 
+     margin: 0;
+}
+.meniu > a{
+     line-height: 3;
+     margin-top: 10px;
+     
+}
+.meniu h4{
+    
+    margin-bottom:0px;
+    padding-top: 20px;
+    line-height: 1.5em;
+    font-size: 19px;
+}
+.meniu h4:hover{
+    color: #8490ff;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+.meniu p{
+    margin-top: 0;
+    margin-bottom:80px;
+    padding-top: 10PX;
+    color: #777777;
+    font-size: 15px;
+    line-height: 1.7em;
+}
+.meniu img{
+    width: 35px;
+    height: 35px;
+ } 
+.path:hover{
+    color: #8490ff;
+    
+}
+.meniu:hover{
+    color: #8490ff;
+    transition-duration: 0.2s;
+        
+     
+}
 
 /* why choose us start */
 /* why choose us end */
