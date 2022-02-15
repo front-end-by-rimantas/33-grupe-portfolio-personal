@@ -17,47 +17,43 @@
 
 function openSideMenu() {
     /* variables */
-    const toggleOn = document.getElementById(`top-side-on`);
-    const toggleOff = document.getElementById(`top-side-off`);
-    const nav = document.getElementById(`main-navigation`);
-    const navBar = document.getElementsByClassName(
-        `visible-flex navigation-bar`
-    );
-    const hid = document.getElementsByClassName(`top-menu-hidden`);
-    const inner = document.getElementsByClassName(`top-menu-inner`);
+    const toggleOn = document.getElementById(`sidebar-main-on`);
+    const toggleOff = document.getElementById(`sidebar-main-off`);
+    const sidebar = document.getElementById(`main-navigation`).cloneNode(true);
     /* logic */
     toggleOn.style.display = `none`;
     toggleOff.style.display = `block`;
-    nav.classList[`value`] = `top-main-nav-side`;
-    navBar[0].classList[`value`] = `navigation-bar-side`;
-    while (hid.length > 0) {
-        hid[0].classList[`value`] = `top-menu-hidden-side`;
+    sidebar.id = `sidebar-main-navigation`;
+    sidebar.removeAttribute(`class`);
+    // sidebar.setAttribute(`class`, `sidebar-main-navigation`);
+    sidebar.getElementsByClassName(
+        `navigation-bar`
+    )[0].className = `sidebar-navigation`;
+    while (sidebar.getElementsByClassName(`top-menu-hidden`).length > 0) {
+        sidebar.getElementsByClassName(
+            `top-menu-hidden`
+        )[0].className = `sidebar-navigation-hidden`;
     }
-    while (inner.length > 0) {
-        inner[0].classList[`value`] = `top-menu-inner-side`;
+    while (sidebar.getElementsByClassName(`top-menu-inner`).length > 0) {
+        sidebar.getElementsByClassName(
+            `top-menu-inner`
+        )[0].className = `sidebar-navigation-inner`;
     }
+    sidebar.getElementsByClassName(
+        `top-menu-hidden-nested`
+    )[0].className = `sidebar-navigation-hidden-nested`;
+    document.getElementsByTagName('body')[0].appendChild(sidebar);
 }
+
 function closeSideMenu() {
     /* variables */
-    const toggleOn = document.getElementById(`top-side-on`);
-    const toggleOff = document.getElementById(`top-side-off`);
-    const nav = document.getElementById(`main-navigation`);
-    const navBar = document.getElementsByClassName(`navigation-bar-side`);
-    const hid = document.getElementsByClassName(`top-menu-hidden-side`);
-    const inner = document.getElementsByClassName(`top-menu-inner-side`);
+    const toggleOn = document.getElementById(`sidebar-main-on`);
+    const toggleOff = document.getElementById(`sidebar-main-off`);
+    const sidebarRemoval = document.getElementById(`sidebar-main-navigation`);
     /* logic */
     toggleOn.style.display = `block`;
     toggleOff.style.display = `none`;
-    nav.classList[
-        `value`
-    ] = `col-9 ml-1 col-lg-7 ml-lg-3 hidden visible-lg top-main-nav`;
-    navBar[0].classList[`value`] = `visible-flex navigation-bar`;
-    while (hid.length > 0) {
-        hid[0].classList[`value`] = `top-menu-hidden`;
-    }
-    while (inner.length > 0) {
-        inner[0].classList[`value`] = `top-menu-inner`;
-    }
+    sidebarRemoval.remove();
 }
 /* header end */
 

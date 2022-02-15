@@ -37,7 +37,7 @@ body {
     width: 133px;
     height: 30px;
 }
-.top-menu-container a {
+#main-navigation a {
     font-size: 0.8em;
     font-weight: 500;
     color: #222;
@@ -45,10 +45,11 @@ body {
     text-transform: uppercase;
     font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-.navigation-bar a:hover {
+
+#main-navigation a:hover {
     color: #8490ff;
 }
-.navigation-bar > .top-menu-current {
+#main-navigation .top-menu-current {
     color: #8490ff;
 }
 .navigation-bar {
@@ -78,19 +79,19 @@ body {
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
     transition: all 0.3s ease 0.3s;
 }
-#top-menu-inner-nested {
+.top-menu-hidden-nested > .top-menu-inner {
     position: absolute;
     width: 100%;
     right: 100%;
     top: 40px;
 }
-.top-menu-arrow {
+.navigation-arrow-down {
     position: relative;
     top: 2.5px;
     left: 5%;
 }
-.top-menu-hidden-nested > a > .top-menu-arrow {
-    /* transform: rotate(270deg); */
+.top-menu-hidden-nested > a > .navigation-arrow-down {
+    transform: rotate(270deg);
     top: 5px;
     left: 70%;
 }
@@ -100,7 +101,7 @@ body {
 .top-menu-hidden-nested:hover > div {
     visibility: visible;
 }
-.top-menu-inner a {
+#main-navigation .top-menu-inner a {
     width: 180%;
     padding: 10px;
     text-transform: capitalize;
@@ -108,10 +109,6 @@ body {
 .top-menu-hidden-nested > a {
     display: block;
 }
-
-/*~~~~~~~~~Multi level End~~~~~~~~~*/
-/*~~~~~~~~~Responsive meniu~~~~~~~~~*/
-
 /*~~~~~~~~~Sidebar~~~~~~~~~*/
 .top-main-nav-side {
     position: absolute;
@@ -141,26 +138,31 @@ body {
     background-color: royalblue;
     color: white;
 } 
-/*~~~~~~~~~Side Bar~~~~~~~~~*/
-#top-side-on {
-    background-color: red;
+/*~~~~~~~~~Toggle navigation icons~~~~~~~~~*/
+#sidebar-main-on {
     display: none;
     position: fixed;
-    right: 35px;
     top: 30px;
+    right: 35px;
     z-index: 100;
+    transform: scale(1.5,1.5); 
 }
-#top-side-off {
-    background-color: yellow;
+#sidebar-main-off {
     display: none;
     position: fixed;
     top: 30px;
     right: 35px;
     z-index: 100;
+    transform: scale(1.5,1.5); 
 }
 @media (max-width: 990px) {
-    #top-side-on {
+    #sidebar-main-on {
         display: block;
+    }
+}
+@media (min-width: 990px) {
+    #sidebar-main-on {
+        visibility: hidden;
     }
 }
 
