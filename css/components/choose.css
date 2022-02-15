@@ -140,7 +140,7 @@
 }
 
 .choose-column:hover .circle{
-    background-color: #EDEFFF;
+   background-color: rgb(204, 209, 248, 0.5);
 }
 
 .choose-column:hover  .price-h2 {
