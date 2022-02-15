@@ -20,11 +20,13 @@
 </head>
 
 <body>
-     <!-- header start -->
-     <header id="top-header">
-         <div class="container top-menu-container">
+    <!-- header start -->
+    <i class="fa fa-bars" id="top-side-on" onclick="openSideMenu()"></i>
+    <i class="fa fa-bars" id="top-side-off" onclick="closeSideMenu()"></i>
+    <header id="top-header">
+        <div class="container top-menu-container">
             <div class="row" id="top-menu-nav-container">
-                <div class="col-2 logo-top" id="logo-top">
+                <div class="col-12 col-lg-2 logo-top" id="logo-top">
                     <a href="#"><img src="./img/logo-top-left-corner.png"></a>
                 </div> 
                 <nav class="col-9 ml-1 col-lg-7 ml-lg-3 hidden visible-lg top-main-nav" id="main-navigation">
@@ -35,18 +37,18 @@
                         <a href="#">Portfolio</a>
                         <a href="#">Pricing</a>
                         <div class="top-menu-hidden">
-                            <a href="#">Blog</a>
+                            <a href="#">Blog<i class="fa fa-angle-down top-menu-arrow"></i></a>
                             <div class="top-menu-inner">
                                 <a href="#">Blog Home</a>
                                 <a href="#">Blog Single</a>
                             </div>
                         </div>
                         <div class="top-menu-hidden">
-                            <a href="#">Pages</a>
+                            <a href="#">Pages<i class="fa fa-angle-down top-menu-arrow"></i></a>
                             <div class="top-menu-inner">
                                 <a href="#">Elements</a>
                                 <div class="top-menu-hidden-nested">
-                                    <a href="#">Level 2</a>
+                                    <a href="#">Level 2<i class="fa fa-angle-right top-menu-arrow"></i></a>
                                     <div class="top-menu-inner" id="top-menu-inner-nested">
                                         <a href="#">Items One</a>
                                         <a href="#">Items Two</a>
@@ -57,9 +59,7 @@
                         <a href="#">Contact</a>
                     </div>
                 </nav>
-                <i class="fa fa-bars col-1 ml-9 hidden-lg" id="top-side-on" onclick="openSideMenu()"></i>
-                <i class="fa fa-bars col-1 ml-9 hidden" id="top-side-off" onclick="closeSideMenu()"></i>
-                <!-- <i class="col-1 ml-9 top-side-menu-off " onclick="closeSideMenu()"></div> -->
+   
             </div>
         </div>
     </header>

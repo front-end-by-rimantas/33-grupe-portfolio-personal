@@ -16,6 +16,7 @@
 // /*~~~~~~~~~Sidebar Menu~~~~~~~~~*/
 
 function openSideMenu() {
+    /* variables */
     const toggleOn = document.getElementById(`top-side-on`);
     const toggleOff = document.getElementById(`top-side-off`);
     const nav = document.getElementById(`main-navigation`);
@@ -24,36 +25,38 @@ function openSideMenu() {
     );
     const hid = document.getElementsByClassName(`top-menu-hidden`);
     const inner = document.getElementsByClassName(`top-menu-inner`);
-    if (toggleOn.classList[`value`] === `fa fa-bars col-1 ml-9 hidden-lg`) {
-        toggleOn.classList[`value`] = `fa fa-bars col-1 ml-9 hidden`;
-        toggleOff.classList[`value`] = `fa fa-bars col-1 ml-9 hidden-lg`;
-        nav.classList[`value`] = `top-main-nav-side`;
-        navBar[0].classList[`value`] = `navigation-bar-side`;
-        while (hid.length > 0) {
-            hid[0].classList[`value`] = `top-menu-hidden-side`;
-            inner[0].classList[`value`] = `top-menu-inner-side`;
-        }
+    /* logic */
+    toggleOn.style.display = `none`;
+    toggleOff.style.display = `block`;
+    nav.classList[`value`] = `top-main-nav-side`;
+    navBar[0].classList[`value`] = `navigation-bar-side`;
+    while (hid.length > 0) {
+        hid[0].classList[`value`] = `top-menu-hidden-side`;
+    }
+    while (inner.length > 0) {
+        inner[0].classList[`value`] = `top-menu-inner-side`;
     }
 }
-
 function closeSideMenu() {
+    /* variables */
     const toggleOn = document.getElementById(`top-side-on`);
     const toggleOff = document.getElementById(`top-side-off`);
     const nav = document.getElementById(`main-navigation`);
     const navBar = document.getElementsByClassName(`navigation-bar-side`);
     const hid = document.getElementsByClassName(`top-menu-hidden-side`);
     const inner = document.getElementsByClassName(`top-menu-inner-side`);
-    if (toggleOff.classList[`value`] === `fa fa-bars col-1 ml-9 hidden-lg`) {
-        toggleOn.classList[`value`] = `fa fa-bars col-1 ml-9 hidden-lg`;
-        toggleOff.classList[`value`] = `fa fa-bars col-1 ml-9 hidden`;
-        nav.classList[
-            `value`
-        ] = `col-9 ml-1 col-lg-7 ml-lg-3 hidden visible-lg top-main-nav`;
-        navBar[0].classList[`value`] = `visible-flex navigation-bar`;
-        while (hid.length > 0) {
-            hid[0].classList[`value`] = `top-menu-hidden`;
-            inner[0].classList[`value`] = `top-menu-inner`;
-        }
+    /* logic */
+    toggleOn.style.display = `block`;
+    toggleOff.style.display = `none`;
+    nav.classList[
+        `value`
+    ] = `col-9 ml-1 col-lg-7 ml-lg-3 hidden visible-lg top-main-nav`;
+    navBar[0].classList[`value`] = `visible-flex navigation-bar`;
+    while (hid.length > 0) {
+        hid[0].classList[`value`] = `top-menu-hidden`;
+    }
+    while (inner.length > 0) {
+        inner[0].classList[`value`] = `top-menu-inner`;
     }
 }
 /* header end */
