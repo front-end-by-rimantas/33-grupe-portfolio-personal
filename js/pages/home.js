@@ -5,75 +5,57 @@
 /* header start */
 
 /*~~~~~~~~~Hide menu~~~~~~~~~*/
-// const hideNavigation = function () {
-//     const maxWidth990 = window.matchMedia('(max-width: 990px)');
-//     const nav = document.getElementsByClassName(
-//         `col-9 ml-1 col-lg-7 ml-lg-3 top-main-nav`
-//     );
-//     const navBar = document.getElementsByClassName(`navigation-bar`);
-//     console.log(nav[0]);
-//     if (maxWidth990.matches || window.innerWidth < 990) {
-//         navBar[0].className = `hidden navigation-bar`;
-//         nav[0].className = `ml-10 top-main-nav`;
-//     } else {
-//         navBar[0].className = `visible-flex navigation-bar`;
-//         nav[0].className = `col-9 ml-1 col-lg-7 ml-lg-3 top-main-nav`;
-//     }
-// };
+
 // /*~~~~~~~~~Load functions after reload~~~~~~~~~*/
 // window.onload = function () {
 //     hideNavigation();
 // };
 
-// /*~~~~~~~~~Respond to resizing~~~~~~~~~*/
 // // window.addEventListener('resize', hideNavigation);
+// /*~~~~~~~~~Respond to resizing~~~~~~~~~*/
 // /*~~~~~~~~~Sidebar Menu~~~~~~~~~*/
 
-eslint-disable-next-line no-unused-vars
 function openSideMenu() {
+    const toggleOn = document.getElementById(`top-side-on`);
+    const toggleOff = document.getElementById(`top-side-off`);
     const nav = document.getElementById(`main-navigation`);
     const navBar = document.getElementsByClassName(
         `visible-flex navigation-bar`
     );
     const hid = document.getElementsByClassName(`top-menu-hidden`);
     const inner = document.getElementsByClassName(`top-menu-inner`);
-
-    if (
-        nav.classList[`value`] ===
-        `col-9 ml-1 col-lg-7 ml-lg-3 hidden visible-lg top-main-nav`
-    ) {
+    if (toggleOn.classList[`value`] === `fa fa-bars col-1 ml-9 hidden-lg`) {
+        toggleOn.classList[`value`] = `fa fa-bars col-1 ml-9 hidden`;
+        toggleOff.classList[`value`] = `fa fa-bars col-1 ml-9 hidden-lg`;
         nav.classList[`value`] = `top-main-nav-side`;
         navBar[0].classList[`value`] = `navigation-bar-side`;
-        hid[0].classList[`value`] = `top-menu-hidden-side`;
-        hid[0].classList[`value`] = `top-menu-hidden-side`;
-        inner[0].classList[`value`] = `top-menu-inner-side`;
-        inner[0].classList[`value`] = `top-menu-inner-side`;
+        while (hid.length > 0) {
+            hid[0].classList[`value`] = `top-menu-hidden-side`;
+            inner[0].classList[`value`] = `top-menu-inner-side`;
+        }
     }
 }
 
-// menuOn[0].classList.add(`hidden`);
-// menuOff[0].classList.remove(`hidden`);
-eslint-disable-next-line no-unused-vars
 function closeSideMenu() {
+    const toggleOn = document.getElementById(`top-side-on`);
+    const toggleOff = document.getElementById(`top-side-off`);
     const nav = document.getElementById(`main-navigation`);
-    const navBar = document.getElementsByClassName(
-        `visible-flex navigation-bar`
-    );
-    const hid = document.getElementsByClassName(`top-menu-hidden`);
-    const inner = document.getElementsByClassName(`top-menu-inner`);
-
-    if (nav.classList[`value`] === `top-main-nav-side`) {
+    const navBar = document.getElementsByClassName(`navigation-bar-side`);
+    const hid = document.getElementsByClassName(`top-menu-hidden-side`);
+    const inner = document.getElementsByClassName(`top-menu-inner-side`);
+    if (toggleOff.classList[`value`] === `fa fa-bars col-1 ml-9 hidden-lg`) {
+        toggleOn.classList[`value`] = `fa fa-bars col-1 ml-9 hidden-lg`;
+        toggleOff.classList[`value`] = `fa fa-bars col-1 ml-9 hidden`;
         nav.classList[
             `value`
         ] = `col-9 ml-1 col-lg-7 ml-lg-3 hidden visible-lg top-main-nav`;
         navBar[0].classList[`value`] = `visible-flex navigation-bar`;
-        hid[0].classList[`value`] = `top-menu-hidden`;
-        hid[0].classList[`value`] = `top-menu-hidden`;
-        inner[0].classList[`value`] = `top-menu-inner`;
-        inner[0].classList[`value`] = `top-menu-inner`;
+        while (hid.length > 0) {
+            hid[0].classList[`value`] = `top-menu-hidden`;
+            inner[0].classList[`value`] = `top-menu-inner`;
+        }
     }
 }
-// openSideMenu();
 /* header end */
 
 /* hero start */

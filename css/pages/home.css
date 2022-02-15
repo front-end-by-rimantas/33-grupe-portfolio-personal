@@ -53,10 +53,9 @@ body {
 }
 .navigation-bar {
     gap: 5px;
-    /* justify-content: space-around; */
     justify-content: space-between;
     align-items: center;
-    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    /* font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; */
 }
 .navigation-bar > * {
     height: 20px;
@@ -143,6 +142,13 @@ body {
     color: white;
 } 
 /*~~~~~~~~~Side Bar~~~~~~~~~*/
+#top-side-on {
+    background-color: red;
+}
+#top-side-off {
+    background-color: yellow;
+}
+
 
 /* header end */
 
