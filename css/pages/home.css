@@ -7,34 +7,158 @@
 
 /* components */
 @import '../components/button.css';
+@import '../components/choose.css';
+
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
-/* header start */
-header {
-    background-color: #fff;
+body {
+    background-color: #F9F9FF;/*To remove*/
 }
-.logo-top > div {
-    height: 10vh;
+/* header start */
+#top-header {
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    background-color: #fff;
+    z-index: 99;
+}
+.top-menu-container {
+    margin-top: 0;
+    padding: 0;
+}
+#top-menu-nav-container {
+    display: flex;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0;
     justify-content: flex-end;
     align-items: center;
 }
-.navigation-bar {
-    height: 10vh;
-    padding: 0 5%;
-    justify-content: space-around;
-    align-items: center;
+#logo-top {
+    width: 133px;
+    height: 30px;
 }
-.navigation-bar > a {
-    padding: 0 2%;
+.top-menu-container a {
     font-size: 0.8em;
     font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
     color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-.navigation-bar > .top-menu-home-link {
+.navigation-bar a:hover {
     color: #8490ff;
 }
+.navigation-bar > .top-menu-current {
+    color: #8490ff;
+}
+.navigation-bar {
+    gap: 5px;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.navigation-bar > * {
+    height: 20px;
+}
+/*~~~~~~~~~Multi level Start~~~~~~~~~*/
+.top-menu-hidden {
+    position: relative;
+    margin-right: -35px;
+}
+.top-menu-hidden > a::after {
+    position: absolute;
+    margin-left: 5%;
+    content: "^";
+    transform: rotate(180deg) scaleX(1.6);
+}
+.top-menu-inner {       
+    display: flex;
+    visibility: hidden;
+    position: relative;
+    width: 200%;
+    top: 20px;
+    right: 100%;
+    /* padding: 10px; */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+    transition: all 0.3s ease 0.3s;
+}
+.top-menu-hidden:hover > div {
+    visibility: visible;
+}
+.top-menu-hidden-nested:hover > div {
+    visibility: visible;
+}
+.top-menu-inner a {
+    width: 180%;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.top-menu-hidden-nested > a {
+    display: block;
+}
+.top-menu-hidden-nested > a::after {
+    position: absolute;
+    content: "\003e";
+    left: 80%;
+}
+#top-menu-inner-nested {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+}
+/*~~~~~~~~~Multi level End~~~~~~~~~*/
+/*~~~~~~~~~Responsive meniu~~~~~~~~~*/
+
+/*~~~~~~~~~Sidebar~~~~~~~~~*/
+.top-main-nav-side {
+    position: absolute;
+    height: 100vh;
+    top:0;
+    left: 0px;
+}
+.navigation-bar-side {
+    display: inline-block;
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    margin-left: -2%;
+    background-color: black;
+    z-index: 99;
+    opacity: 0.9;
+    padding: 2vh 2%;
+}
+.navigation-bar-side > * {
+    float: left;
+    width: 100%;
+    margin-top: 3vh;
+    border: 1px solid white;
+}
+.navigation-bar-side a {
+    display: block;
+    background-color: royalblue;
+    color: white;
+} 
+/* @media (min-width: 991px) {
+    .top-side-menu-on {
+        display: none;
+    }
+    .top-side-menu-off {
+        display: none;
+    }
+    .top-main-nav {
+        display: inline-block;
+    }
+}
+
+
+}
+/*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
+/*~~~~~~~~~Side Bar~~~~~~~~~*/
 
 /* header end */
 
@@ -43,53 +167,148 @@ header {
     font-family: "Poppins", sans-serif;
     color: #222222;
     text-transform: uppercase;
+    text-align: left;
 }
 .a {
+    margin-top: 130px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
+    
     }
 .b {
-    font-size: 60px;
+    position: relative;
+    margin-top: 20px;
+    font-size: 53px;
     font-weight: 600;
     }
 .c {
+    position: relative;
+    margin-top: 20px;
     color: #777777;
     text-transform: none;
-    font-size: 14px;
+    height: 68px;
+    font-size: 15px;
     font-weight: 300;
     
     }
-.herobutton {
-    width: 168px;
-    height: 42px;
-    line-height: 42px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 500;
-    color: #fff;
-    background: linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-size: 13.5px;
-    
-    
+
+.imgThisIsMe {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 /* hero end */
 
 
 
 /* about cards start */
+
+.imgAboutMe {
+    max-width: 100%;
+    height: auto;
+}
+.a2, .b2, .c2 {
+    font-family: "Poppins", sans-serif;
+    color: #222222;
+    text-transform: uppercase;
+    text-align: left;
+}
+.a2 {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    }
+.b2 {
+    position: relative;
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: 600;
+    width: 370px;
+    line-height: 1.2em;
+    }
+.c2 {
+    position: relative;
+    margin-top: 30px;
+    color: #777777;
+    text-transform: none;
+    height: 68px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 444px;
+    
+    }
+
 /* about cards end */
 
 /* about progress-bars start */
 /* about progress-bars end */
 
 /* services start */
-/* services end */
+.myoffered{
+    width: 100%;
+    color: #222222;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.4;
+}   
+.pastraipa{
+    width: 100%;
+    text-align: center;
+    color: #777777;
+    font-size: 18px;
+     line-height: 1.5;
+    padding-top: 15px;  
+}
+.meniu{
+    align-items: center;
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 70px; 
+     margin: 0;
+}
+.meniu > a{
+     line-height: 3;
+     margin-top: 10px;
+     
+}
+.meniu h4{
+    
+    margin-bottom:0px;
+    padding-top: 20px;
+    line-height: 1.5em;
+    font-size: 19px;
+}
+.meniu h4:hover{
+    color: #8490ff;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+.meniu p{
+    margin-top: 0;
+    margin-bottom:80px;
+    padding-top: 10PX;
+    color: #777777;
+    font-size: 15px;
+    line-height: 1.7em;
+}
+.meniu img{
+    width: 35px;
+    height: 35px;
+ } 
+.path:hover{
+    color: #8490ff;
+    
+}
+.meniu:hover{
+    color: #8490ff;
+    transition-duration: 0.2s;
+        
+     
+}
 
 /* why choose us start */
 /* why choose us end */

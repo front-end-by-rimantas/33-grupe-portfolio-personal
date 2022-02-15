@@ -1,0 +1,152 @@
+.choose {
+    text-align: center;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.choose-row2{
+    /*--half-gap:  0px;*/
+    
+}
+.choose-column {
+    background-color: #F9F9FF;
+    padding: 20px 5px;
+    margin: 0 !important;
+    width: 25% !important;
+}
+ 
+
+@media (max-width: 991px){
+    .choose-column{
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 959px){
+    .choose-column{
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 767px){
+    .choose-column{
+        width: 100% !important;
+    }
+}
+.choose-row > .choose-row-h1 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.choose-row > .pp {
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.choose-row > p {
+    text-align: center;
+}
+
+.choose-row > .choose-row-h4 {
+    padding-top: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.choose-row > .choose-row-p {
+    height: 45px;
+    margin-top: 5px;
+}
+
+.choose-box > .choose-box-p {
+    border-top: 1px solid #EEEEEE ;
+    margin: 0 5px;
+    padding: 10px 0px;
+    height: 45px;
+}
+
+.choose-box > .choose-box-p:last-child {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.price {
+    margin: 0;
+    padding: 20px 5px;
+    font-size: 25px;
+}
+
+.price > .price-h2 {
+    font-weight: 600;
+}
+
+.circle {
+    background-color: #E2E5FF;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.circle2 {
+    background-color: #EDEFFF;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.circle2 > .circle2-h2 {
+    color: rgb(12, 12, 12);
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.price > .price-a {
+    display: none;
+    text-decoration: none;
+    line-height: 56px;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.choose-column:hover {
+    background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
+    color: white;
+    cursor: pointer;
+    /*box-shadow: 0 24px 44px #8490ff;*/
+    /*transform: translateY(-10px);*/
+    transform: scale(1.04,1.04);
+    transition-duration:  0.1s;
+}
+
+.choose-column:hover p, .choose-column:hover .circle2-h2{
+    color: white;
+}
+
+
+.choose-column:hover .circle2{
+    background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
+}
+
+.choose-column:hover .circle{
+    background-color: #EDEFFF;
+}
+
+.choose-column:hover  .price-h2 {
+    display: none;
+}
+
+.choose-column:hover  .price-a {
+    display: block;
+}
