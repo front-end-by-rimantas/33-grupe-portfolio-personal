@@ -114,12 +114,11 @@ body {
 /*~~~~~~~~~Responsive meniu~~~~~~~~~*/
 
 /*~~~~~~~~~Sidebar~~~~~~~~~*/
-.nav-side {
-    /* margin-left: 35%; */
-    /* position: fixed; */
-    width: 100%;
+.top-main-nav-side {
+    position: absolute;
     height: 100vh;
-
+    top:0;
+    left: 0px;
 }
 .navigation-bar-side {
     display: inline-block;
@@ -142,60 +141,23 @@ body {
     display: block;
     background-color: royalblue;
     color: white;
-}
-@media (min-width: 991px ) {
-    .top-menu-button {
+} 
+/* @media (min-width: 991px) {
+    .top-side-menu-on {
         display: none;
     }
+    .top-side-menu-off {
+        display: none;
+    }
+    .top-main-nav {
+        display: inline-block;
+    }
 }
 
-@media (max-width: 990px) {
-/*~~~~~~~~~Small size screen menu icon Start~~~~~~~~~*/
-    .top-side-menu-on {
-        position: relative;
-        float: right;
-        width: 20px;
-        height: 20px;
-        top: 20px;
-        right:20px;
-        background-color: red;
-    }
-    .top-side-menu-on::before {
-        position: absolute;
-        content: "|||";
-        font-size: 0.8em;
-        top: 1px;
-        left: 5px;
-        transform: rotate(90deg) scale(1.5,1.2);
-    }
-    .top-side-menu-off {
-        position: relative;
-        float:right;
-        width: 20px;
-        height: 20px;
-        top: 20px;
-        right:20px;
-        background-color: red;
-    }
-    .top-side-menu-off::before {
-        position: absolute;
-        content: "X";
-        font-weight: 900;
-        left: 5px;
-        transform: scale(1.5,1.2);
-    }
 
-
+}
 /*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
 /*~~~~~~~~~Side Bar~~~~~~~~~*/
-
-}
-@media (max-width: 767px) {
-    header > div {
-        padding-top: 30px;
-    }
-}
-
 
 /* header end */
 
