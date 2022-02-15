@@ -478,9 +478,8 @@ nav > div .top-menu-home {
 /* footer start */
 
 .aboutme{ 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    position: sticky;
+    height: 432px;
     font-family: "Poppins", sans-serif;
     background-color: #04091e; 
 }  
@@ -500,7 +499,6 @@ nav > div .top-menu-home {
     padding-top: 3px;
 }
 .aboutme .email{
-    height: 500px;
     width: 30px; 
 }
 .aboutme .Colorlib{
