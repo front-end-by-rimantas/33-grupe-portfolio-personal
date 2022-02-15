@@ -37,7 +37,6 @@ function openSideMenu() {
     );
     const hid = document.getElementsByClassName(`top-menu-hidden`);
     const inner = document.getElementsByClassName(`top-menu-inner`);
-    const inner = document.getElementsByClassName(`top-menu-inner`);
 
     if (
         nav.classList[`value`] ===
@@ -54,27 +53,8 @@ function openSideMenu() {
             `value`
         ] = `col-9 ml-1 col-lg-7 ml-lg-3 hidden visible-lg top-main-nav`;
     }
-    console.log(nav.classList[`value`]);
 }
 
-console.log(document.getElementById(`main-navigation`))
-
-// const nav = document.getElementsByTagName(`nav`);
-// const nav = document.getElementsByClassName(`navigation-bar`);
-// const navBar = document.getElementsByClassName(`navigation-bar`);
-// const hid = document.getElementsByClassName(`top-menu-hidden`);
-// const menuOn = document.getElementsByClassName(`top-side-menu-on`);
-// const menuOff = document.getElementsByClassName(`top-side-menu-off`);
-// nav[0].className = `nav-side`;
-// navBar[0].classList.add(`navigation-bar-side`);
-// navBar[0].classList.remove(`hidden`);
-// navBar[0].classList.remove(`navigation-bar`);
-// for (let i = 0; i < 2; i++) {
-//     hid[0].classList.add(`top-menu-hidden-side`);
-//     hid[0].classList.remove(`top-menu-hidden`);
-//     inner[0].classList.add(`top-menu-inner-side`);
-//     inner[0].classList.remove(`top-menu-inner`);
-// }
 // menuOn[0].classList.add(`hidden`);
 // menuOff[0].classList.remove(`hidden`);
 // // eslint-disable-next-line no-unused-vars
