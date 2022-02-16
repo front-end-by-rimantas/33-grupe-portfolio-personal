@@ -76,6 +76,11 @@ function sidebarExpand () {
 /* testimonials end */
 
 /* bottom logos start */
+
+function logosSlide () {
+    
+}
+
 /* bottom logos end */
 
 /* footer start */
