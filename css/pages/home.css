@@ -367,6 +367,10 @@ body {
 /* testimonials end */
 
 /* bottom logos start */
+
+.logos-main-container {
+    background-image: linear-gradient(113deg, rgba(132,144,255,1) 0%, rgba(128,149,255,1) 29%, rgba(98,189,252,1) 100%);
+}
 /* bottom logos end */
 
 /* footer start */
