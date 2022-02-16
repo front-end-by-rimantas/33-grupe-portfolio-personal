@@ -148,23 +148,24 @@ body {
     display: block;
 } 
 .sidebar-navigation-inner {
-    /* display: none; */
-    max-height: 0;
     visibility: hidden;
+    max-height: 0;
     /* height: 30px; */
     /* overflow: hidden; */
     transition: all 0.3s ease 0.3s;
     margin-top: 10px;
 }
 .sidebar-navigation-hidden  > .sidebar-navigation-inner {
-    visibility: visible;
+    visibility: hidden;
     transition: all 1.5s ease 0.5s;
 }
 #sidebar-main-navigation .navigation-arrow-down {
     left: 70%;
 }
 
-
+#sidebar-main-navigation .navigation-arrow-down {
+    position: relative;
+}
 
 /*~~~~~~~~~Toggle navigation icons~~~~~~~~~*/
 #sidebar-main-on {

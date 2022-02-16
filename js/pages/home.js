@@ -44,6 +44,8 @@ function closeSideMenu() {
     toggleOff.style.display = `none`;
     sidebarRemoval.remove();
 }
+function sidebarExpand () {
+}
 /* header end */
 
 /* hero start */
