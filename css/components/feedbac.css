@@ -22,15 +22,15 @@
 
 .big-ceo {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     gap: 20px;
 }
 
 .ceo {
-    width: 48%;
+    width: 100%;
     display: grid;
     gap: 10px;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 50px 1fr;
     grid-template-areas: 
     'foto-fase ceo-p1'
     'foto-fase ceo-h4'
@@ -39,8 +39,9 @@
     padding: 30px;
 }
 
-.foto-face{
+.foto-face {
     grid-area: foto-fase;
+    width: 35px;
 }
 
 .ceo-p1 {
@@ -66,4 +67,10 @@
     font-weight: 300;
     line-height: 1.625em;
     color: #777777;
+}
+
+@media (max-width: 767px){
+    .big-ceo {
+        flex-wrap: wrap;
+    }
 }
