@@ -376,10 +376,23 @@ body {
 .logos-container-top > .logos-main-wrraper {
     margin-top: 0;
     margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+
+    /* width: 2000px; */
+
 }
+.logos-icon-box {
+    /* transform: translate3d(-502px, 0px, 0px); */
+    /* transform: translate3d(-1332px, 0px, 0px); */
+    transition: all 0.25s ease 0s;
+    display: inline-block;
+}
+
 .logos-main-container {
-    justify-content: space-between;
-    overflow-y: hidden;
+    /* justify-content: space-between; */
+
+    /* width: 3330px; */
 }
 .logos-icon {
     opacity: 0.5;
@@ -387,13 +400,6 @@ body {
 .logos-icon:hover {
     opacity: 0.9;
 }
-.logos-icon-box {
-    transform: translate3d(-502px, 0px, 0px);
-    /* transform: translate3d(-1332px, 0px, 0px); */
-    transition: all 0.25s ease 0s;
-}
-
-
 
 
 /*
