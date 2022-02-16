@@ -4,17 +4,7 @@
 
 /* header start */
 
-/*~~~~~~~~~Hide menu~~~~~~~~~*/
-
-// /*~~~~~~~~~Load functions after reload~~~~~~~~~*/
-// window.onload = function () {
-//     hideNavigation();
-// };
-
-// // window.addEventListener('resize', hideNavigation);
-// /*~~~~~~~~~Respond to resizing~~~~~~~~~*/
-// /*~~~~~~~~~Sidebar Menu~~~~~~~~~*/
-
+/*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
     /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
@@ -25,7 +15,6 @@ function openSideMenu() {
     toggleOff.style.display = `block`;
     sidebar.id = `sidebar-main-navigation`;
     sidebar.removeAttribute(`class`);
-    // sidebar.setAttribute(`class`, `sidebar-main-navigation`);
     sidebar.getElementsByClassName(
         `navigation-bar`
     )[0].className = `sidebar-navigation`;

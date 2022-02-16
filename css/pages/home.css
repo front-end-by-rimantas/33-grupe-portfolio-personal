@@ -65,6 +65,7 @@ body {
 .top-menu-hidden {
     position: relative;
     margin-right: -35px;
+    /* max-width: 0;/?????*/
 }
 .top-menu-inner {       
     display: flex;
@@ -140,16 +141,29 @@ body {
 .sidebar-navigation > * {
     float: left;
     width: 100%;
-    margin-top: 3vh;
-    margin-left: 10%;
+    margin-top: 4.5vh;
+    margin-left: 4.5%;
 }
 .sidebar-navigation a {
     display: block;
 } 
 .sidebar-navigation-inner {
-    display: none;;
-    /* visibility: hidden; */
+    /* display: none; */
+    max-height: 0;
+    visibility: hidden;
+    /* height: 30px; */
+    /* overflow: hidden; */
+    transition: all 0.3s ease 0.3s;
+    margin-top: 10px;
 }
+.sidebar-navigation-hidden  > .sidebar-navigation-inner {
+    visibility: visible;
+    transition: all 1.5s ease 0.5s;
+}
+#sidebar-main-navigation .navigation-arrow-down {
+    left: 70%;
+}
+
 
 
 /*~~~~~~~~~Toggle navigation icons~~~~~~~~~*/
