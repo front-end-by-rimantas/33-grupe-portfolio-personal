@@ -8,289 +8,231 @@
 /* components */
 @import '../components/button.css';
 @import '../components/choose.css';
+
 @import '../components/featured.css';
 
 
 
+@import '../components/feedbac.css';
+
+
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 body {
-    background-color: #F9F9FF;/*To remove*/
-}
-/* header start */
-/*To make margin-top height responsive, white background header */
-header {
-    margin-top: -100px;
-}
-header > div {
-    width: 100%;
     background-color: #fff;
 }
-nav a {
-    padding: 0 2%;
+/* header start */
+
+#top-header {
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: -21.213px 21.213px 30px 0px rgb(158 158 158 / 30%);
+}
+.top-menu-container {
+    margin-top: 0;
+    padding: 0;
+}
+#top-menu-nav-container {
+    display: flex;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+}
+#logo-top {
+    width: 133px;
+    height: 30px;
+}
+#main-navigation a {
     font-size: 0.8em;
     font-weight: 500;
     color: #222;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-}
-nav a:hover {
-    color: #8490ff;
+    /* font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; */
 }
 
-nav > div .top-menu-home {
+#main-navigation a:hover {
     color: #8490ff;
 }
-
-.logo-top > div {
-    height: 10vh;
-    justify-content: flex-start;
-    align-items: center;
+#main-navigation .top-menu-current {
+    color: #8490ff;
 }
 .navigation-bar {
-    height: 10vh;
-    padding: 0 5%;
+    gap: 5px;
     justify-content: space-between;
     align-items: center;
     font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
-
+.navigation-bar > * {
+    height: 20px;
+}
 /*~~~~~~~~~Multi level Start~~~~~~~~~*/
 .top-menu-hidden {
     position: relative;
-    width: 10%;
-    line-height: 0; /*don't remove, extra margin from bellow*/
-
+    margin-right: -35px;
+    /* max-width: 0;/?????*/
 }
-
-/*Base for multi layer box*/
 .top-menu-inner {       
     display: flex;
     visibility: hidden;
-    position: absolute;
-    line-height: 20px;
-    margin-top: 5vh;
-    margin-left: -200%;
-    padding: 10px;
+    position: relative;
+    width: 200%;
+    top: 20px;
+    right: 130%;
     flex-direction: column;
     align-items: flex-start;
     background-color: #fff;
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-    transition: all 0.5s ease 0.5s;
+    transition: all 0.3s ease 0.3s;
 }
-
-
-.top-menu-hidden > .top-menu-inner {
-    width: 300%; 
+.top-menu-hidden-nested > .top-menu-inner {
+    position: absolute;
+    width: 100%;
+    right: 100%;
+    top: 40px;
+}
+.navigation-arrow-down {
+    position: relative;
+    top: 2.5px;
+    left: 5%;
+}
+.top-menu-hidden-nested > a > .navigation-arrow-down {
+    transform: rotate(270deg);
+    top: 5px;
+    left: 70%;
 }
 .top-menu-hidden:hover > div {
     visibility: visible;
 }
-
-
-.top-menu-hidden-nested > .top-menu-inner {
-    width: 100%; 
-    left: 100%;
-    top: 3vh;
-}
 .top-menu-hidden-nested:hover > div {
     visibility: visible;
 }
-
-
-.top-menu-inner a {
+#main-navigation .top-menu-inner a {
+    width: 180%;
     padding: 10px;
     text-transform: capitalize;
 }
-
-/*Base for multi layer box*/
-.top-menu-inner {       
-    display: flex;
-    visibility: hidden;
-    position: absolute;
-    line-height: 20px;
-    margin-top: 5vh;
-    margin-left: -200%;
-    padding: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
-    transition: all 0.5s ease 0.5s;
-}
-
-
-.top-menu-hidden > .top-menu-inner {
-    width: 300%; 
-}
-.top-menu-hidden:hover > div {
-    visibility: visible;
-}
-
-
-.top-menu-hidden-nested > .top-menu-inner {
-    width: 100%; 
-    left: 100%;
-    top: 3vh;
-}
-.top-menu-hidden-nested:hover > div {
-    visibility: visible;
-}
-
-
-.top-menu-inner a {
-    padding: 10px;
-    text-transform: capitalize;
-}
-.top-menu-hidden > a::after {
-    position: absolute;
-    margin-left: 10%;
-    content: "^";
-    transform: rotate(180deg) scaleX(1.6);
-}
-.top-menu-hidden-nested > a {/*makes it like the other div element in the block*/
+.top-menu-hidden-nested > a {
     display: block;
 }
-.top-menu-hidden-nested {
-    width: 100%;
-}
-.top-menu-hidden-nested > a::after {
-    position: absolute;
-    margin-left: 50%;
-
-    content: "\003e";
-}
-/*~~~~~~~~~Multi level End~~~~~~~~~*/
-/*~~~~~~~~~Responsive meniu~~~~~~~~~*/
-
 /*~~~~~~~~~Sidebar~~~~~~~~~*/
-.nav-side {
-    /* margin-left: 35%; */
-    position: fixed;
-    width: 100%;
-    height: 100vh;
 
-}
-.navigation-bar-side {
-    display: inline-block;
+#sidebar-main-navigation {
     position: fixed;
-    width: 30%;
     height: 100vh;
-    margin-left: -2%;
-    background-color: black;
-    z-index: 99;
-    opacity: 0.9;
-    padding: 2vh 2%;
+    width: 100%;
+    top:0;
+    left: 0px;
+    z-index: 11;
+    opacity: 0.6;
+    background-color: darkgray;
 }
-.navigation-bar-side > * {
+.sidebar-navigation {
+    display: inline-block;
+    width: 33%;
+    height: 100vh;
+    background-color: black;
+}
+#sidebar-main-navigation a {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#sidebar-main-navigation .sidebar-navigation-inner a {
+    text-transform: capitalize;
+}
+.sidebar-navigation > * {
     float: left;
     width: 100%;
-    margin-top: 3vh;
-    border: 1px solid white;
-
+    margin-top: 4.5vh;
+    margin-left: 4.5%;
 }
-.navigation-bar-side a {
+.sidebar-navigation a {
     display: block;
-
-    background-color: royalblue;
-    color: white;
+} 
+.sidebar-navigation-inner {
+    visibility: hidden;
+    max-height: 0;
+    /* height: 30px; */
+    /* overflow: hidden; */
+    transition: all 0.3s ease 0.3s;
+    margin-top: 10px;
 }
-/* .top-menu-hidden-side > div {
+.sidebar-navigation-hidden  > .sidebar-navigation-inner {
+    visibility: hidden;
+    transition: all 1.5s ease 0.5s;
+}
+#sidebar-main-navigation .navigation-arrow-down {
+    left: 70%;
+}
+
+#sidebar-main-navigation .navigation-arrow-down {
+    position: relative;
+}
+
+/*~~~~~~~~~Toggle navigation icons~~~~~~~~~*/
+#sidebar-main-on {
     display: none;
-} */
-
-
-
-@media (min-width: 991px ) {
-    .top-menu-button {
-        display: none;
-    }
+    position: fixed;
+    top: 30px;
+    right: 35px;
+    z-index: 12;
+    transform: scale(1.5,1.5); 
 }
-@media (max-width: 1198px) {
-    header > div {
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-left: 5px;
-    }
+#sidebar-main-off {
+    display: none;
+    position: fixed;
+    /* height: 100vh; */
+    /* width: 70%; */
+    top: 30px;
+    right: 35px;
+    z-index: 12;
+    transform: scale(1.5,1.5); 
 }
 @media (max-width: 990px) {
-    header > div {
-        padding-top: 20px;
-    }
-/*~~~~~~~~~Small size screen menu icon Start~~~~~~~~~*/
-    .top-side-menu-on {
-        /* display: none; */
-        position: relative;
-        width: 20px;
-        height: 20px;
-        float:right;
-        top: 20px;
-        right:20px;
-        background-color: red;
-    }
-    .top-side-menu-on::before {
-        position: absolute;
-        content: "|||";
-        font-size: 0.8em;
-        top: 1px;
-        left: 5px;
-        transform: rotate(90deg) scale(1.5,1.2);
-    }
-    .top-side-menu-off {
-        position: relative;
-        float:right;
-        width: 20px;
-        height: 20px;
-        top: 20px;
-        right:20px;
-        background-color: red;
-    }
-    .top-side-menu-off::before {
-        /* display: block; */
-        /* font-family: 'Font Awesome\ 5 Free'; */
-        /* content: "\f09a"; */
-        position: absolute;
-        content: "X";
-        font-weight: 900;
-        left: 5px;
-        transform: scale(1.5,1.2);
-    }
-
-
-/*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
-/*~~~~~~~~~Side Bar~~~~~~~~~*/
-
-}
-@media (max-width: 767px) {
-    header > div {
-        padding-top: 30px;
+    #sidebar-main-on {
+        display: block;
     }
 }
-
+@media (min-width: 990px) {
+    #sidebar-main-on {
+        visibility: hidden;
+    }
+}
 
 /* header end */
 
 /* hero start */
-.a, .b, .c {
+.first {
+    margin-top: -115px;
+    background-color: #F9F9FF;
+    height: 735px;
+   }
+.title-a, .mainTitle-a, .text-a {
     font-family: "Poppins", sans-serif;
     color: #222222;
     text-transform: uppercase;
     text-align: left;
 }
-.a {
+.title-a {
     margin-top: 130px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
     
     }
-.b {
+.mainTitle-a {
     position: relative;
     margin-top: 20px;
     font-size: 53px;
     font-weight: 600;
     }
-.c {
+.text-a {
     position: relative;
     margin-top: 20px;
     color: #777777;
@@ -313,24 +255,24 @@ nav > div .top-menu-home {
 
 
 /* about cards start */
-
+ 
 .imgAboutMe {
     max-width: 100%;
     height: auto;
 }
-.a2, .b2, .c2 {
+.title-b, .mainTitle-b, .text-b {
     font-family: "Poppins", sans-serif;
     color: #222222;
     text-transform: uppercase;
     text-align: left;
 }
-.a2 {
+.title-b {
     margin-top: 30px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
     }
-.b2 {
+.mainTitle-b {
     position: relative;
     margin-top: 30px;
     font-size: 36px;
@@ -338,7 +280,7 @@ nav > div .top-menu-home {
     width: 370px;
     line-height: 1.2em;
     }
-.c2 {
+.text-b {
     position: relative;
     margin-top: 30px;
     color: #777777;
@@ -434,4 +376,66 @@ nav > div .top-menu-home {
 /* bottom logos end */
 
 /* footer start */
+
+.aboutme{ 
+    position: sticky;
+    height: 432px;
+    font-family: "Poppins", sans-serif;
+    background-color: #04091e; 
+}  
+.aboutme h3{
+    color: #fff;
+    margin-top: 10px;
+    font-size: 18px; 
+    text-decoration: none; 
+}
+.aboutme p{
+    padding-top: 22px;
+    color: #777777;
+    line-height: 22px;
+    font-size: 14px; 
+}
+.aboutme .heart{
+    padding-top: 3px;
+}
+.aboutme .email{
+    width: 30px; 
+}
+.aboutme .Colorlib{
+    color: #8490ff;
+}
+.aboutme .email .box{
+    font-size: 15px;
+    color:  #f9f9ff;
+    margin-top: 20px;
+    padding-left: 15px;
+    position: relative;
+    display: inline block;
+    width: 398px;
+    height: 43px;
+}
+.aboutme .email .button{
+    cursor: pointer;
+    display: inline;
+    background-color: #8490ff;
+    margin-top: -43px;
+    margin-left: 395px;
+    border: #62bdfc;
+    width: 47px;
+    height: 43px;  
+}
+.aboutme .email .button .submit{
+    padding-top: 10px;
+    margin-right: 5px;
+}
+.aboutme .fa{
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 7px;
+    color: #fff;
+}
+.aboutme .fa:hover{
+    color: #8490ff;
+
+}
 /* footer end */
