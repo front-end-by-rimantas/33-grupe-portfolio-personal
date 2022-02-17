@@ -77,25 +77,6 @@ function sidebarExpand () {
 
 /* bottom logos start */
 
-// console.log(document.getElementsByClassName(`logos-main-container`)[0]);
-const mainContainer = document.getElementsByClassName(
-    `logos-main-container`
-)[0];
-
-function addItem(number) {
-    let item = document.createElement('img');
-    item.classList.add(`logos-icon`);
-    item.classList.add(`logos-icon-${1}`);
-    item.src = `./img/png/l${(number % 5) + 1}.png.webp`;
-    return item;
-}
-for (let i = 0; i < 7; i++) {
-    mainContainer.appendChild(addItem(i));
-}
-// for (let i = 0; i < 15; i++) {
-//     mainContainer.innerHTML += `<div class="logos-icon-box"><img class="logos-icon" src="./img/png/l${(i % 5) + 1}.png.webp"></div>`
-// }
-
 /* bottom logos end */
 
 /* footer start */

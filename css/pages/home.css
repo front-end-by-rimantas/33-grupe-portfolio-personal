@@ -67,7 +67,8 @@ body {
 .top-menu-hidden {
     position: relative;
     margin-right: -35px;
-    /* max-width: 0;/?????*/
+    /* max-width: 0; */
+    /* padding:10px; */
 }
 .top-menu-inner {       
     display: flex;
@@ -390,12 +391,19 @@ body {
 }
 
 .logos-main-container {
-    /* justify-content: space-between; */
-
-    /* width: 3330px; */
+    justify-content: space-between;
+    transform-style: preserve-3d;
 }
 .logos-icon {
-    opacity: 0.5;
+    position: absolute;
+    /* top:0; */
+    /* width: 100%; */
+    /* margin: auto; */
+    /* padding: 1rem 4rem; */
+    z-index: 100;
+    /* opacity: 0.5; */
+    transition: transform .5s, opacity .5s, z-index .5s;
+
 }
 .logos-icon:hover {
     opacity: 0.9;
@@ -407,6 +415,8 @@ transform: translate3d(-1332px, 0px, 0px);
 transition: all 0.25s ease 0s;
 width: 3330px;
 */
+
+
 
 
 
