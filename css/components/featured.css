@@ -1,3 +1,5 @@
+
+
 .featured * {
     font-family: "Poppins", sans-serif;
     text-align: center;
@@ -21,7 +23,7 @@
 
 }
 
-p {
+.navAll, .nav {
     display: inline-block;
     padding: 12px 12px;
     border-radius: 13%;
@@ -39,7 +41,7 @@ p {
     
 }
 
-.navFeatured p::after {
+::after {
     content: "";
     display: block;
     width: calc(0% - 60px);
