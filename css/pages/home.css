@@ -9,18 +9,26 @@
 @import '../components/button.css';
 @import '../components/choose.css';
 
+@import '../components/featured.css';
+
+
+
+@import '../components/feedbac.css';
+
 
 /* CUSTOM STYLE BELOW THIS COMMENT LINE */
 body {
-    background-color: #F9F9FF;/*To remove*/
+    background-color: #fff;
 }
 /* header start */
+
 #top-header {
     position: fixed;
     width: 100%;
     margin-top: 0;
     background-color: #fff;
-    z-index: 99;
+    z-index: 10;
+    box-shadow: -21.213px 21.213px 30px 0px rgb(158 158 158 / 30%);
 }
 .top-menu-container {
     margin-top: 0;
@@ -31,30 +39,29 @@ body {
     height: 70px;
     margin: 0 auto;
     padding: 0;
-    justify-content: flex-end;
     align-items: center;
 }
 #logo-top {
     width: 133px;
     height: 30px;
 }
-.top-menu-container a {
+#main-navigation a {
     font-size: 0.8em;
     font-weight: 500;
     color: #222;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    /* font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; */
 }
-.navigation-bar a:hover {
+
+#main-navigation a:hover {
     color: #8490ff;
 }
-.navigation-bar > .top-menu-current {
+#main-navigation .top-menu-current {
     color: #8490ff;
 }
 .navigation-bar {
     gap: 5px;
-    /* justify-content: space-around; */
     justify-content: space-between;
     align-items: center;
     font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -66,12 +73,7 @@ body {
 .top-menu-hidden {
     position: relative;
     margin-right: -35px;
-}
-.top-menu-hidden > a::after {
-    position: absolute;
-    margin-left: 5%;
-    content: "^";
-    transform: rotate(180deg) scaleX(1.6);
+    /* max-width: 0;/?????*/
 }
 .top-menu-inner {       
     display: flex;
@@ -79,13 +81,28 @@ body {
     position: relative;
     width: 200%;
     top: 20px;
-    right: 100%;
-    /* padding: 10px; */
+    right: 130%;
     flex-direction: column;
     align-items: flex-start;
     background-color: #fff;
     box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
     transition: all 0.3s ease 0.3s;
+}
+.top-menu-hidden-nested > .top-menu-inner {
+    position: absolute;
+    width: 100%;
+    right: 100%;
+    top: 40px;
+}
+.navigation-arrow-down {
+    position: relative;
+    top: 2.5px;
+    left: 5%;
+}
+.top-menu-hidden-nested > a > .navigation-arrow-down {
+    transform: rotate(270deg);
+    top: 5px;
+    left: 70%;
 }
 .top-menu-hidden:hover > div {
     visibility: visible;
@@ -93,7 +110,7 @@ body {
 .top-menu-hidden-nested:hover > div {
     visibility: visible;
 }
-.top-menu-inner a {
+#main-navigation .top-menu-inner a {
     width: 180%;
     padding: 10px;
     text-transform: capitalize;
@@ -101,88 +118,121 @@ body {
 .top-menu-hidden-nested > a {
     display: block;
 }
-.top-menu-hidden-nested > a::after {
-    position: absolute;
-    content: "\003e";
-    left: 80%;
-}
-#top-menu-inner-nested {
-    position: absolute;
-    width: 100%;
-    top: 50px;
-}
-/*~~~~~~~~~Multi level End~~~~~~~~~*/
-/*~~~~~~~~~Responsive meniu~~~~~~~~~*/
-
 /*~~~~~~~~~Sidebar~~~~~~~~~*/
-.top-main-nav-side {
-    position: absolute;
+
+#sidebar-main-navigation {
+    position: fixed;
     height: 100vh;
+    width: 100%;
     top:0;
     left: 0px;
+    z-index: 11;
+    opacity: 0.6;
+    background-color: darkgray;
 }
-.navigation-bar-side {
+.sidebar-navigation {
     display: inline-block;
-    position: fixed;
-    width: 30%;
+    width: 33%;
     height: 100vh;
-    margin-left: -2%;
     background-color: black;
-    z-index: 99;
-    opacity: 0.9;
-    padding: 2vh 2%;
 }
-.navigation-bar-side > * {
+#sidebar-main-navigation a {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#sidebar-main-navigation .sidebar-navigation-inner a {
+    text-transform: capitalize;
+}
+.sidebar-navigation > * {
     float: left;
     width: 100%;
-    margin-top: 3vh;
-    border: 1px solid white;
+    margin-top: 4.5vh;
+    margin-left: 4.5%;
 }
-.navigation-bar-side a {
+.sidebar-navigation a {
     display: block;
-    background-color: royalblue;
-    color: white;
 } 
-/* @media (min-width: 991px) {
-    .top-side-menu-on {
-        display: none;
-    }
-    .top-side-menu-off {
-        display: none;
-    }
-    .top-main-nav {
-        display: inline-block;
-    }
+.sidebar-navigation-inner {
+    visibility: hidden;
+    max-height: 0;
+    /* height: 30px; */
+    /* overflow: hidden; */
+    transition: all 0.3s ease 0.3s;
+    margin-top: 10px;
+}
+.sidebar-navigation-hidden  > .sidebar-navigation-inner {
+    visibility: hidden;
+    transition: all 1.5s ease 0.5s;
+}
+#sidebar-main-navigation .navigation-arrow-down {
+    left: 70%;
 }
 
-
+#sidebar-main-navigation .navigation-arrow-down {
+    position: relative;
 }
-/*~~~~~~~~~Small size screen menu icon End~~~~~~~~~*/
-/*~~~~~~~~~Side Bar~~~~~~~~~*/
+
+/*~~~~~~~~~Toggle navigation icons~~~~~~~~~*/
+#sidebar-main-on {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 35px;
+    z-index: 12;
+    transform: scale(1.5,1.5); 
+}
+#sidebar-main-off {
+    display: none;
+    position: fixed;
+    /* height: 100vh; */
+    /* width: 70%; */
+    top: 30px;
+    right: 35px;
+    z-index: 12;
+    transform: scale(1.5,1.5); 
+}
+@media (max-width: 990px) {
+    #sidebar-main-on {
+        display: block;
+    }
+}
+@media (min-width: 990px) {
+    #sidebar-main-on {
+        visibility: hidden;
+    }
+}
 
 /* header end */
 
 /* hero start */
-.a, .b, .c {
+.first {
+    margin-top: -115px;
+    background-color: #F9F9FF;
+    height: 735px;
+   }
+.title-a, .mainTitle-a, .text-a {
     font-family: "Poppins", sans-serif;
     color: #222222;
     text-transform: uppercase;
     text-align: left;
 }
-.a {
+.title-a {
     margin-top: 130px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
     
     }
-.b {
+.mainTitle-a {
     position: relative;
     margin-top: 20px;
     font-size: 53px;
     font-weight: 600;
     }
-.c {
+.text-a {
     position: relative;
     margin-top: 20px;
     color: #777777;
@@ -205,24 +255,24 @@ body {
 
 
 /* about cards start */
-
+ 
 .imgAboutMe {
     max-width: 100%;
     height: auto;
 }
-.a2, .b2, .c2 {
+.title-b, .mainTitle-b, .text-b {
     font-family: "Poppins", sans-serif;
     color: #222222;
     text-transform: uppercase;
     text-align: left;
 }
-.a2 {
+.title-b {
     margin-top: 30px;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
     }
-.b2 {
+.mainTitle-b {
     position: relative;
     margin-top: 30px;
     font-size: 36px;
@@ -230,7 +280,7 @@ body {
     width: 370px;
     line-height: 1.2em;
     }
-.c2 {
+.text-b {
     position: relative;
     margin-top: 30px;
     color: #777777;
@@ -326,4 +376,66 @@ body {
 /* bottom logos end */
 
 /* footer start */
+
+.aboutme{ 
+    position: sticky;
+    height: 432px;
+    font-family: "Poppins", sans-serif;
+    background-color: #04091e; 
+}  
+.aboutme h3{
+    color: #fff;
+    margin-top: 10px;
+    font-size: 18px; 
+    text-decoration: none; 
+}
+.aboutme p{
+    padding-top: 22px;
+    color: #777777;
+    line-height: 22px;
+    font-size: 14px; 
+}
+.aboutme .heart{
+    padding-top: 3px;
+}
+.aboutme .email{
+    width: 30px; 
+}
+.aboutme .Colorlib{
+    color: #8490ff;
+}
+.aboutme .email .box{
+    font-size: 15px;
+    color:  #f9f9ff;
+    margin-top: 20px;
+    padding-left: 15px;
+    position: relative;
+    display: inline block;
+    width: 398px;
+    height: 43px;
+}
+.aboutme .email .button{
+    cursor: pointer;
+    display: inline;
+    background-color: #8490ff;
+    margin-top: -43px;
+    margin-left: 395px;
+    border: #62bdfc;
+    width: 47px;
+    height: 43px;  
+}
+.aboutme .email .button .submit{
+    padding-top: 10px;
+    margin-right: 5px;
+}
+.aboutme .fa{
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 7px;
+    color: #fff;
+}
+.aboutme .fa:hover{
+    color: #8490ff;
+
+}
 /* footer end */
