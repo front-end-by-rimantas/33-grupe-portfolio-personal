@@ -317,6 +317,85 @@ body {
 }
 
 /* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+
+.counter-conteiner{
+  
+    text-align: center;
+    background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    height: 322px;
+}
+.counter-conteiner h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700px;
+    font-weight: bold;
+    font-size: 34px;
+    margin-top: 14px;
+    color: #fff;
+    
+    
+}
+.counter-conteiner p{
+    padding-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
+/* why choose us start */
 /* why choose us end */
 
 /* contact start */
@@ -333,34 +412,33 @@ body {
 
 /* footer start */
 
-.aboutme{ 
-    position: sticky;
-    height: 432px;
+.footer{ 
+   
     font-family: "Poppins", sans-serif;
     background-color: #04091e; 
 }  
-.aboutme h3{
+.footer h3{
     color: #fff;
     margin-top: 10px;
     font-size: 18px; 
     text-decoration: none; 
 }
-.aboutme p{
+.footer p{
     padding-top: 22px;
     color: #777777;
     line-height: 22px;
     font-size: 14px; 
 }
-.aboutme .heart{
+.footer .heart{
     padding-top: 3px;
 }
-.aboutme .email{
+.footer .email{
     width: 30px; 
 }
-.aboutme .Colorlib{
+.footer .Colorlib{
     color: #8490ff;
 }
-.aboutme .email .box{
+.footer .email .box{
     font-size: 15px;
     color:  #f9f9ff;
     margin-top: 20px;
@@ -370,7 +448,7 @@ body {
     width: 398px;
     height: 43px;
 }
-.aboutme .email .button{
+.footer .email .button{
     cursor: pointer;
     display: inline;
     background-color: #8490ff;
@@ -380,18 +458,17 @@ body {
     width: 47px;
     height: 43px;  
 }
-.aboutme .email .button .submit{
+.footer .email .button .submit{
     padding-top: 10px;
     margin-right: 5px;
 }
-.aboutme .fa{
+.footer  .fa{
     font-size: 15px;
     margin-top: 15px;
     padding: 7px;
     color: #fff;
 }
-.aboutme .fa:hover{
+.footer .fa:hover{
     color: #8490ff;
-
 }
 /* footer end */
