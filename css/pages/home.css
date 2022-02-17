@@ -311,17 +311,10 @@ body {
 }
 .meniu:hover{
     color: #8490ff;
-    transition-duration: 0.2s;
-        
-     
+    transition-duration: 0.2s; 
 }
 
 /* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-
 .counter-conteiner{
   
     text-align: center;
@@ -335,8 +328,6 @@ body {
     font-size: 34px;
     margin-top: 14px;
     color: #fff;
-    
-    
 }
 .counter-conteiner p{
     padding-top: 10px;
@@ -346,56 +337,6 @@ body {
     margin-bottom: 1rem;
     text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
-/* why choose us start */
 /* why choose us end */
 
 /* contact start */
@@ -411,9 +352,7 @@ body {
 /* bottom logos end */
 
 /* footer start */
-
 .footer{ 
-   
     font-family: "Poppins", sans-serif;
     background-color: #04091e; 
 }  
@@ -431,9 +370,6 @@ body {
 }
 .footer .heart{
     padding-top: 3px;
-}
-.footer .email{
-    width: 30px; 
 }
 .footer .Colorlib{
     color: #8490ff;
