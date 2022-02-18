@@ -1,17 +1,17 @@
-.feedbac{
+.feedback{
     background-color: #F9F9FF;
     padding-top: 85px;
     padding-bottom: 120px;
 }
 
-.feedbac-h1 {
+.feedback-h1 {
     font-size: 36px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-.feedbac-p {
+.feedback-p {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 14px;
