@@ -34,14 +34,15 @@
     font-size: 12px;
     font-weight: 500;
     }
-:focus {
+
+    :focus {
     vertical-align: middle;
     color: #8490ff;
-    
-    
 }
 
-::after {
+
+/*Visiems ::after elementams*/
+/* ::after {
     content: "";
     display: block;
     width: calc(0% - 60px);
@@ -49,7 +50,10 @@
     height: 2px;
     background: #333;
     transition: width 350ms ease-out;
-}
+} */
+
+
+
 .nav:focus::after {
     width: 30%;
-    }
+}

@@ -22,43 +22,51 @@
     <!-- header start -->
     <i class="fa fa-bars" id="sidebar-main-on" onclick="openSideMenu()"></i>
     <i class="fa fa-close" id="sidebar-main-off" onclick="closeSideMenu()"></i>
-    <header id="top-header">
-        <div class="container navigation-container">
-            <div class="row" id="navigation-nav-container">
-                <div class="col-12 col-lg-2 logo-top" id="logo-top">
+    <header class="container top-header">
+        <div class="row nav-outer-wrapper">
+            <div class="visible-flex nav-container">
+                <div class="logo-top">
                     <a href="#"><img src="./img/logo-top-left-corner.png"></a>
                 </div> 
-                <nav class="col-9 ml-1 col-lg-7 ml-lg-3 -outer visible-flex-lg navigation-bar" id="main-navigation">
-                    <!-- <div class="visible-flex navigation-bar"> -->
-                    <a class="navigation-current" href="#">Home</a>
+                <nav class="hidden visible-flex-lg nav-main">
+                    <a class="nav-current" href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Services</a>
                     <a href="#">Portfolio</a>
                     <a href="#">Pricing</a>
-                    <div class="navigation-outer">
-                        <a href="#">Blog<i class="fa fa-angle-down navigation-arrow-down"></i></a>
-                        <div class="navigation-inner">
-                            <a href="#">Blog Home</a>
-                            <a href="#">Blog Single</a>
+                    <div class="nav-flyout">
+                        <div class="nav-subtitle"><a href="#">Blog</a></div>
+                        <div class="nav-submenu">
+                            <div><a href="#">Blog&nbsp;Home</a></div>
+                            <div><a href="#">Blog&nbsp;Single</a></div>
                         </div>
                     </div>
-                    <div class="navigation-outer">
-                        <a href="#">Pages<i class="fa fa-angle-down navigation-arrow-down"></i></a>
-                        <div class="navigation-inner">
-                            <a href="#">Elements</a>
-                            <div class="navigation-outer">
-                                <a href="#">Level 2<i class="fa fa-angle-down navigation-arrow-down"></i></a>
-                                <div class="navigation-inner">
-                                    <a href="#">Items One</a>
-                                    <a href="#">Items Two</a>
+                    <div class="nav-flyout">
+                        <div class="nav-subtitle"><a href="#">Pages</a></div>
+                        <div class="nav-submenu">
+                            <div><a href="#">Elements</a></div>
+                            <div class="nav-flyout submenu-left">
+                                <div class="nav-subtitle"><a href="">Level&nbsp;2</a></div>
+                                <div class="nav-submenu">
+                                    <div><a href="#">Items&nbsp;One</a></div>
+                                    <div><a href="#">Items&nbsp;Two</a></div>
+
+                       
+                                    <div class="nav-flyout submenu-right">
+                                        <div class="nav-subtitle"><a href="">Level&nbsp;3 need to improve</a></div>
+                                        <div class="nav-submenu">
+                                            <div><a href="#">Items&nbsp;One</a></div>
+                                            <div><a href="#">Items&nbsp;Two</a></div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <a href="#">Contact</a>
-                    <!-- </div> -->
                 </nav>
-   
             </div>
         </div>
     </header>
