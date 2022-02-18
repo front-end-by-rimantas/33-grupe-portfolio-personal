@@ -1,0 +1,257 @@
+#top-header {
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: -21.213px 21.213px 30px 0px rgb(158 158 158 / 30%);
+}
+.navigation-container {
+    margin-top: 0;
+    padding: 0;
+}
+#navigation-nav-container {
+    display: flex;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+}
+#logo-top {
+    width: 133px;
+    height: 30px;
+}
+#main-navigation a {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; */
+}
+
+#main-navigation a:hover {
+    color: #8490ff;
+}
+#main-navigation .navigation-current {
+    color: #8490ff;
+}
+.navigation-bar {
+    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Segoe UI","Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+.navigation-bar > * {
+    height: 20px;
+}
+/*~~~~~~~~~Multi level Start~~~~~~~~~*/
+.navigation-outer {
+    position: relative;
+}
+.navigation-inner {       
+    display: none;
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateY(100%);
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgb(127 137 161 / 25%);
+    /* transition: all 0.3s ease 0.3s; */
+}
+.navigation-bar .navigation-outer > .navigation-inner .navigation-inner {
+    top: 0;
+    bottom: unset;
+}
+.navigation-bar .navigation-outer:hover > .navigation-inner {
+    display: flex;
+}
+.navigation-arrow-down {
+    top: 5px;
+    left: 80%;
+    transform: rotate(270deg);
+}
+.navigation-bar > .navigation-outer > a > .navigation-arrow-down {
+    position: relative;
+    top: 2.5px;
+    left: 5%;
+    transform: rotate(0);
+}
+/* .navigation-outer:hover > div {
+    visibility: visible;
+}
+.navigation-outer-nested:hover > div {
+    visibility: visible;
+} */
+#main-navigation .navigation-inner a {
+    width: 180%;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.navigation-bar .navigation-outer .inner-direction-left:hover > .navigation-inner {
+    transform: translateX(-100%);
+}
+.navigation-bar .navigation-outer .inner-direction-right:hover > .navigation-inner {
+    transform: translateY(0) translateX(100%);
+}
+/* ~~~~~~~~~Sidebar~~~~~~~~~ */
+
+#sidebar-main-navigation {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top:0;
+    left: 0px;
+    z-index: 11;
+    opacity: 0.6;
+    background-color: darkgray;
+}
+.sidebar-navigation {
+    display: inline-block;
+    width: 33%;
+    height: 100vh;
+    background-color: black;
+}
+#sidebar-main-navigation a {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#sidebar-main-navigation .sidebar-navigation-inner a {
+    text-transform: capitalize;
+}
+.sidebar-navigation > * {
+    float: left;
+    width: 100%;
+    margin-top: 4.5vh;
+    margin-left: 4.5%;
+}
+.sidebar-navigation a {
+    display: block;
+} 
+.sidebar-navigation-inner {
+    visibility: hidden;
+    max-height: 0;
+    /* height: 30px; */
+    /* overflow: hidden; */
+    transition: all 0.3s ease 0.3s;
+    margin-top: 10px;
+}
+.sidebar-navigation-outer  > .sidebar-navigation-inner {
+    visibility: hidden;
+    transition: all 1.5s ease 0.5s;
+}
+#sidebar-main-navigation .navigation-arrow-down {
+    left: 70%;
+}
+
+#sidebar-main-navigation .navigation-arrow-down {
+    position: relative;
+}
+
+/*~~~~~~~~~Toggle navigation icons~~~~~~~~~*/
+#sidebar-main-on {
+    display: none;
+    position: fixed;
+    top: 30px;
+    right: 35px;
+    z-index: 12;
+    transform: scale(1.5,1.5); 
+}
+#sidebar-main-off {
+    display: none;
+    position: fixed;
+    /* height: 100vh; */
+    /* width: 70%; */
+    top: 30px;
+    right: 35px;
+    z-index: 12;
+    transform: scale(1.5,1.5); 
+}
+@media (max-width: 990px) {
+    #sidebar-main-on {
+        display: block;
+    }
+}
+@media (min-width: 990px) {
+    #sidebar-main-on {
+        visibility: hidden;
+    }
+}
+
+/* header end */
+
+/* hero start */
+/* hero end */
+
+/* about cards start */
+/* about cards end */
+
+/* about progress-bars start */
+/* about progress-bars end */
+
+/* services start */
+.myoffered{
+    width: 100%;
+    color: #222222;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.4;
+}   
+.pastraipa{
+    width: 100%;
+    text-align: center;
+    color: #777777;
+    font-size: 18px;
+     line-height: 1.5;
+    padding-top: 15px;  
+}
+.meniu{
+    align-items: center;
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom: 70px; 
+     margin: 0;
+}
+.meniu > a{
+     line-height: 3;
+     margin-top: 10px;
+     
+}
+.meniu h4{
+    
+    margin-bottom:0px;
+    padding-top: 20px;
+    line-height: 1.5em;
+    font-size: 19px;
+}
+.meniu h4:hover{
+    color: #8490ff;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+.meniu p{
+    margin-top: 0;
+    margin-bottom:80px;
+    padding-top: 10PX;
+    color: #777777;
+    font-size: 15px;
+    line-height: 1.7em;
+}
+.meniu img{
+    width: 35px;
+    height: 35px;
+ } 
+.path:hover{
+    color: #8490ff;
+    
+}
+.meniu:hover{
+    color: #8490ff;
+    transition-duration: 0.2s;
+}

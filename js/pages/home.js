@@ -18,19 +18,19 @@ function openSideMenu() {
     sidebar.getElementsByClassName(
         `navigation-bar`
     )[0].className = `sidebar-navigation`;
-    while (sidebar.getElementsByClassName(`top-menu-hidden`).length > 0) {
+    while (sidebar.getElementsByClassName(`navigation-outer`).length > 0) {
         sidebar.getElementsByClassName(
-            `top-menu-hidden`
-        )[0].className = `sidebar-navigation-hidden`;
+            `navigation-outer`
+        )[0].className = `sidebar-navigation-outer`;
     }
-    while (sidebar.getElementsByClassName(`top-menu-inner`).length > 0) {
+    while (sidebar.getElementsByClassName(`navigation-inner`).length > 0) {
         sidebar.getElementsByClassName(
-            `top-menu-inner`
+            `navigation-inner`
         )[0].className = `sidebar-navigation-inner`;
     }
     sidebar.getElementsByClassName(
-        `top-menu-hidden-nested`
-    )[0].className = `sidebar-navigation-hidden-nested`;
+        `navigation-outer-nested`
+    )[0].className = `sidebar-navigation-outer-nested`;
     document.getElementsByTagName('body')[0].appendChild(sidebar);
 }
 
