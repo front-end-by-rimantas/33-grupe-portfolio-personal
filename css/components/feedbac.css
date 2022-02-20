@@ -108,7 +108,7 @@
 @media (max-width: 1000px){
     .feedback-button{
         position: relative;
-        margin:calc(50% - 75px);
+        margin-left:calc(50% - 75px);
         bottom: -10px;
         width: 40px;
         height: 40px;
