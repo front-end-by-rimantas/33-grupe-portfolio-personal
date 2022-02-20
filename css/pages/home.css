@@ -323,10 +323,7 @@ body {
 }
 .logos-main-container {
     position: relative;
-    /* left: -242px; */
-    /* background-color: royalblue; */
     grid-template-columns: repeat(auto-fill, 230px);
-    /* justify-content: space-between; */
 }
   
 .logos-slides {
@@ -336,15 +333,18 @@ body {
     justify-content: center;
     grid-column-end: span 1;
     grid-row: 1 / span 1;
-    transition-delay: 0s;
-    transition: all;
-
-    /* opacity: 0.5; */
+    opacity: 0.5;
 }
 .logos-slides:hover {
     opacity: 0.9;
 }
 
+.left-0 {left:0}
+.left-230 {left:-230px;}
+.left-460 {left:-460px}
+.left-690 {left:-690px}
+.left-920 {left:-920px}
+.left-1150 {left:-1150px}
 
 
 /* bottom logos end */

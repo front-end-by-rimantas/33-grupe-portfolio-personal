@@ -65,22 +65,27 @@ function closeSideMenu() {
 /* services end */
 
 /* why choose us start */
-// const counters = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll('.counter');
 
-// counters.forEach((counter) => {
-//     counter.innerText = '0';
-//     const updateCounter = () => {
-//         const target = +counter.getAttribute('data-target');
-//         const c = +counter.innerText;
+counters.forEach((counter) =>{
+    counter.innerText = '0'; 
 
-//         const increment = target / 5000;
-//         if (c < target) {
-//             counter.innerText = `${Math.ceil(c + increment)}`;
-//             setTimeout(updateCounter, 1);
-//             updateCounter();
-//         }
-//     }
-// }
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute
+        ('data-target');
+        const c = +counter.innerText;
+
+        const increment = target / 5000;   
+
+        if (c < target) {
+            counter.innerText = `${Math.ceil(c 
+            + increment)}`; 
+            setTimeout(updateCounter, 1);
+            }
+            };
+            updateCounter();
+});
 /* why choose us end */
 
 /* contact start */
@@ -94,9 +99,11 @@ function closeSideMenu() {
 
 /* bottom logos start */
 
-
 const logosMainCotainer = function () {
     const cont = document.getElementsByClassName(`logos-main-container`)[0];
+    cont.style.left = `0px`;
+    cont.style.transitionDuration = `.5s`;
+    // cont.classList.add(`left-0`);
     for (let i = 0; i < 2 * 5; i++) {
         const div = document.createElement(`div`);
         const img = document.createElement(`img`);
@@ -108,25 +115,38 @@ const logosMainCotainer = function () {
 };
 logosMainCotainer();
 
+// let k = -230;
+// const iconSlider = function () {
+//     k = k + 230;
+//     const slides = document.getElementsByClassName(`logos-main-container`)[0];
+//     slides.transitionDuration = `250ms`;
+//     if (k === 0) {
+//         slides.classList.remove(`left-${1150}`);
+//     } else {
+//         slides.classList.remove(`left-${k - 230}`);
+//     }
+//     slides.classList.add(`left-${k}`);
+//     if (k === 1150) {
+//         slides.transitionDuration = `0`;
+//         k = -230;
+//     }
+// };
 const iconSlider = function () {
     const slides = document.getElementsByClassName(`logos-main-container`)[0];
-    // console.log(slides.offsetLeft);
-    // console.log(slides.style);
-    if (slides.offsetLeft <= -230 * 5) {
-        // slides.style.transition = `all`;
+    if (Number(slides.style.left.replace(`px`, ``)) === -230 * 5) {
+        slides.style.transitionDuration = `0ms`;
         slides.style.left = `${
-            Number(slides.style.left.replace(`px`, ``)) + 230 * 5
+            Number(slides.style.left.replace(`px`, ``)) + 5 * 230
         }px`;
-        slides.style.transitionDuration = `0.5s`;
+    // }
     } else {
+        slides.style.transitionDuration = `250ms`;
         slides.style.left = `${
             Number(slides.style.left.replace(`px`, ``)) - 230
         }px`;
-        slides.style.transitionDuration = `0.5s`;
     }
 };
 
-// iconSlider();
 setInterval(iconSlider, 3000);
 
 /* bottom logos end */
