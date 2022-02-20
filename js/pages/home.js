@@ -95,157 +95,40 @@ function closeSideMenu() {
 /* bottom logos start */
 
 
-// let slideIndex = 0;
-// showSlides();
-
-// const showSlides = function() {
-//     const slides = document.getElementsByClassName(`logos-slides`);
-//     for (let i = 0; i < slides.length; i++) {
-//         // slides[i].style.display = `none`;
-//     }
-//     slideIndex++;
-//     if (slideIndex > slides.length) {
-//         slideIndex = 1;
-//     }
-//     // slides[slideIndex - 1].style.display = `block`;
-//     setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
-
-// for (let i = 0; i < 5; i++) {
-//     const slide = document.getElementsByClassName(`logos-main-container`);
-//     // console.log(slide);
-//     // <div class="logos-slides" style="grid-column: 4 / 6;">
-//     // <img src="./img/png/l3.png.webp">
-// // </div>
-// }
-
-// const iconSlider = function () {
-//     for (let i = 0; i < 7; i++) {
-//         const e = document.getElementById(`logos-icon-box${i}`);
-//         e.id = `logos-icon-box${
-//             e.id[e.id.length - 1] > 0 ? e.id[e.id.length - 1] - 1 : 6
-//         }`;
-//     }
-// };
+const logosMainCotainer = function () {
+    const cont = document.getElementsByClassName(`logos-main-container`)[0];
+    for (let i = 0; i < 2 * 5; i++) {
+        const div = document.createElement(`div`);
+        const img = document.createElement(`img`);
+        img.src = `./img/png/l${(i % 5) + 1}.png.webp`;
+        div.appendChild(img);
+        div.classList.add(`logos-slides`);
+        cont.appendChild(div);
+    }
+};
+logosMainCotainer();
 
 const iconSlider = function () {
-    const slides = document.getElementsByClassName(`logos-slides`);
-    // console.log(slides.length)
-    for (let slide of slides) {
-        // console.log(`offset ~> `, slide.offsetLeft)
-        if (slide.offsetLeft < 242) {
-            console.log(`offset ~> `, slide.offsetLeft)
-            slide.style.left = `${Number(slide.style.left.replace(`px`, ``)) + 6 * 242}px`;
-            slide.style.transitionDuration = `0s`;
-        } else {
-            slide.style.left = `${Number(slide.style.left.replace(`px`, ``)) - 242}px`;
-            slide.style.transitionDuration = `3s`;
-        }
-        // console.log(slide.offsetLeft)
+    const slides = document.getElementsByClassName(`logos-main-container`)[0];
+    // console.log(slides.offsetLeft);
+    // console.log(slides.style);
+    if (slides.offsetLeft <= -230 * 5) {
+        // slides.style.transition = `all`;
+        slides.style.left = `${
+            Number(slides.style.left.replace(`px`, ``)) + 230 * 5
+        }px`;
+        slides.style.transitionDuration = `0.5s`;
+    } else {
+        slides.style.left = `${
+            Number(slides.style.left.replace(`px`, ``)) - 230
+        }px`;
+        slides.style.transitionDuration = `0.5s`;
     }
-    console.log(`<~~~~>`);
 };
-// iconSlider();
-// iconSlider();
-// iconSlider();
-// iconSlider();
-// iconSlider();
-// iconSlider();
-// iconSlider();
-// iconSlider();
-// iconSlider();
-// iconSlider();
-setInterval(iconSlider, 4000);
-console.log(`<~~~~>`);
 
-// if (k === 0) {
-//     e.style.left = `${k * 242}px`;
-//     e.style.transitionDuration = `1s`;
-// }
-// if (k === 1) {
-//     e.style.left = `${k * 242}px`;
-// }
-// if (k === 2) {
-//     e.style.left = `${k * 242}px`;
-// }
-// if (k === 3) {
-//     e.style.left = `${k * 242}px`;
-// }
-// if (k === 4) {
-//     e.style.left = `${k * 242}px`;
-// }
-// if (k === 5) {
-//     e.style.left = `${k * 242}px`;
-// }
-// if (k === 6) {
-//     e.style.left = `${k * 242}px`;
-// }
+// iconSlider();
+setInterval(iconSlider, 3000);
 
-
-// e.style.gridRowStart = `${k}`;
-// slides[0].classList.replace(`c${0}`, `c${6}`);
-// for (let i = 1; i < 7; i++) {
-//     slides[i].classList.replace(`c${i}`, `c${i - 1}`);
-//     console.log(slides[i].classList)
-    // slides[i].classList.add(`c${i}`);
-    // slides[i].classList.remove(`c${i - 1}`);
-// }
-    // if(k === 0) {e.style.left = `-${k*242}px`}
-    // if(k === 1) {e.style.left = `-${k*242}px`}
-    // if(k === 2) {e.style.left = `-${k*242}px`}
-    // if(k === 3) {e.style.left = `-${k*242}px`}
-    // if(k === 4) {e.style.left = `-${k*242}px`}
-    // if(k === 5) {e.style.left = `-${k*242}px`}
-
-
-
-    // console.log(value[0].classList[value[0].classList.length - 1]);
-    // console.log(value[0].style.transform());
-    // value[0].style.transform = `translate(-242px)`;
-    // for (let i = 1; i < 5; i++) {
-        //     // slides[i].style.gridColumnStart = i - 1;
-        
-        // }
-    // console.log(slides[0])
-    // slides[0].style.gridColumnStart = 1 - 1;
-    // slides[0].style.gridColumnStart = -1;
-    // slides[1].style.gridColumnStart = 1;
-    // slides[0].style.transform = `translate(-242px)`;
-    // slides[1].style.transform = `translate(-242px)`;
-    // console.log(slides[0])
-    // setInterval(iconSlider, 2000);
-
-// let slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
-//     const slides = document.getElementsByClassName(`logos-slides`);
-//     for (let i = 0; i < slides.length; i++) {
-//         slides[i].style.display = `none`;
-//     }
-//     slideIndex++;
-//     if (slideIndex > slides.length) {
-//         slideIndex = 1;
-//     }
-//     slides[slideIndex - 1].style.display = `block`;
-//     setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
-// let slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
-//     let i;
-//     const slides = document.getElementsByClassName(`mySlides`);
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = `none`;
-//     }
-//     slideIndex++;
-//     if (slideIndex > slides.length) {
-//         slideIndex = 1;
-//     }
-//     slides[slideIndex - 1].style.display = `block`;
-//     setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
 /* bottom logos end */
 
 /* footer start */
