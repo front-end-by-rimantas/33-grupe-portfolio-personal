@@ -1,0 +1,101 @@
+/* ThisIsMe */
+.first {
+    background-color: #F9F9FF;
+    height: 735px;
+   }
+.title-a, .mainTitle-a, .text-a {
+    font-family: "Poppins", sans-serif;
+    color: #222222;
+    text-transform: uppercase;
+    text-align: left;
+}
+.title-a {
+    margin-top: 130px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    
+    }
+.mainTitle-a {
+    position: relative;
+    margin-top: 20px;
+    font-size: 53px;
+    font-weight: 600;
+    }
+.text-a {
+    position: relative;
+    margin-top: 20px;
+    color: #777777;
+    text-transform: none;
+    height: 68px;
+    font-size: 15px;
+    font-weight: 300;
+    
+    }
+
+
+
+.imgThisIsMe {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/* AboutMe */
+.imgAboutMe {
+    max-width: 100%;
+    height: auto;
+}
+.title-b, .mainTitle-b, .text-b {
+    font-family: "Poppins", sans-serif;
+    color: #222222;
+    text-transform: uppercase;
+    text-align: left;
+}
+.title-b {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    }
+.mainTitle-b {
+    position: relative;
+    margin-top: 30px;
+    font-size: 36px;
+    font-weight: 600;
+    width: 370px;
+    line-height: 1.2em;
+    }
+.text-b {
+    position: relative;
+    margin-top: 30px;
+    color: #777777;
+    text-transform: none;
+    height: 68px;
+    font-size: 14px;
+    font-weight: 300;
+   
+    
+    }
+    @media (min-width: 1800px){
+    .text-b {
+    font-size: 13px;
+    }       
+    @media (min-width: 1200px){
+    .text-b {
+    font-size: 13px;
+    }
+    @media (min-width: 900px){
+    .text-b {
+    font-size: 13px;}
+    }
+    }
+    @media (min-width: 600px){
+    .text-b {
+    font-size: 12px;}
+    }
+    @media (max-width: 599px){
+    .text-b {
+    font-size: 12px;}
+}                            

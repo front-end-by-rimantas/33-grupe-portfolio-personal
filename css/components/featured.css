@@ -1,3 +1,5 @@
+
+
 .featured * {
     font-family: "Poppins", sans-serif;
     text-align: center;
@@ -20,9 +22,11 @@
     line-height: 1.625em;
 
 }
-.navFeatured p {
+
+.navAll, .nav {
     display: inline-block;
-    padding: 18px 12px;
+    padding: 12px 12px;
+    border-radius: 13%;
     cursor: pointer;
     position: relative;
     text-transform: uppercase;
@@ -30,12 +34,14 @@
     font-size: 12px;
     font-weight: 500;
     }
-.navFeatured p:hover {
-    
+:focus {
     vertical-align: middle;
-    color: #8490ff;   
-    }    
-.navFeatured p::after {
+    color: #8490ff;
+    
+    
+}
+
+::after {
     content: "";
     display: block;
     width: calc(0% - 60px);
@@ -44,11 +50,6 @@
     background: #333;
     transition: width 350ms ease-out;
 }
-.nav:hover::after {
+.nav:focus::after {
     width: 30%;
     }
-    
-     
-    
-
-
