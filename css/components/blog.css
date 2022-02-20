@@ -1,34 +1,39 @@
-.container-blog {
+.blogs {
     font-family: 'Poppins', sans-serif;
     align-content: center; 
     padding-bottom: 60px;
 }
-.container-blog > .row-top-blog > .h2 {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 550;
-    padding: 20px 0px 20px 0;
-    text-transform: capitalize;
-    background: linear-gradient(#e2e2e6 0%, #f9f9ff 100%);
+.blogs > .blog {
+    min-height: 1px; 
+    padding: 20px 0px;
+    position: relative;
 }
-
-.container-blog > .row-top-blog > .p {
-    text-align: center;
-    font-size: 14px;
-    padding: 0px 300px;
-    color: #777;
+.blogs > .blog > .icon {
+    display: inline-block;
+    width: 100%; 
 }
-
-.container-blog > .row-bottom-blog > {
+.blogs > .blog > .information bar {
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    /* background-color: aqua; */
+    font-size: 14px;
+    font-weight: 300px;
+    }
+.blogs > .blog > .information bar > .img-bar1 {
+    font-size: 14px;
+    line-height: 1.625em;
+    position: relative;
+    /* align-items: center; */
+    border-bottom: 1px solid #777;
 }
-.container-blog > .row-bottom-blog > .column > .img-blog > .img {
-    width: 100%;
-    height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /* background-color: bisque; */
+.blogs > .blog > .title {
+
+    font-weight: 600px;
+    margin: 35px 0px 0px 0px;
+    text-transform: uppercase;
+    color: #222;
+    line-height: 1.2em! important;
+}
+.blogs > .blog > .description {
+    margin: 15px 0px 45px 0px;
+    font-size: 14px;
+    color: #777;  
 }

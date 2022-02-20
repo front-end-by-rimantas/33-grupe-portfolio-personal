@@ -7,6 +7,7 @@
 
 /* components */
 @import '../components/button.css';
+@import '../components/blog.css';
 @import '../components/choose.css';
 
 
@@ -423,6 +424,14 @@ nav > div .top-menu-home {
 /* contact end */
 
 /* blog start */
+a {
+    text-decoration: none;
+}
+.img-title::selection::selection {
+    background-color: #8490ff;
+    color: #fff;
+}
+
 /* blog end */
 
 /* testimonials start */
