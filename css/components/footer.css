@@ -1,0 +1,78 @@
+/* footer start */
+.footer { 
+    font-family: "Poppins", sans-serif;
+    background-color: #04091e; 
+}
+.footer .footer-main-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.footer-main-container > * {
+    flex-direction: column;
+    padding-bottom: 50px;
+    gap: 16px;
+}
+.email-container {
+    grid-template-columns: auto  43px;
+    background-color: pink;
+}
+.footer h3 {
+    margin-bottom: 9px;
+    font-size: 18px; 
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none; 
+}
+.footer p {
+    line-height: 22px;
+    font-size: 14px; 
+    color: #777777;
+}
+.footer-heart {
+    padding-top: 3px;
+}
+.footer-colorlib{
+    color: #8490ff;
+}
+.footer-email {
+    grid-column: 1/ span 1;
+    padding-left: 15px;
+    font-size: 15px;
+    color:  #f9f9ff;
+}
+
+.footer-button {
+    cursor: pointer;
+    height: 43px;
+    grid-column: 2 / span 1;
+    background-color: #8490ff;
+    border: #62bdfc;
+}
+.footer-submit{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+.footer-social .fa {
+    padding: 7px;
+    font-size: 15px;
+    color: #fff;
+}
+.footer-social .fa:hover{
+    color: #8490ff;
+}
+@media (max-width: 990px) {
+    .footer-main-container > *:not(:last-child) {
+        height: 220px;
+    }
+}
+@media (max-width: 766px) {
+    .footer-main-container > *:not(:last-child) {
+        height: 250px;
+    }
+}
+@media (max-width: 574px) {
+    .footer-main-container > *:not(:last-child) {
+        height: initial;
+    }
+}
+/* footer end */

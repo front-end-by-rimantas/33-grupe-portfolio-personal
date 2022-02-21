@@ -1,17 +1,17 @@
-.feedbac{
+.feedback{
     background-color: #F9F9FF;
     padding-top: 85px;
     padding-bottom: 120px;
 }
 
-.feedbac-h1 {
+.feedback-h1 {
     font-size: 36px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-.feedbac-p {
+.feedback-p {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 14px;
@@ -37,6 +37,7 @@
     'foto-fase ceo-p2';
     background-color: white;
     padding: 30px;
+    cursor: pointer;
 }
 
 .foto-face {
@@ -72,5 +73,45 @@
 @media (max-width: 767px){
     .big-ceo {
         flex-wrap: wrap;
+    }
+}
+
+.up, .down{
+    box-shadow: -5px 10px 18px rgb(157 157 157 / 20%);
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: #777777;
+}
+
+.up:hover, .down:hover{
+    background-color: #8490ff;
+    color: white;
+}
+
+.feedback-row{
+    position: relative;
+}
+
+.feedback-button{
+    position: absolute;
+    right: -35px;
+    display: grid;
+    gap: 3px;
+    top: 30%;
+}
+
+.ceo:hover > .ceo-h4 {
+    color: #8490ff;
+}
+
+@media (max-width: 1000px){
+    .feedback-button{
+        position: relative;
+        margin-left:calc(50% - 75px);
+        bottom: -10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
     }
 }

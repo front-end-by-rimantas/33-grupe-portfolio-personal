@@ -1,5 +1,6 @@
 // IMPORTS
 
+
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
 /* header start */
@@ -39,8 +40,8 @@ function closeSideMenu() {
     toggleOff.style.display = `none`;
     sidebarRemoval.remove();
 }
-function sidebarExpand () {
-}
+// function sidebarExpand () {
+// }
 /* header end */
 
 /* hero start */
@@ -59,6 +60,27 @@ function sidebarExpand () {
 /* services end */
 
 /* why choose us start */
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach((counter) =>{
+    counter.innerText = '0'; 
+
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute
+        ('data-target');
+        const c = +counter.innerText;
+
+        const increment = target / 200;   
+
+        if (c < target) {
+            counter.innerText = `${Math.ceil(c 
+            + increment)}`; 
+            setTimeout(updateCounter, 1);
+            }
+            };
+            updateCounter();
+});
 /* why choose us end */
 
 /* contact start */
@@ -71,6 +93,73 @@ function sidebarExpand () {
 /* testimonials end */
 
 /* bottom logos start */
+
+const logosMainCotainer = function () {
+    const cont = document.getElementsByClassName(`logos-main-container`)[0];
+    cont.style.left = `0px`;
+    cont.style.transitionDuration = `.5s`;
+    // cont.classList.add(`left-0`);
+    for (let i = 0; i < 2 * 5; i++) {
+        const div = document.createElement(`div`);
+        const img = document.createElement(`img`);
+        img.src = `./img/png/l${(i % 5) + 1}.png.webp`;
+        div.appendChild(img);
+        div.classList.add(`logos-slides`);
+        cont.appendChild(div);
+    }
+};
+logosMainCotainer();
+
+// let k = -230;
+// const iconSlider = function () {
+//     k = k + 230;
+//     const slides = document.getElementsByClassName(`logos-main-container`)[0];
+//     slides.transitionDuration = `250ms`;
+//     if (k === 0) {
+//         slides.classList.remove(`left-${1150}`);
+//     } else {
+//         slides.classList.remove(`left-${k - 230}`);
+//     }
+//     slides.classList.add(`left-${k}`);
+//     if (k === 1150) {
+//         slides.transitionDuration = `0`;
+//         k = -230;
+//     }
+// };
+// function finalizeAndCleanUp(event) {
+//     if (event.propertyName == 'left') {
+//         this.style.left = `0`;
+//         this.removeEventListener('transitionend', finalizeAndCleanUp);
+//         // console.log(event);
+//     }
+// }
+const iconOffset = function (slides) {
+    slides.style.transitionDuration = `250ms`;
+    slides.style.left = `${
+        Number(slides.style.left.replace(`px`, ``)) - 230
+    }px`;
+};
+const iconOffsetReset = function (slides) {
+    slides.style.transitionDuration = `0ms`;
+    slides.style.left = `${
+        Number(slides.style.left.replace(`px`, ``)) + 5 * 230
+    }px`;
+};
+const iconSlider = function () {
+    const slides = document.getElementsByClassName(`logos-main-container`)[0];
+    if (Number(slides.style.left.replace(`px`, ``)) === -230 * 5) {
+        // slides.offsetHight;
+        // setTimeout(iconOffsetReset(slides), 30);
+        iconOffsetReset(slides); //}
+    } else {
+        iconOffset(slides);
+    }
+    // setTimeout(iconOffset(slides), 100);
+};
+
+iconSlider();
+setInterval(iconSlider, 3000);
+
 /* bottom logos end */
 
 /* footer start */
