@@ -109,4 +109,44 @@
 
 .price > .price-a {
     display: none;
+    text-decoration: none;
+    line-height: 56px;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.choose-column:hover {
+    background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
+    color: white;
+    cursor: pointer;
+    /*box-shadow: 0 24px 44px #8490ff;*/
+    /*transform: translateY(-10px);*/
+    transform: scale(1.04,1.04);
+    transition-duration:  0.1s;
+}
+
+.choose-column:hover p, .choose-column:hover .circle2-h2{
+    color: white;
+}
+
+
+.choose-column:hover .circle2{
+    background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
+}
+
+.choose-column:hover .circle{
+   background-color: rgb(204, 209, 248, 0.5);
+}
+
+.choose-column:hover  .price-h2 {
+    display: none;
+}
+
+.choose-column:hover  .price-a {
+    display: block;
 }

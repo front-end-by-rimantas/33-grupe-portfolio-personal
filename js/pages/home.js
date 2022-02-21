@@ -1,90 +1,52 @@
 // IMPORTS
 
+
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
 /* header start */
 
-
-/*~~~~~~~~~Responsive meniu 1000-1199px~~~~~~~~~*/
-const resizeTopMenu1199 = function () {
-    const mediaQuery = window.matchMedia('(min-width: 1199px)');
-    const nav = document.getElementsByTagName(`nav`);
-    const header = document.getElementsByTagName(`header`);
-    if (mediaQuery.matches) {
-        nav[0].className = `col-7 ml-3`;
-        header[0].className = `container`;
-    } else {
-        nav[0].className = `col-8 ml-2`;
-        header[0].className = `container-fluid`;
-    }
-};
-/*~~~~~~~~~Hide menu~~~~~~~~~*/
-const hideNavigation = function () {
-    const maxWidth990 = window.matchMedia('(max-width: 990px)');
-    const navBar = document.getElementsByClassName(`navigation-bar`);
-    if (maxWidth990.matches || window.innerWidth < 990) {
-        navBar[0].className = `hidden navigation-bar`;
-    } else {
-        navBar[0].className = `visible-flex navigation-bar`;
-    }
-};
-/*~~~~~~~~~Load functions after reload~~~~~~~~~*/
-window.onload = function () {
-    resizeTopMenu1199();
-    hideNavigation();
-};
-/*~~~~~~~~~Respond to resizing~~~~~~~~~*/
-window.addEventListener('resize', resizeTopMenu1199);
-window.addEventListener('resize', hideNavigation);
-/*~~~~~~~~~Sidebar Menu~~~~~~~~~*/
-
-// eslint-disable-next-line no-unused-vars
+/*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
-    const nav = document.getElementsByTagName(`nav`);
-    const navBar = document.getElementsByClassName(`navigation-bar`);
-    const hid = document.getElementsByClassName(`top-menu-hidden`);
-    const inner = document.getElementsByClassName(`top-menu-inner`);
-    const menuOn = document.getElementsByClassName(`top-side-menu-on`);
-    const menuOff = document.getElementsByClassName(`top-side-menu-off`);
-    nav[0].className = `nav-side`;
-    navBar[0].classList.add(`navigation-bar-side`);
-    navBar[0].classList.remove(`hidden`);
-    navBar[0].classList.remove(`navigation-bar`);
-    console.log(hid)
-    for (let i = 0; i < 2; i++) {
-        hid[0].classList.add(`top-menu-hidden-side`);
-        hid[0].classList.remove(`top-menu-hidden`);
-        inner[0].classList.add(`top-menu-inner-side`);
-        inner[0].classList.remove(`top-menu-inner`);
+    /* variables */
+    const toggleOn = document.getElementById(`sidebar-main-on`);
+    const toggleOff = document.getElementById(`sidebar-main-off`);
+    const sidebar = document.getElementById(`main-navigation`).cloneNode(true);
+    /* logic */
+    toggleOn.style.display = `none`;
+    toggleOff.style.display = `block`;
+    sidebar.id = `sidebar-main-navigation`;
+    sidebar.removeAttribute(`class`);
+    sidebar.getElementsByClassName(
+        `navigation-bar`
+    )[0].className = `sidebar-navigation`;
+    while (sidebar.getElementsByClassName(`top-menu-hidden`).length > 0) {
+        sidebar.getElementsByClassName(
+            `top-menu-hidden`
+        )[0].className = `sidebar-navigation-hidden`;
     }
-    menuOn[0].classList.add(`hidden`);
-    menuOff[0].classList.remove(`hidden`);
+    while (sidebar.getElementsByClassName(`top-menu-inner`).length > 0) {
+        sidebar.getElementsByClassName(
+            `top-menu-inner`
+        )[0].className = `sidebar-navigation-inner`;
+    }
+    sidebar.getElementsByClassName(
+        `top-menu-hidden-nested`
+    )[0].className = `sidebar-navigation-hidden-nested`;
+    document.getElementsByTagName('body')[0].appendChild(sidebar);
 }
-// eslint-disable-next-line no-unused-vars
+
 function closeSideMenu() {
-    const nav = document.getElementsByTagName(`nav`);
-    const navBar = document.getElementsByClassName(`navigation-bar-side`);
-    const hid = document.getElementsByClassName(`top-menu-hidden-side`);
-    const inner = document.getElementsByClassName(`top-menu-inner-side`);
-    const menuOn = document.getElementsByClassName(`top-side-menu-on`);
-    const menuOff = document.getElementsByClassName(`top-side-menu-off`);
-
-    nav[0].className = `col-8 ml-2`;
-    nav[0].classList.remove(`nav-side`);
-    navBar[0].classList.add(`navigation-bar`);
-    navBar[0].classList.add(`hidden`);
-    navBar[0].classList.remove(`navigation-bar-side`);
-    for (let i = 0; i < hid[0].classList.length; i++) {
-        hid[0].classList.add(`top-menu-hidden`);
-        hid[0].classList.remove(`top-menu-hidden-side`);
-        inner[0].classList.add(`top-menu-inner`);
-        inner[0].classList.remove(`top-menu-inner-side`);
-    }
-    menuOff[0].classList.add(`hidden`);
-    menuOn[0].classList.remove(`hidden`);
+    /* variables */
+    const toggleOn = document.getElementById(`sidebar-main-on`);
+    const toggleOff = document.getElementById(`sidebar-main-off`);
+    const sidebarRemoval = document.getElementById(`sidebar-main-navigation`);
+    /* logic */
+    toggleOn.style.display = `block`;
+    toggleOff.style.display = `none`;
+    sidebarRemoval.remove();
 }
-// openSideMenu();
-
+// function sidebarExpand () {
+// }
 /* header end */
 
 /* hero start */
@@ -103,6 +65,27 @@ function closeSideMenu() {
 /* services end */
 
 /* why choose us start */
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach((counter) =>{
+    counter.innerText = '0'; 
+
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute
+        ('data-target');
+        const c = +counter.innerText;
+
+        const increment = target / 5000;   
+
+        if (c < target) {
+            counter.innerText = `${Math.ceil(c 
+            + increment)}`; 
+            setTimeout(updateCounter, 1);
+            }
+            };
+            updateCounter();
+});
 /* why choose us end */
 
 /* contact start */
@@ -115,6 +98,57 @@ function closeSideMenu() {
 /* testimonials end */
 
 /* bottom logos start */
+
+const logosMainCotainer = function () {
+    const cont = document.getElementsByClassName(`logos-main-container`)[0];
+    cont.style.left = `0px`;
+    cont.style.transitionDuration = `.5s`;
+    // cont.classList.add(`left-0`);
+    for (let i = 0; i < 2 * 5; i++) {
+        const div = document.createElement(`div`);
+        const img = document.createElement(`img`);
+        img.src = `./img/png/l${(i % 5) + 1}.png.webp`;
+        div.appendChild(img);
+        div.classList.add(`logos-slides`);
+        cont.appendChild(div);
+    }
+};
+logosMainCotainer();
+
+// let k = -230;
+// const iconSlider = function () {
+//     k = k + 230;
+//     const slides = document.getElementsByClassName(`logos-main-container`)[0];
+//     slides.transitionDuration = `250ms`;
+//     if (k === 0) {
+//         slides.classList.remove(`left-${1150}`);
+//     } else {
+//         slides.classList.remove(`left-${k - 230}`);
+//     }
+//     slides.classList.add(`left-${k}`);
+//     if (k === 1150) {
+//         slides.transitionDuration = `0`;
+//         k = -230;
+//     }
+// };
+const iconSlider = function () {
+    const slides = document.getElementsByClassName(`logos-main-container`)[0];
+    if (Number(slides.style.left.replace(`px`, ``)) === -230 * 5) {
+        slides.style.transitionDuration = `0ms`;
+        slides.style.left = `${
+            Number(slides.style.left.replace(`px`, ``)) + 5 * 230
+        }px`;
+    // }
+    } else {
+        slides.style.transitionDuration = `250ms`;
+        slides.style.left = `${
+            Number(slides.style.left.replace(`px`, ``)) - 230
+        }px`;
+    }
+};
+
+setInterval(iconSlider, 3000);
+
 /* bottom logos end */
 
 /* footer start */
