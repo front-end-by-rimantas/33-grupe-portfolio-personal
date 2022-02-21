@@ -279,6 +279,8 @@ body {
     transition-duration: 0.2s; 
 }
 
+
+
 /* why choose us start */
 .counter-conteiner{
   
@@ -308,9 +310,6 @@ body {
 /* contact end */
 
 /* blog start */
-a {
-    text-decoration: none;
-}
 .img-title::selection::selection {
     background-color: #8490ff;
     color: #fff;
@@ -348,12 +347,12 @@ a {
     opacity: 0.9;
 }
 
-.left-0 {left:0}
+/* .left-0 {left:0}
 .left-230 {left:-230px;}
 .left-460 {left:-460px}
 .left-690 {left:-690px}
 .left-920 {left:-920px}
-.left-1150 {left:-1150px}
+.left-1150 {left:-1150px} */
 
 
 /* bottom logos end */
