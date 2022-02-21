@@ -131,22 +131,38 @@ logosMainCotainer();
 //         k = -230;
 //     }
 // };
+// function finalizeAndCleanUp(event) {
+//     if (event.propertyName == 'left') {
+//         this.style.left = `0`;
+//         this.removeEventListener('transitionend', finalizeAndCleanUp);
+//         // console.log(event);
+//     }
+// }
+const iconOffset = function (slides) {
+    slides.style.transitionDuration = `250ms`;
+    slides.style.left = `${
+        Number(slides.style.left.replace(`px`, ``)) - 230
+    }px`;
+};
+const iconOffsetReset = function (slides) {
+    slides.style.transitionDuration = `0ms`;
+    slides.style.left = `${
+        Number(slides.style.left.replace(`px`, ``)) + 5 * 230
+    }px`;
+};
 const iconSlider = function () {
     const slides = document.getElementsByClassName(`logos-main-container`)[0];
     if (Number(slides.style.left.replace(`px`, ``)) === -230 * 5) {
-        slides.style.transitionDuration = `0ms`;
-        slides.style.left = `${
-            Number(slides.style.left.replace(`px`, ``)) + 5 * 230
-        }px`;
-    // }
+        // slides.offsetHight;
+        // setTimeout(iconOffsetReset(slides), 30);
+        iconOffsetReset(slides); //}
     } else {
-        slides.style.transitionDuration = `250ms`;
-        slides.style.left = `${
-            Number(slides.style.left.replace(`px`, ``)) - 230
-        }px`;
+        iconOffset(slides);
     }
+    // setTimeout(iconOffset(slides), 100);
 };
 
+iconSlider();
 setInterval(iconSlider, 3000);
 
 /* bottom logos end */
