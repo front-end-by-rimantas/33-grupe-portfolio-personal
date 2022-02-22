@@ -1,0 +1,184 @@
+.contact-us {
+    background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+}
+
+.contact-us-contact-us {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+}
+.contact-us-h1 {
+   font-size: 48px;
+   font-weight: 600;
+}
+.contact-us-a {
+    color: white;
+    padding-left: 10px;
+}
+
+.map , .send{
+    background-color: #F9F9FF;
+}
+
+@media (max-width: 1600px){
+    iframe{
+        width: 1400px;
+        margin-left:calc(50% - 700px) ;
+    }
+}
+
+@media (max-width: 1400px){
+    iframe{
+        width: 1000px;
+        margin-left:calc(50% - 500px) ;
+    }
+}
+
+@media (max-width: 1200px){
+    iframe{
+        width: 800px;
+        margin-left:calc(50% - 400px) ;
+    }
+}
+
+@media (max-width: 1000px){
+    iframe{
+        width: 700px;
+        margin-left:calc(50% - 350px) ;
+    }
+
+    .form0 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form1 {
+        margin-top: 40px;
+        width: 100% !important;
+        margin-right: 10px;
+    }
+
+    .email1 {
+        margin-top: 20px;
+    }
+
+    .message {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    iframe{
+        width: 500px;
+        margin-left:calc(50% - 250px) ;
+    }
+}
+
+@media (max-width: 600px){
+    iframe{
+        width: 400px;
+        margin-left:calc(50% - 200px) ;
+    }
+}
+
+@media (max-width: 500px){
+    iframe{
+        width: 380px;
+        margin-left:calc(50% - 190px);
+    }
+}
+
+@media (max-width: 400px){
+    iframe{
+        width: 300px;
+        margin-left:calc(50% - 150px) ;
+    }
+}
+
+@media (max-width: 320px){
+    iframe{
+        width: 250px;
+        margin-left:calc(50% - 125px) ;
+    }
+}
+
+.sendd {
+    display: flex;
+}
+
+.form0 {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form1{
+    display: grid;
+    width: 450px;
+}
+
+.email1 {
+    font-size: 14px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    border: none;
+    border: solid 1px #b4b0b0;
+}
+
+.send1 {
+    display: flex;
+    gap: 20px;
+}
+
+.send11 {
+    display: grid;
+    gap: 18px;
+}
+
+.send-h3 {
+   font-weight: 300;
+   font-size: 16px;
+   font-family: 'Poppins', sans-serif;
+}
+
+.send-p {
+    color: #777777;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fifa {
+    font-size: 35px;
+    color: #8490ff;
+}
+
+.seand-message {
+    float: right;
+}
+
+.form2 {
+    height: 190px;
+}
+.message {
+    padding: 10px;
+    height: 100% !important;
+    border: none;
+    border: solid 1px #b4b0b0;
+}
+
+.form2-button {
+    background-color: #8490ff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
