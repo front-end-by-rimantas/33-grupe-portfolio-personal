@@ -10,28 +10,23 @@ function openSideMenu() {
     /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
     const toggleOff = document.getElementById(`sidebar-main-off`);
-    const sidebar = document.getElementById(`main-navigation`).cloneNode(true);
+    const sidebar = document.getElementById(`nav-main`).cloneNode(true);
     /* logic */
     toggleOn.style.display = `none`;
     toggleOff.style.display = `block`;
-    sidebar.id = `sidebar-main-navigation`;
+    sidebar.id = `sidebar-nav`;
     sidebar.removeAttribute(`class`);
-    sidebar.getElementsByClassName(
-        `navigation-bar`
-    )[0].className = `sidebar-navigation`;
-    while (sidebar.getElementsByClassName(`top-menu-hidden`).length > 0) {
+    // sidebar.getElementById(`nav-main`).className = `sidebar-nav`;
+    while (sidebar.getElementsByClassName(`nav-flyout`).length > 0) {
         sidebar.getElementsByClassName(
-            `top-menu-hidden`
-        )[0].className = `sidebar-navigation-hidden`;
+            `nav-flyout`
+        )[0].className = `sidebar-nav-flyout`;
     }
-    while (sidebar.getElementsByClassName(`top-menu-inner`).length > 0) {
+    while (sidebar.getElementsByClassName(`nav-submenu`).length > 0) {
         sidebar.getElementsByClassName(
-            `top-menu-inner`
-        )[0].className = `sidebar-navigation-inner`;
+            `nav-submenu`
+        )[0].className = `sidebar-nav-submenu`;
     }
-    sidebar.getElementsByClassName(
-        `top-menu-hidden-nested`
-    )[0].className = `sidebar-navigation-hidden-nested`;
     document.getElementsByTagName('body')[0].appendChild(sidebar);
 }
 
@@ -39,7 +34,7 @@ function closeSideMenu() {
     /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
     const toggleOff = document.getElementById(`sidebar-main-off`);
-    const sidebarRemoval = document.getElementById(`sidebar-main-navigation`);
+    const sidebarRemoval = document.getElementById(`sidebar-nav`);
     /* logic */
     toggleOn.style.display = `block`;
     toggleOff.style.display = `none`;
