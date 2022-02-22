@@ -34,14 +34,10 @@
     font-size: 12px;
     font-weight: 500;
     }
-<<<<<<< HEAD
 
-    :focus {
-=======
-/* :focus {
->>>>>>> 32df722ec4ccc02b04ddd4a8d1a77e25e295baa4
+    /* :focus {
     vertical-align: middle;
-    color: #8490ff;
+    color: #8490ff; */
 }
 
 
@@ -55,12 +51,7 @@
     background: #333;
     transition: width 350ms ease-out;
 } */
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 32df722ec4ccc02b04ddd4a8d1a77e25e295baa4
 .nav:focus::after {
     width: 30%;
 }
