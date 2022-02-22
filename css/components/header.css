@@ -36,10 +36,7 @@
 .nav-main > a, .nav-main > * > * > a {/* nav-main > div > div > a */
     text-transform: uppercase;
 }
-.nav-main a:hover, #nav-main:active {
-    color: #8490ff;
-}
-.nav-main  .nav-current {
+.nav-main a:hover, #nav-main:active, .nav-main  .nav-current {
     color: #8490ff;
 }
 /*~~~~~~~~~Multi level Start~~~~~~~~~*/
@@ -71,7 +68,7 @@
 }
 .nav-flyout > * > a, .nav-submenu > * > a {
     display: grid;
-    grid-template-columns: 140px auto;
+    grid-template-columns: 140px 20px;
     padding-right: 10px;
     padding-left: 10px;
     align-items: center;
@@ -81,10 +78,10 @@
     padding-right: 0;
     padding-left: 0;
 }
-.nav-flyout > * > a > span, .nav-submenu > * > a > span{
+.nav-flyout > * > a > span, .nav-submenu > * > a > span {
     grid-column: 1 3;
 }
-.nav-flyout > * > a > i, .nav-submenu > * > a > i{
+.nav-flyout > * > a > i, .nav-submenu > * > a > i {
     grid-column: 2 4;
     margin-left: 10px;
     transform: rotate(270deg);
