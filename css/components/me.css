@@ -73,6 +73,7 @@
     text-transform: none;
     font-size: 14px;
     font-weight: 300;
+
     }
     @media(max-width: 1050px){
         .mainTitle-b{
@@ -80,6 +81,7 @@
         width: 200px;
     }
     }
+
 
 
     
