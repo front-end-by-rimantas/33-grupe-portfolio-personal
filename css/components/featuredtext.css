@@ -1,0 +1,25 @@
+
+
+.featured * {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    
+}
+.titleFeatured {
+    font-size: 36px;
+    color: #222222;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+.textFeatured {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
+
+}
+
