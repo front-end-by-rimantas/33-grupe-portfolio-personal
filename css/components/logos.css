@@ -1,0 +1,27 @@
+/* bottom logos start */
+
+.logos-container {
+    background-image: linear-gradient(113deg, rgba(132,144,255,1) 0%, rgba(128,149,255,1) 29%, rgba(98,189,252,1) 100%);
+}
+.logos-container > .row {
+    position: relative;
+    overflow: hidden;
+}
+.logos-main-container {
+    position: relative;
+    grid-template-columns: repeat(auto-fill, 230px);
+}
+  
+.logos-slides {
+    display: flex;
+    position: relative;
+    width: 230px;
+    justify-content: center;
+    grid-column-end: span 1;
+    grid-row: 1 / span 1;
+    opacity: 0.5;
+}
+.logos-slides:hover {
+    opacity: 0.9;
+}
+/* bottom logos end */
