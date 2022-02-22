@@ -1,7 +1,7 @@
 /* ThisIsMe */
 .first {
     background-color: #F9F9FF;
-    height: 735px;
+    /* height: 735px; */
    }
 .title-a, .mainTitle-a, .text-a {
     font-family: "Poppins", sans-serif;
@@ -27,11 +27,12 @@
     margin-top: 20px;
     color: #777777;
     text-transform: none;
-    height: 68px;
+    margin-bottom: 30px;
     font-size: 15px;
     font-weight: 300;
-    
     }
+
+
 
 .imgThisIsMe {
     position: relative;
@@ -70,10 +71,17 @@
     margin-top: 30px;
     color: #777777;
     text-transform: none;
-    height: 68px;
     font-size: 14px;
     font-weight: 300;
-}
-   
+    }
+    @media(max-width: 1050px){
+        .mainTitle-b{
+        font-size: 20px;
+        width: 200px;
+    }
+    }
+
+
     
-    
+
+                            
