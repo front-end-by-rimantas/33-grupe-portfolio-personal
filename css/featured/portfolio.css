@@ -1,0 +1,151 @@
+.container {
+    display: inline-block;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.container-slim{
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+.row {
+    display: inline-block;
+    width: 1140px;
+    margin: 0 calc(50% - 570px);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.content-center{
+    justify-content: center;
+}
+
+.sb {
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: grid;
+    align-items: center;
+}
+
+.grid-container-inline {
+    display: inline-grid;
+}
+
+.g-c {
+    display: grid;
+}
+
+.grid-gap {
+    grid-gap: 30px;
+}
+
+.col-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.col-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col-4 {
+    grid-template-columns: auto auto auto auto;
+}
+.col-5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.footer-grid {
+    grid-template-columns: 40% 40% 20%;
+}
+
+.ov-h {
+    overflow: hidden;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.p-20 {
+    padding: 20px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 1240px) {
+    .row {
+        width: 940px;
+        margin: 0 calc(50% - 470px);
+    }
+}
+@media (max-width: 1040px) {
+    .row {
+        width: 740px;
+        margin: 0 calc(50% - 370px);
+    }
+
+    .col-md-1 {
+        grid-template-columns: auto;
+    }
+
+    .col-md-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .col-md-3 {
+        grid-template-columns: auto auto auto;
+    }
+
+    .md-pt {
+        padding-top: 120px;
+    }
+
+    #aboutme {
+        justify-items: center;
+    }
+
+    .right > h2 {
+        font-size: 20px;
+    }
+
+    /*.footer-grid-md-2{*/
+    /*    grid-template-columns: 50% 50%;*/
+    /*}*/
+}
+@media (max-width: 840px) {
+    .row {
+        width: 540px;
+        margin: 0 calc(50% - 270px);
+    }
+
+    .col-md-1 {
+        grid-template-columns: auto;
+    }
+
+    .col-md-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 640px) {
+    .row {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .col-xs-1 {
+        grid-template-columns: auto;
+    }
+}
