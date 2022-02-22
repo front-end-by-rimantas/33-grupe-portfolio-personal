@@ -14,9 +14,9 @@ function openSideMenu() {
     /* logic */
     toggleOn.style.display = `none`;
     toggleOff.style.display = `block`;
-    sidebar.id = `sidebar-nav-main`;
+    sidebar.id = `sidebar-nav`;
     sidebar.removeAttribute(`class`);
-    sidebar.getElementsByClassName(`nav-main`)[0].className = `sidebar-nav`;
+    // sidebar.getElementById(`nav-main`).className = `sidebar-nav`;
     while (sidebar.getElementsByClassName(`nav-flyout`).length > 0) {
         sidebar.getElementsByClassName(
             `nav-flyout`
@@ -34,7 +34,7 @@ function closeSideMenu() {
     /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
     const toggleOff = document.getElementById(`sidebar-main-off`);
-    const sidebarRemoval = document.getElementById(`sidebar-nav-main`);
+    const sidebarRemoval = document.getElementById(`sidebar-nav`);
     /* logic */
     toggleOn.style.display = `block`;
     toggleOff.style.display = `none`;
