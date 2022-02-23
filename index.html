@@ -7,7 +7,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
-    
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/featured.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +25,8 @@
     <i class="fa fa-close" id="sidebar-main-off" onclick="closeSideMenu()"></i>
     <header class="container" id="nav-header">
         <div class="row nav-outer-wrapper">
-            <div class="visible-flex nav-container">
-                <div class="logo-top">
+            <div class="col-2 col-lg-12 visible-flex nav-container">
+                <div>
                     <a href="#"><img src="./img/logo-top-left-corner.png"></a>
                 </div> 
                 <nav class="hidden visible-flex-lg nav-main" id="nav-main">
@@ -35,23 +36,23 @@
                     <a href="#">Portfolio</a>
                     <a href="#">Pricing</a>
                     <div class="nav-flyout">
-                        <div class="nav-subtitle"><a href="#">Blog</a></div>
+                        <div class="nav-subtitle"><a href="#"><span>Blog</span><i class="fa fa-chevron-down"></i></a></div>
                         <div class="nav-submenu">
                             <div><a href="#">Blog&nbsp;Home</a></div>
                             <div><a href="#">Blog&nbsp;Single</a></div>
                         </div>
                     </div>
                     <div class="nav-flyout">
-                        <div class="nav-subtitle"><a href="#">Pages</a></div>
+                        <div class="nav-subtitle"><a href="#"><span>Pages</span><i class="fa fa-chevron-down"></i></a></div>
                         <div class="nav-submenu">
-                            <div><a href="#">Elements</a></div>
+                            <div><a href="#"><span>Elements</span></a></div>
                             <div class="nav-flyout submenu-left">
-                                <div class="nav-subtitle"><a href="">Level&nbsp;2</a></div>
+                                <div class="nav-subtitle"><a href="#"><span>Level&nbsp;2</span><i class="fa fa-chevron-down"></i></a></div>
                                 <div class="nav-submenu">
                                     <div><a href="#">Items&nbsp;One</a></div>
                                     <div><a href="#">Items&nbsp;Two</a></div>
                                     <!-- <div class="nav-flyout submenu-right">
-                                        <div class="nav-subtitle"><a href="">Level&nbsp;3 need to improve</a></div>
+                                        <div class="nav-subtitle"><a href=""><span>Level&nbsp;3</span><i class="fa fa-chevron-down"></i></a></div>
                                         <div class="nav-submenu">
                                             <div><a href="#">Items&nbsp;One</a></div>
                                             <div><a href="#">Items&nbsp;Two</a></div>
@@ -61,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#">Contact</a>
+                    <a href="./contact.html">Contact</a>
                 </nav>
             </div>
         </div>
@@ -227,88 +228,15 @@
     <!-- NUMBERS end -->
 
     <!-- Our Latest Featured Projects start -->
-    <section class="container featured">
-        <div class="row">
-            <div class="col-10 ml-1 col-sm-8 ml-sm-2 col-md-8 ml-md-2 col-xl-6 ml-xl-3">
-                 <h1 class="titleFeatured">Our Latest Featured Projects</h1>
-                 <h2 class="textFeatured">Who are in extremely love with eco friendly system.</h2>
-            </div>
-            
+   <section class="container">
+        <div class="featured col-xs-1 col-md-2 col-3">
+            <p class="titleFeatured">Our Latest Featured Projects</p>
+                <p class="textFeatured">Who are in extremely love with eco friendly system.</p>
         </div>
-        <div class="row">
-            <div class="col-8 ml-2 col-sm-6 ml-sm-3 col-md-6 ml-md-3 col-xl-4 ml-xl-4">
-                <div class="navFeatured">
-                    <p class="navAll" tabindex="0">All</p>
-                    <p tabindex="0" class="nav" >Vector</p>
-                    <p tabindex="0" class="nav">Raster</p>
-                    <p tabindex="0" class="nav">UI/UX</p>
-                    <p tabindex="0" class="nav">Printing</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="design">
-                    <img src="./img/featured/p1.jpg.webp" width="100%" height="100%" alt="Design">
-                    <div class="cover">
-                        <!-- <img src="./img/featured/binoculars.png" class="imgCover" alt="Cover"> -->
-                    </div>
-                    <h3>2D Vinyl Design</h3>
-                    <p>vector</p>
-                </div>
+        <div class="row gallery" id="portfolio"><div>
+            <ul class="filters flex flex-wrap content-center"></ul>
+            <div class="filters-content grid-container grid-gap col-xs-1 col-md-2 col-3"></div>
 
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="design">
-                    <img src="./img/featured/p2.jpg.webp" width="100%" height="100%" alt="Design">
-                    <div class="cover">
-                        <!-- <img src="./img/featured/binoculars.png" class="imgCover" alt="Cover"> -->
-                    </div>
-                    <h3>2D Vinyl Design</h3>
-                    <p>vector</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="design">
-                    <img src="./img/featured/p3.jpg.webp" width="100%" height="100%" alt="Design">
-                    <div class="cover">
-                        <!-- <img src="./img/featured/binoculars.png" class="imgCover" alt="Cover"> -->
-                    </div>
-                    <h3>Creative Poster Design</h3>
-                    <p>Agency</p>
-                </div> 
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="design">
-                    <img src="./img/featured/p4.jpg.webp" width="100%" height="100%" alt="Design">
-                    <div class="cover">
-                        <!-- <img src="./img/featured/binoculars.png" class="imgCover" alt="Cover"> -->
-                    </div>
-                    <h3>Embosed Logo Design</h3>
-                    <p>Portal</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="design">
-                    <img src="./img/featured/p5.jpg.webp" width="100%" height="100%" alt="Design">
-                    <div class="cover">
-                        <!-- <img src="./img/featured/binoculars.png" class="imgCover" alt="Cover"> -->
-                    </div>
-                    <h3>3D Helmet Design</h3>
-                    <p>vector</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-                <div class="design">
-                    <img src="./img/featured/p6.jpg.webp" width="100%" height="100%" alt="Design">
-                    <div class="cover">
-                        <!-- <img src="./img/featured/binoculars.png" class="imgCover" alt="Cover"> -->
-                    </div>
-                    <h3>2D Vinyl Design</h3>
-                    <p>raster</p>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Our Latest Featured Projects end -->
 
@@ -535,7 +463,11 @@
     <!-- logos start -->
     <section class="container logos-container">
         <div class="row">
-            <div class="col-12 visible-grid logos-main-container"></div>
+            <!-- <div class="col-12 visible-grid logos-main-wrapper"> -->
+                <div class="col-12 visible-grid logos-main-container"></div>
+                <!-- <div class="logos-empty-container"></div> -->
+            <!-- </div> -->
+            <!-- <div class="col-12 logos-cover-container display-none"></div> -->
         </div>
     </section>
 
@@ -586,6 +518,10 @@
 
     <!-- footer end -->
  <script src="./js/pages/home.js" defer></script>
+ <script src="./js/featured/data.js"></script>
+ <script src="./js/featured/functions.js"></script>
+ <script src="./js/featured/actions.js"></script>
+
 </body>
 
 </html>

@@ -115,3 +115,33 @@
         display: flex;
     }
 }
+
+@media (max-width: 1240px) {
+    .feedback-button {
+        right: -25px;
+    }
+}
+
+@media (max-width: 1220px) {
+    .feedback-button {
+        right: -15px;
+    }
+}
+
+@media (max-width: 1198px) {
+    .feedback-button {
+        right: -35px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .feedback-button {
+        right: -10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .feedback-button {
+        right: -35px;
+    }
+}
