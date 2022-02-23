@@ -3,12 +3,12 @@
 
 <head>
     <link rel="shortcut icon" href="./favicon/favicon.ico">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/featured.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,78 +21,79 @@
 
 <body>
     <!-- header start -->
-    <header class="container-fluid">
-        <div class="row visible-flex">
-            <div class="col-2 logo-top">
-                <div class="visible-flex">
+    <i class="fa fa-bars" id="sidebar-main-on" onclick="openSideMenu()"></i>
+    <i class="fa fa-close" id="sidebar-main-off" onclick="closeSideMenu()"></i>
+    <header class="container" id="nav-header">
+        <div class="row nav-outer-wrapper">
+            <div class="col-2 col-lg-12 visible-flex nav-container">
+                <div>
                     <a href="#"><img src="./img/logo-top-left-corner.png"></a>
-                </div>
-            </div> 
-            <nav class="col-7 ml-3">
-                <div class="visible-flex navigation-bar">
-                    <a class="top-menu-home" href="#">Home</a>
+                </div> 
+                <nav class="hidden visible-flex-lg nav-main" id="nav-main">
+                    <a class="nav-current" href="#">Home</a>
                     <a href="#">About</a>
                     <a href="#">Services</a>
                     <a href="#">Portfolio</a>
                     <a href="#">Pricing</a>
-                    <div class="top-menu-hidden">
-                        <a href="#">Blog</a>
-                        <div class="top-menu-inner">
-                            <a href="#">Blog Home</a>
-                            <a href="#">Blog Single</a>
+                    <div class="nav-flyout">
+                        <div class="nav-subtitle"><a href="#"><span>Blog</span><i class="fa fa-chevron-down"></i></a></div>
+                        <div class="nav-submenu">
+                            <div><a href="#">Blog&nbsp;Home</a></div>
+                            <div><a href="#">Blog&nbsp;Single</a></div>
                         </div>
                     </div>
-                    <div class="top-menu-hidden">
-                        <a href="#">Pages</a>
-                        <div class="top-menu-inner">
-                            <a href="#">Elements</a>
-
-                            <div class="top-menu-hidden-nested">
-                                <a href="#">Level 2</a>
-                                <div class="top-menu-inner">
-                                    <a href="#">Items One</a>
-                                    <a href="#">Items Two</a>
+                    <div class="nav-flyout">
+                        <div class="nav-subtitle"><a href="#"><span>Pages</span><i class="fa fa-chevron-down"></i></a></div>
+                        <div class="nav-submenu">
+                            <div><a href="#"><span>Elements</span></a></div>
+                            <div class="nav-flyout submenu-left">
+                                <div class="nav-subtitle"><a href="#"><span>Level&nbsp;2</span><i class="fa fa-chevron-down"></i></a></div>
+                                <div class="nav-submenu">
+                                    <div><a href="#">Items&nbsp;One</a></div>
+                                    <div><a href="#">Items&nbsp;Two</a></div>
+                                    <!-- <div class="nav-flyout submenu-right">
+                                        <div class="nav-subtitle"><a href=""><span>Level&nbsp;3</span><i class="fa fa-chevron-down"></i></a></div>
+                                        <div class="nav-submenu">
+                                            <div><a href="#">Items&nbsp;One</a></div>
+                                            <div><a href="#">Items&nbsp;Two</a></div>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                    <a href="#">Contact</a>
-                </div>
-            </nav>
-            <div class="top-side-menu-on" onclick="openSideMenu()"></div>
-            <div class="hidden top-side-menu-off" onclick="closeSideMenu()"></div>
+                    <a href="./contact.html">Contact</a>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- header end -->
 
     <!-- THIS IS ME start -->
-    <section class="container">
+    <section class="container first">
         <div class="row">
             <div class="col-12 col-md-6">
-            <p class="a">This is me</p>
-            <p class="b">Philip Gilbert</p>
-            <p class="c">You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures.</p>
+            <p class="title-a">This is me</p>
+            <p class="mainTitle-a">Philip Gilbert</p>
+            <p class="text-a">You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures.</p>
             <a href="#" class="herobutton">Discover now</a>
         </div>
-        <div class="col-12 col-md-6">
-            <img class="imgThisIsMe" src="./img/hero-img.png.webp" alt="PHILIP GILBERT">
+        <div class="col-12 col-md-6 imgBox" >
+            <img class="imgThisIsMe" src="./img/hero-img.png.webp" width="100%" height="100%" alt="PHILIP GILBERT">
         </div>
-        
     </section>
     <!-- THIS IS ME end -->
 
     <!-- ABOUT ME start -->
-    <section class="container">
+    <section class="container second">
         <div class="row">
-            <div class="col-12 col-md-6"><img class="imgAboutMe" src="./img/about-img.png.webp" alt="PHILIP GILBERT"></div>
+            <div class="col-12 col-md-6"><img class="imgAboutMe" src="./img/about-img.png.webp" width="100%" height="100%" alt="PHILIP GILBERT"></div>
             <div class="col-12 col-md-6">
-                <p class="a2">About me</p>
-                <p class="b2">Personal Details</p>
-                <p class="c2">Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <p class="title-b">About me</p>
+                <p class="mainTitle-b">Personal Details</p>
+                <p class="text-b">Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                 <a href="#" class="herobutton2">View full details</a> 
             </div>
-           
         </div>
     </section>
     <!-- ABOUT ME end -->
@@ -201,43 +202,86 @@
     <!-- My Offered Services end -->
 
     <!-- NUMBERS start -->
-    <section class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-3">skaiciai</div>
-            <div class="col-12 col-md-6 col-lg-3">skaiciai</div>
-            <div class="col-12 col-md-6 col-lg-3">skaiciai</div>
-            <div class="col-12 col-md-6 col-lg-3">skaiciai</div>
-        </div>
-    </section>
+    <div class="counter-conteiner">
+        <section class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h1 class="counter" data-target="2536"></h1>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h1 class="counter" data-target="6784"></h1>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h1 class="counter" data-target="2239"></h1>
+                    <p>Cups of Coffee</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h1 class="counter" data-target="434"></h1>
+                    <p>Real Professionals</p>
+                </div>
+            </div>
+        </section>
+    </div>
+   
     <!-- NUMBERS end -->
 
     <!-- Our Latest Featured Projects start -->
-    <section class="container">
-        <div class="row">
-            <div class="col-10 ml-1 col-sm-8 ml-sm-2 col-md-8 ml-md-2 col-xl-6 ml-xl-3">Our Latest Featured Projects</div>
+   <section class="container">
+        <div class="featured col-xs-1 col-md-2 col-3">
+            <p class="titleFeatured">Our Latest Featured Projects</p>
+                <p class="textFeatured">Who are in extremely love with eco friendly system.</p>
         </div>
-        <div class="row">
-            <div class="col-8 ml-2 col-sm-6 ml-sm-3 col-md-6 ml-md-3 col-xl-4 ml-xl-4">all</div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">card</div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">card</div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">card</div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">card</div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">card</div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4">card</div>
-        </div>
+        <div class="row gallery" id="portfolio"><div>
+            <ul class="filters flex flex-wrap content-center"></ul>
+            <div class="filters-content grid-container grid-gap col-xs-1 col-md-2 col-3"></div>
+
     </section>
     <!-- Our Latest Featured Projects end -->
 
     <!-- Client’s Feedback About Me start -->
-    <section class="container">
+    <section class="container feedback">
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-8 ml-lg-2">Client Feedback About Me</div>
+            <div class="col-12 col-md-12 col-lg-12">
+                <h1 class="feedback-h1">Client’s Feedback About Me</h1>
+                <p class="feedback-p ">It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.</p>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                Feedbsck about me JS
+        <div class="row feedback-row">
+            <div class="col-12 big-ceo">
+                <div class="ceo">
+                    <img class="foto-face" src="./img/feedback-img1.png" alt="face">
+                    <p class="ceo-p1 ">Do you want to be even more successfil? Learn to love learning and grrowth. The more effort you put info improving your skills, the bigger the payoff you.</p>
+                    <h4 class="ceo-h4">Harriet Maxwell</h4>
+                    <p class="ceo-p2 ">CEO at Google</p>
+                </div>
+                <div class="ceo">
+                    <img class="foto-face" src="./img/feedbac-img2.png" alt="face">
+                    <p class="ceo-p1">A purpose is the eternal condition for succsess. Every former smoker can tell you just how hard it is to stop smoking cigaretts. However.</p>
+                    <h4 class="ceo-h4">Carolyn Craig</h4>
+                    <p class="ceo-p2">CEO at Facebook</p>
+                </div>
+            </div>
+            <div class="feedback-button">
+                <!-- <a href="#" class="fa fa-arrow-up" aria-hidden="true"></a>
+                <a href="#" class="fa fa-arrow-down" aria-hidden="true"></a>-->
+                <div class="up">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generated by IcoMoon.io -->
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg class="up1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                    <path fill="currentColor" d="M9.146 0.646l-6 6c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l5.146-5.146v16.293c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-16.293l5.146 5.146c0.195 0.195 0.512 0.195 0.707 0 0.098-0.098 0.146-0.226 0.146-0.354s-0.049-0.256-0.146-0.354l-6-6c-0.195-0.195-0.512-0.195-0.707 0z"></path>
+                    </svg>
+                </div>
+                <div class="down">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generated by IcoMoon.io -->
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                    <path fill="currentColor" d="M9.854 19.354l6-6c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-5.146 5.146v-16.293c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v16.293l-5.146-5.146c-0.195-0.195-0.512-0.195-0.707 0-0.098 0.098-0.146 0.226-0.146 0.354s0.049 0.256 0.146 0.354l6 6c0.195 0.195 0.512 0.195 0.707 0z"></path>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -248,7 +292,7 @@
         <div class="row">
             <div class="col-12 col-md-12 col-lg-6 ml-lg-3 choose-row">
                 <h1 class="choose-row-h1">Choose Your Plan</h1>
-                <p class="c pp">When someone does something that they know that they shouldn’t do, did they.</p>
+                <p class="feedback-p pp">When someone does something that they know that they shouldn’t do, did they.</p>
             </div>
         </div>
         <div class="row choose-row2">
@@ -260,12 +304,12 @@
                 </div>
                 <div class="choose-row">
                     <h4 class="choose-row-h4">Economy</h4>
-                    <p class="c choose-row-p">For the individuals</p>
+                    <p class="feedback-p choose-row-p">For the individuals</p>
                 </div>
                 <div class="choose-row choose-box">
-                    <p class="c choose-box-p">Secure Online Transfer</p>
-                    <p class="c choose-box-p">Unlimited Styles for interface</p>
-                    <p class="c choose-box-p">Reliable Customer Service</p>
+                    <p class="feedback-p choose-box-p">Secure Online Transfer</p>
+                    <p class="feedback-p choose-box-p">Unlimited Styles for interface</p>
+                    <p class="feedback-p choose-box-p">Reliable Customer Service</p>
                 </div>
                 <div class="price">
                     <h2 class="price-h2">&pound; 199.00</h2>
@@ -280,12 +324,12 @@
                 </div>
                 <div class="choose-row">
                     <h4 class="choose-row-h4">Business</h4>
-                    <p class="c choose-row-p">For the individuals</p>
+                    <p class="feedback-p choose-row-p">For the individuals</p>
                 </div>
                 <div class="choose-row choose-box">
-                    <p class="c choose-box-p">Secure Online Transfer</p>
-                    <p class="c choose-box-p">Unlimited Styles for interface</p>
-                    <p class="c choose-box-p">Reliable Customer Service</p>
+                    <p class="feedback-p choose-box-p">Secure Online Transfer</p>
+                    <p class="feedback-p choose-box-p">Unlimited Styles for interface</p>
+                    <p class="feedback-p choose-box-p">Reliable Customer Service</p>
                 </div>
                 <div class="price">
                     <h2 class="price-h2">&pound; 299.00</h2>
@@ -300,12 +344,12 @@
                 </div>
                 <div class="choose-row">
                     <h4 class="choose-row-h4">Premium</h4>
-                    <p class="c choose-row-p">For the individuals</p>
+                    <p class="feedback-p choose-row-p">For the individuals</p>
                 </div>
                 <div class="choose-row choose-box">
-                    <p class="c choose-box-p">Secure Online Transfer</p>
-                    <p class="c choose-box-p">Unlimited Styles for interface</p>
-                    <p class="c choose-box-p">Reliable Customer Service</p>
+                    <p class="feedback-p choose-box-p">Secure Online Transfer</p>
+                    <p class="feedback-p choose-box-p">Unlimited Styles for interface</p>
+                    <p class="feedback-p choose-box-p">Reliable Customer Service</p>
                 </div>
                 <div class="price">
                     <h2 class="price-h2">&pound; 399.00</h2>
@@ -320,12 +364,12 @@
                 </div>
                 <div class="choose-row">
                     <h4 class="choose-row-h4">Exclusive</h4>
-                    <p class="c choose-row-p">For the individuals</p>
+                    <p class="feedback-p choose-row-p">For the individuals</p>
                 </div>
                 <div class="choose-row choose-box">
-                    <p class="c choose-box-p">Secure Online Transfer</p>
-                    <p class="c choose-box-p">Unlimited Styles for interface</p>
-                    <p class="c choose-box-p">Reliable Customer Service</p>
+                    <p class="feedback-p choose-box-p">Secure Online Transfer</p>
+                    <p class="feedback-p choose-box-p">Unlimited Styles for interface</p>
+                    <p class="feedback-p choose-box-p">Reliable Customer Service</p>
                 </div>
                 <div class="price">
                     <h2 class="price-h2">&pound; 499.00</h2>
@@ -337,40 +381,147 @@
     <!-- Choose Your Plan end -->
 
     <!-- Latest Posts From Our Blog start -->
-    <section class="container blog">
-
-        <div class="row1">
-            <div class="col-12 col-md-8 ml-md-2 col-lg-6 ml-lg-3 blogs1">
+    <section class="container">
+        <div class="row">
+            <div class="col-12 blogs1">
                 <h2>Latest Posts From Our Blog</h2>
                 <p>You may be a skillful, effective employer but if you don't trust your personnel and the opposite, then the chances of improving and expanding the business</p>
+
             </div>
         </div>
+    </section>
 
+    <section class="container blog">
+
+        <div class="row blogs">
+            <div class="col-12 col-md-4 col-lg-4 blog">
+                <img src="./img/xb/blog1.jpg" alt="Blog" class="icon">
+                    <div class="information bar">
+                        <div class="img bar1">
+                            <img src="./img/xb/user.jpg" alt="user">
+                            Mark Wiens
+                            13th Dec
+                            <span class="fa fa-heart"></span>
+                            15
+                            <span class="fa fa-comment"></span>
+                            04 
+                        </div>
+                    </div>
+                <h3 class="title">BREAK THROUGH SELF DOUBT AND FEAR</h3>
+                <div class="description">Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career.</div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-4 blog">
+                <img src='./img/xb/blog2.jpg' alt="Blog" class="icon">
+                <div class="information bar">
+                    <div class="img bar1">
+                        <img src="./img/xb/user.jpg" alt="user">
+                        Mark Wiens
+                        13th Dec
+                        <span class="fa fa-heart"></span>
+                        15
+                        <span class="fa fa-comment"></span>
+                        04 
+                    </div>
+                </div>
+                <h3 class="title">PORTABLE FASHION FOR YOUNG WOMEN</h3>
+                <div class="description">You may be a skillful, effective employer but if you don't trust your personnel and the opposite, then the chances of improving.</div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-4 blog">
+                <img src="./img/xb/blog3.jpg" alt="Blog" class="icon">
+                <div class="information bar">
+                    <div class="img bar1">
+                        <img src="./img/xb/user.jpg" alt="user">
+                        Mark Wiens
+                        13th Dec
+                        <span class="fa fa-heart"></span>
+                        15
+                        <span class="fa fa-comment"></span>
+                        04 
+                    </div>
+                </div>
+            <h3 class="title">DO DREAMS SERVE AS A PREMONITION</h3>
+            <div class="description">So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved.</div>
+        <!-- <div class="row">
+
+            <div class="col-12 col-sm-6 col-md-6 col-lg-5">
+                <div>
+                    <img class="imgBlog1" src="./img/xb/xb1.jpg" alt="PHILIP GILBERT">
+
+                </div>
+                <div>BREAK THROUGH SELF DOUBT AND FEAR</div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-6 col-lg-5">row</div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-2">row</div>
+        </div> -->
     </section>
 
     <!-- Latest Posts From Our Blog end -->
 
     <!-- logos start -->
-    <section class="container">
+    <section class="container logos-container">
         <div class="row">
-            <div class="col-12">
-                LOGO
+            <!-- <div class="col-12 visible-grid logos-main-wrapper"> -->
+                <div class="col-12 visible-grid logos-main-container"></div>
+                <!-- <div class="logos-empty-container"></div> -->
+            <!-- </div> -->
+            <!-- <div class="col-12 logos-cover-container display-none"></div> -->
+        </div>
+    </section>
+
+    <!--  logos end -->
+
+
+    <!-- footer start -->
+
+    <section class="container footer">
+        <div class="row footer-main-container">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-5 visible-flex"> 
+                <h3>About Me</h3>
+                <p>We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.</p>
+                <p>Copyright ©2022 All rights reserved | This template is made with  <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generated by IcoMoon.io -->
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg class="footer-heart" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="19" viewBox="0 0 20 20">
+                    <path fill="#777777" d="M9.5 19c-0.084 0-0.167-0.021-0.243-0.063-0.094-0.052-2.326-1.301-4.592-3.347-1.341-1.21-2.411-2.448-3.183-3.68-0.984-1.571-1.482-3.139-1.482-4.66 0-2.895 2.355-5.25 5.25-5.25 0.98 0 2.021 0.367 2.931 1.034 0.532 0.39 0.985 0.86 1.319 1.359 0.334-0.499 0.787-0.969 1.319-1.359 0.91-0.667 1.951-1.034 2.931-1.034 2.895 0 5.25 2.355 5.25 5.25 0 1.521-0.499 3.089-1.482 4.66-0.771 1.232-1.842 2.47-3.182 3.68-2.266 2.046-4.498 3.295-4.592 3.347-0.076 0.042-0.159 0.063-0.243 0.063zM5.25 3c-2.343 0-4.25 1.907-4.25 4.25 0 3.040 2.35 5.802 4.321 7.585 1.76 1.592 3.544 2.708 4.179 3.087 0.635-0.379 2.419-1.495 4.179-3.087 1.971-1.782 4.321-4.545 4.321-7.585 0-2.343-1.907-4.25-4.25-4.25-1.703 0-3.357 1.401-3.776 2.658-0.068 0.204-0.259 0.342-0.474 0.342s-0.406-0.138-0.474-0.342c-0.419-1.257-2.073-2.658-3.776-2.658z"></path>
+                    </svg> by 
+                    <a class="footer-colorlib" href="#">Colorlib</a></p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-5 visible-flex">
+                <h3>Newsletter</h3>
+                <p>Stay updated with our latest trends</p>
+                <form class="visible-grid email-container">
+                    <input class="footer-email" type="email" placeholder="Enter Emai Address" >
+                    <button class="footer-button"><?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generated by IcoMoon.io -->
+                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg class="footer-submit" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 10 40">
+                        <path fill="#fff" d="M19.354 10.146l-6-6c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l5.146 5.146h-16.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h16.293l-5.146 5.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l6-6c0.195-0.195 0.195-0.512 0-0.707z"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2 visible-flex">
+                <h3>Follow Me</h3>
+                <p>Let us be social</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-behance"></i></a>
+                </div>
             </div>
         </div>
     </section>
-    <!--  logos end -->
 
-    <!-- footer start -->
-    <section class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-5">row</div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-5">row</div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-2">row</div>
-        </div>
-    </section>
     <!-- footer end -->
+ <script src="./js/pages/home.js" defer></script>
+ <script src="./js/featured/data.js"></script>
+ <script src="./js/featured/functions.js"></script>
+ <script src="./js/featured/actions.js"></script>
 
-    <script src="./js/pages/home.js" defer></script>
 </body>
 
 </html>

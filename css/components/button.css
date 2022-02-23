@@ -15,29 +15,33 @@
     font-size: 14px;
     transition: all 0.3s ease 0s;
     position: relative;
-    }
-    .herobutton:hover, .herobutton2:hover,
-	:focus,
-	:active {
-	box-shadow: 0 9px 30px -1px rgba(132, 144, 255, 0.6);
-    }
-    .herobutton2 {
-        margin-top: 80px;
-        width: 185px;
-        height: 42px;
-        line-height: 42px;
-        padding-left: 29px;
-        padding-right: 29px;
-        border: none;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: 500;
-        color: #fff;
-        background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
-        text-transform: uppercase;
-        font-family: "Poppins", sans-serif;
-        font-size: 14px;
-        transition: all 0.3s ease 0s;
-        position: relative;
-        }
-        
+}
+/*removed focus and active bellow*/
+.herobutton:hover, .herobutton2:hover {
+    box-shadow: 0 9px 30px -1px rgba(132, 144, 255, 0.6);
+}
+.herobutton2 {
+
+
+
+ 
+    margin-top: 40px;
+
+
+    width: 185px;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 29px;
+    padding-right: 29px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+}
