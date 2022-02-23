@@ -2,7 +2,7 @@
     background-color: var(--plans-background-color);
     padding-bottom: 60px;
     font-family: Poppins, sans-serif;
-    /* background-color: aqua; */
+    background-color: aqua;
 }
 .blog > .row1 {
     box-sizing: border-box;
@@ -13,7 +13,7 @@
     margin-inline-start: 200px; */
     justify-content: center!important;
     text-align: center;
-    /* background-color: blue; */
+    background-color: blue;
 }
 .blog > .row1 > .blogs1 > h2 {
     font-size: 36px;
