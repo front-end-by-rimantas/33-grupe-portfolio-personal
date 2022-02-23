@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // IMPORTS
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
@@ -24,18 +25,21 @@ function openSideMenu() {
     /* logic */
     toggleOn.style.display = `none`;
     toggleOff.style.display = `block`;
-    sidebar.id = `sidebar-nav`;
+    sidebar.id = `sidebar`;
     sidebar.removeAttribute(`class`);
     // sidebar.getElementById(`nav-main`).className = `sidebar-nav`;
     while (sidebar.getElementsByClassName(`nav-flyout`).length > 0) {
         sidebar.getElementsByClassName(
             `nav-flyout`
-        )[0].className = `sidebar-nav-flyout`;
+        )[0].className = `sidebar-dropdown`;
     }
     while (sidebar.getElementsByClassName(`nav-submenu`).length > 0) {
         sidebar.getElementsByClassName(
             `nav-submenu`
-        )[0].className = `sidebar-nav-submenu`;
+        )[0].className = `sidebar-submenu`;
+        sidebar.getElementsByClassName(
+            `nav-subtitle`
+        )[0].className = `sidebar-subtitle`;
     }
     document.getElementsByTagName('body')[0].appendChild(sidebar);
 }
@@ -72,24 +76,20 @@ function closeSideMenu() {
 /* why choose us start */
 const counters = document.querySelectorAll('.counter');
 
-counters.forEach((counter) =>{
-    counter.innerText = '0'; 
-
+counters.forEach((counter) => {
+    counter.innerText = '0';
 
     const updateCounter = () => {
-        const target = +counter.getAttribute
-        ('data-target');
+        const target = +counter.getAttribute('data-target');
         const c = +counter.innerText;
 
-        const increment = target / 200;   
-
+        const increment = target / 200;
         if (c < target) {
-            counter.innerText = `${Math.ceil(c 
-            + increment)}`; 
+            counter.innerText = `${Math.ceil(c + increment)}`;
             setTimeout(updateCounter, 1);
-            }
-            };
-            updateCounter();
+        }
+    };
+    updateCounter();
 });
 /* why choose us end */
 
@@ -108,7 +108,6 @@ const logosMainCotainer = function () {
     const cont = document.getElementsByClassName(`logos-main-container`)[0];
     cont.style.left = `0px`;
     cont.style.transitionDuration = `.5s`;
-    // cont.classList.add(`left-0`);
     for (let i = 0; i < 2 * 5; i++) {
         const div = document.createElement(`div`);
         const img = document.createElement(`img`);
