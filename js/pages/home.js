@@ -1,9 +1,19 @@
 // IMPORTS
-
-
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
 /* header start */
+/**
+ * @description scroll down --> adds shadow box to the main menu.
+ */
+const headerShadow = function () {
+    const header = document.getElementById(`nav-header`);
+    if (window.scrollY > 100) {
+        header.classList.add(`header-scrolled`);
+    } else if (header.classList.contains(`header-scrolled`)) {
+        header.classList.remove(`header-scrolled`);
+    }
+};
+document.addEventListener('scroll', headerShadow);
 
 /*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
