@@ -120,29 +120,6 @@ const logosMainCotainer = function () {
 };
 logosMainCotainer();
 
-// let k = -230;
-// const iconSlider = function () {
-//     k = k + 230;
-//     const slides = document.getElementsByClassName(`logos-main-container`)[0];
-//     slides.transitionDuration = `250ms`;
-//     if (k === 0) {
-//         slides.classList.remove(`left-${1150}`);
-//     } else {
-//         slides.classList.remove(`left-${k - 230}`);
-//     }
-//     slides.classList.add(`left-${k}`);
-//     if (k === 1150) {
-//         slides.transitionDuration = `0`;
-//         k = -230;
-//     }
-// };
-// function finalizeAndCleanUp(event) {
-//     if (event.propertyName == 'left') {
-//         this.style.left = `0`;
-//         this.removeEventListener('transitionend', finalizeAndCleanUp);
-//         // console.log(event);
-//     }
-// }
 const iconOffset = function (slides) {
     slides.style.transitionDuration = `250ms`;
     slides.style.left = `${
@@ -162,12 +139,11 @@ const iconSlider = function () {
         setTimeout(iconSlider, 0);
     } else {
         iconOffset(slides);
-        setTimeout(iconSlider, 1000);
+        setTimeout(iconSlider, 5000);
     }
 };
 
 iconSlider();
-// setInterval(iconSlider, 3000);
 
 /* bottom logos end */
 
