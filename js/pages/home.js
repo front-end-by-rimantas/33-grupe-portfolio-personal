@@ -158,17 +158,16 @@ const iconOffsetReset = function (slides) {
 const iconSlider = function () {
     const slides = document.getElementsByClassName(`logos-main-container`)[0];
     if (Number(slides.style.left.replace(`px`, ``)) === -230 * 5) {
-        // slides.offsetHight;
-        // setTimeout(iconOffsetReset(slides), 30);
-        iconOffsetReset(slides); //}
+        iconOffsetReset(slides);
+        setTimeout(iconSlider, 0);
     } else {
         iconOffset(slides);
+        setTimeout(iconSlider, 1000);
     }
-    // setTimeout(iconOffset(slides), 100);
 };
 
 iconSlider();
-setInterval(iconSlider, 3000);
+// setInterval(iconSlider, 3000);
 
 /* bottom logos end */
 
