@@ -9,21 +9,21 @@ const categories = [
         name: 'raster'
     },
     {
-        id:3,
+        id:5,
         name: 'UI/UX'
     },
     
     {
-        id:4,
+        id:6,
         name: 'Printing'
     },
     {
-        id:5,
-        name: 'Portal'
+        id:3,
+        name: 'UI/UX'
     },
     {
-        id:6,
-        name: 'Agency'
+        id:4,
+        name: 'Printing'
     },
 
 ]
