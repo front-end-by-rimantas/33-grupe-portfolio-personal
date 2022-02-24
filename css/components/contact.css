@@ -24,10 +24,17 @@
     background-color: #F9F9FF;
 }
 
-@media (max-width: 1600px){
+@media (max-width: 1800px){
     iframe{
         width: 1400px;
         margin-left:calc(50% - 700px) ;
+    }
+}
+
+@media (max-width: 1600px){
+    iframe{
+        width: 1300px;
+        margin-left:calc(50% - 650px) ;
     }
 }
 
