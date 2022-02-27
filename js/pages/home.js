@@ -18,41 +18,64 @@ document.addEventListener('scroll', headerShadow);
 
 /*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
-    /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
     const toggleOff = document.getElementById(`sidebar-main-off`);
-    const sidebar = document.getElementById(`nav-main`).cloneNode(true);
-    /* logic */
     toggleOn.style.display = `none`;
     toggleOff.style.display = `block`;
-    sidebar.id = `sidebar`;
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    const sidebar = document.getElementById(`nav-main`).cloneNode(true);
+    sidebar.id = `sidebar-container`;
     sidebar.removeAttribute(`class`);
-    // sidebar.getElementById(`nav-main`).className = `sidebar-nav`;
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    const arrow = sidebar.getElementsByClassName(`fa-chevron-right`)[0];
+    arrow.removeAttribute(`class`);
+    arrow.setAttribute(`class`, `fa fa-chevron-down`);
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     while (sidebar.getElementsByClassName(`nav-flyout`).length > 0) {
-        sidebar.getElementsByClassName(
-            `nav-flyout`
-        )[0].className = `sidebar-dropdown`;
+        const dropdown = sidebar.getElementsByClassName(`nav-flyout`)[0];
+        dropdown.className = `sidebar-dropdown`;
     }
     while (sidebar.getElementsByClassName(`nav-submenu`).length > 0) {
-        sidebar.getElementsByClassName(
-            `nav-submenu`
-        )[0].className = `sidebar-submenu`;
-        sidebar.getElementsByClassName(
-            `nav-subtitle`
-        )[0].className = `sidebar-subtitle`;
+        const submenu = sidebar.getElementsByClassName(`nav-submenu`)[0];
+        submenu.className = `sidebar-submenu`;
+        submenu.style.display = `none`;
+        submenu.style.transitionDuration = `2s`;
     }
+    while (sidebar.getElementsByClassName(`nav-subtitle`).length > 0) {
+        const subtitle = sidebar.getElementsByClassName(`nav-subtitle`)[0];
+        subtitle.className = `sidebar-subtitle`;
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        const icon = subtitle.getElementsByClassName(`fa`)[0];
+        const button = document.createElement(`button`);
+        button.className = icon.className;
+        button.addEventListener(`click`, sidebarExpander);
+        icon.parentNode.replaceChild(button, icon);
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     document.getElementsByTagName('body')[0].appendChild(sidebar);
 }
-
 function closeSideMenu() {
     /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
     const toggleOff = document.getElementById(`sidebar-main-off`);
-    const sidebarRemoval = document.getElementById(`sidebar-nav`);
-    /* logic */
     toggleOn.style.display = `block`;
     toggleOff.style.display = `none`;
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    const sidebarRemoval = document.getElementById(`sidebar-container`);
     sidebarRemoval.remove();
+}
+function sidebarExpander(event) {
+    const element = event.target;
+    const result = element.parentNode.parentNode.nextElementSibling;
+    if (result.style.display === `none`) {
+        result.style.display = `block`;
+        result.classList.add(`sidebar-submenu-open`);
+        element.classList.add(`sidebar-arrow-trans`);
+    } else {
+        result.classList.remove(`sidebar-submenu-open`);
+        element.classList.remove(`sidebar-arrow-trans`);
+        result.style.display = `none`;
+    }
 }
 // function sidebarExpand () {
 // }
