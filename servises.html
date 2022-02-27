@@ -7,8 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
-    <link rel="stylesheet" href="./css/fontawesome.css">
-    <link rel="stylesheet" href="./css/featured.css">
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,51 +24,37 @@
     <i class="fa fa-close" id="sidebar-main-off" onclick="closeSideMenu()"></i>
     <header class="container" id="nav-header">
         <div class="row nav-outer-wrapper">
-            <div class="col-2 col-lg-12 visible-flex nav-container">
-                <div>
+            <div class="visible-flex nav-container">
+                <div class="logo-top">
                     <a href="#"><img src="./img/logo-top-left-corner.png"></a>
                 </div> 
                 <nav class="hidden visible-flex-lg nav-main" id="nav-main">
-                    <a class="nav-current" href="#">Home</a>
+                    <a href="./index.html">Home</a>
                     <a href="#">About</a>
-                    <a href="./servises.html">Services</a>
+                    <a class="nav-current" href="./servises.html">Services</a>
                     <a href="./portfolio.html">Portfolio</a>
                     <a href="#">Pricing</a>
                     <div class="nav-flyout">
-                        <div class="nav-subtitle"><a href="#"><span>Blog</span><i class="fa fa-chevron-down"></i></a></div>
+                        <div class="nav-subtitle"><a href="#">Blog</a></div>
                         <div class="nav-submenu">
-                            <div><a href="#"><span>Blog&nbsp;Home</span></a></div>
-                            <div><a href="#"><span>Blog&nbsp;Single</span></a></div>
+                            <div><a href="#">Blog&nbsp;Home</a></div>
+                            <div><a href="#">Blog&nbsp;Single</a></div>
                         </div>
                     </div>
                     <div class="nav-flyout">
-                        <div class="nav-subtitle"><a href="#"><span>Pages</span><i class="fa fa-chevron-down"></i></a></div>
+                        <div class="nav-subtitle"><a href="#">Pages</a></div>
                         <div class="nav-submenu">
-                            <div><a href="#"><span>Elements</span></a></div>
+                            <div><a href="#">Elements</a></div>
                             <div class="nav-flyout submenu-left">
-                                <div class="nav-subtitle"><a href="#"><span>Level&nbsp;2</span><i class="fa fa-chevron-right"></i></a></div>
+                                <div class="nav-subtitle"><a href="">Level&nbsp;2</a></div>
                                 <div class="nav-submenu">
-                                    <div><a href="#"><span>Item&nbsp;One</span></a></div>
-                                    <div><a href="#"><span>Item&nbsp;Two</span></a></div>
+                                    <div><a href="#">Items&nbsp;One</a></div>
+                                    <div><a href="#">Items&nbsp;Two</a></div>
                                     <!-- <div class="nav-flyout submenu-right">
-                                        <div class="nav-subtitle"><a href=""><span>Level&nbsp;3</span><i class="fa fa-chevron-right"></i></a></div>
+                                        <div class="nav-subtitle"><a href="">Level&nbsp;3 need to improve</a></div>
                                         <div class="nav-submenu">
-                                            <div><a href="#"><span>Items&nbsp;One</span></a></div>
-                                            <div><a href="#"><span>Items&nbsp;Two</span></a></div>
-                                            <div class="nav-flyout submenu-left">
-                                                <div class="nav-subtitle"><a href=""><span>Level&nbsp;4</span><i class="fa fa-chevron-right"></i></a></div>
-                                                <div class="nav-submenu">
-                                                    <div><a href="#"><span>Items&nbsp;One</span></a></div>
-                                                    <div><a href="#"><span>Items&nbsp;Two</span></a></div>
-                                                    <div class="nav-flyout submenu-left">
-                                                        <div class="nav-subtitle"><a href=""><span>Level&nbsp;5</span><i class="fa fa-chevron-right"></i></a></div>
-                                                        <div class="nav-submenu">
-                                                            <div><a href="#"><span>Items&nbsp;One</span></a></div>
-                                                            <div><a href="#"><span>Items&nbsp;Two</span></a></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <div><a href="#">Items&nbsp;One</a></div>
+                                            <div><a href="#">Items&nbsp;Two</a></div>
                                         </div>
                                     </div> -->
                                 </div>
@@ -82,37 +67,24 @@
         </div>
     </header>
     <!-- header end -->
-
-    <!-- THIS IS ME start -->
-    <section class="container first">
+    <section class="container contact-us">
         <div class="row">
-            <div class="col-12 col-md-6">
-            <p class="title-a">This is me</p>
-            <p class="mainTitle-a">Philip Gilbert</p>
-            <p class="text-a">You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures.</p>
-            <a href="#" class="herobutton">Discover now</a>
-        </div>
-        <div class="col-12 col-md-6 imgBox" >
-            <img class="imgThisIsMe" src="./img/hero-img.png.webp" width="100%" height="100%" alt="PHILIP GILBERT">
-        </div>
-    </section>
-    <!-- THIS IS ME end -->
-
-    <!-- ABOUT ME start -->
-    <section class="container second">
-        <div class="row">
-            <div class="col-12 col-md-6"><img class="imgAboutMe" src="./img/about-img.png.webp" width="100%" height="100%" alt="PHILIP GILBERT"></div>
-            <div class="col-12 col-md-6">
-                <p class="title-b">About me</p>
-                <p class="mainTitle-b">Personal Details</p>
-                <p class="text-b">Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                <a href="#" class="herobutton2">View full details</a> 
+            <div class="col-12 col-md-12 col-lg-12">
+                <h1 class="contact-us-h1">Services</h1>
+                <div class="contact-us-contact-us">
+                    <a class="contact-us-a" href="./index.html">Home</a>
+                    <div><?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generated by IcoMoon.io -->
+                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="45" viewBox="0 0 10 40">
+                        <path fill="#fff" d="M19.354 10.146l-6-6c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l5.146 5.146h-16.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h16.293l-5.146 5.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l6-6c0.195-0.195 0.195-0.512 0-0.707z"></path>
+                        </svg>
+                    </div>
+                    <a class="contact-us-a" href="./servises.html">Services</a>
+                </div>
             </div>
         </div>
     </section>
-    <!-- ABOUT ME end -->
-
-
       <!-- My Offered Services start -->
       <section class="container"> 
         <div class="row">
@@ -213,8 +185,7 @@
              </div>
          </div>
      </section>
-    <!-- My Offered Services end -->
-
+    <!-- My Offered Services end -->    
     <!-- NUMBERS start -->
     <div class="counter-conteiner">
         <section class="container">
@@ -240,67 +211,6 @@
     </div>
    
     <!-- NUMBERS end -->
-
-    <!-- Our Latest Featured Projects start -->
-   <section class="container">
-        <div class="featured col-xs-1 col-md-2 col-3">
-            <p class="titleFeatured">Our Latest Featured Projects</p>
-                <p class="textFeatured">Who are in extremely love with eco friendly system.</p>
-        </div>
-        <div class="row gallery" id="portfolio"><div>
-            <ul class="filters flex flex-wrap content-center"></ul>
-            <div class="filters-content grid-container grid-gap col-xs-1 col-md-2 col-3"></div>
-
-    </section>
-    <!-- Our Latest Featured Projects end -->
-
-    <!-- Client’s Feedback About Me start -->
-    <section class="container feedback">
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-12">
-                <h1 class="feedback-h1">Client’s Feedback About Me</h1>
-                <p class="feedback-p ">It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.</p>
-            </div>
-        </div>
-        <div class="row feedback-row">
-            <div class="col-12 big-ceo">
-                <div class="ceo">
-                    <img class="foto-face" src="./img/feedback-img1.png" alt="face">
-                    <p class="ceo-p1 ">Do you want to be even more successfil? Learn to love learning and grrowth. The more effort you put info improving your skills, the bigger the payoff you.</p>
-                    <h4 class="ceo-h4">Harriet Maxwell</h4>
-                    <p class="ceo-p2 ">CEO at Google</p>
-                </div>
-                <div class="ceo">
-                    <img class="foto-face" src="./img/feedbac-img2.png" alt="face">
-                    <p class="ceo-p1">A purpose is the eternal condition for succsess. Every former smoker can tell you just how hard it is to stop smoking cigaretts. However.</p>
-                    <h4 class="ceo-h4">Carolyn Craig</h4>
-                    <p class="ceo-p2">CEO at Facebook</p>
-                </div>
-            </div>
-            <div class="feedback-button">
-                <!-- <a href="#" class="fa fa-arrow-up" aria-hidden="true"></a>
-                <a href="#" class="fa fa-arrow-down" aria-hidden="true"></a>-->
-                <div class="up">
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Generated by IcoMoon.io -->
-                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg class="up1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
-                    <path fill="currentColor" d="M9.146 0.646l-6 6c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l5.146-5.146v16.293c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-16.293l5.146 5.146c0.195 0.195 0.512 0.195 0.707 0 0.098-0.098 0.146-0.226 0.146-0.354s-0.049-0.256-0.146-0.354l-6-6c-0.195-0.195-0.512-0.195-0.707 0z"></path>
-                    </svg>
-                </div>
-                <div class="down">
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Generated by IcoMoon.io -->
-                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
-                    <path fill="currentColor" d="M9.854 19.354l6-6c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-5.146 5.146v-16.293c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v16.293l-5.146-5.146c-0.195-0.195-0.512-0.195-0.707 0-0.098 0.098-0.146 0.226-0.146 0.354s0.049 0.256 0.146 0.354l6 6c0.195 0.195 0.512 0.195 0.707 0z"></path>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Client’s Feedback About Me end -->
-
     <!-- Choose Your Plan start -->
     <section class="container choose">
         <div class="row">
@@ -393,96 +303,52 @@
         </div>
     </section>
     <!-- Choose Your Plan end -->
-
-    <!-- Latest Posts From Our Blog start -->
-    <section class="container blog">
+    <!-- Client’s Feedback About Me start -->
+    <section class="container feedback">
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-8 ml-lg-2 blog-row">
-                <h1 class="blog-row-h1">Latest posts from our blog</h1>
-                <p class="feedback-p pp">You may be a skillful, effective employer but if you don't trust your personnel and the opposite, then the chances of improving and expanding the business</p>
+            <div class="col-12 col-md-12 col-lg-12">
+                <h1 class="feedback-h1">Client’s Feedback About Me</h1>
+                <p class="feedback-p ">It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.</p>
             </div>
         </div>
-        <div class="row column-blog">
-            <div class="col-md-4 col-lg-4 blog-row1">
-                <div class="thumb">
-                    <img src="./img/xb/blog1.jpg" alt="" class="img-bar1">
+        <div class="row feedback-row">
+            <div class="col-12 big-ceo">
+                <div class="ceo">
+                    <img class="foto-face" src="./img/feedback-img1.png" alt="face">
+                    <p class="ceo-p1 ">Do you want to be even more successfil? Learn to love learning and grrowth. The more effort you put info improving your skills, the bigger the payoff you.</p>
+                    <h4 class="ceo-h4">Harriet Maxwell</h4>
+                    <p class="ceo-p2 ">CEO at Google</p>
                 </div>
-                    <div class="information-bar">
-                        <div class="img-bar2">
-                            <img class="img" src="./img/xb/user.jpg" alt="">
-                            <a href="#"><span>Mark Wiens</span></a>
-                        </div>
-                        <div class="img-bar3">
-                            13th Dec
-                            <span class="fa fa-heart"></span> 15
-                            <span class="fa fa-comment"></span> 04 
-                        </div>
-                    </div>
-                    <a href="#">
-                        <h4 class="title-blog">BREAK THROUGH SELF DOUBT AND FEAR</h4>
-                    </a>
-                        <p class="description-blog">Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career.</p>
+                <div class="ceo">
+                    <img class="foto-face" src="./img/feedbac-img2.png" alt="face">
+                    <p class="ceo-p1">A purpose is the eternal condition for succsess. Every former smoker can tell you just how hard it is to stop smoking cigaretts. However.</p>
+                    <h4 class="ceo-h4">Carolyn Craig</h4>
+                    <p class="ceo-p2">CEO at Facebook</p>
+                </div>
             </div>
-
-            <div class="col-md-4 col-lg-4 blog-row1">
-                <div class="thumb">
-                    <img src="./img/xb/blog2.jpg" alt="" class="img-bar1">
+            <div class="feedback-button">
+                <!-- <a href="#" class="fa fa-arrow-up" aria-hidden="true"></a>
+                <a href="#" class="fa fa-arrow-down" aria-hidden="true"></a>-->
+                <div class="up">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generated by IcoMoon.io -->
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg class="up1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                    <path fill="currentColor" d="M9.146 0.646l-6 6c-0.195 0.195-0.195 0.512 0 0.707s0.512 0.195 0.707 0l5.146-5.146v16.293c0 0.276 0.224 0.5 0.5 0.5s0.5-0.224 0.5-0.5v-16.293l5.146 5.146c0.195 0.195 0.512 0.195 0.707 0 0.098-0.098 0.146-0.226 0.146-0.354s-0.049-0.256-0.146-0.354l-6-6c-0.195-0.195-0.512-0.195-0.707 0z"></path>
+                    </svg>
                 </div>
-                    <div class="information-bar">
-                        <div class="img-bar2">
-                            <img class="img" src="./img/xb/user.jpg" alt="">
-                            <a href="#"><span>Mark Wiens</span></a>
-                        </div>
-                        <div class="img-bar3">
-                            13th Dec
-                            <span class="fa fa-heart"></span> 15
-                            <span class="fa fa-comment"></span> 04 
-                        </div>
-                    </div>
-                    <a href="#">
-                        <h4 class="title-blog">PORTABLE FASHION FOR YOUNG WOMEN</h4>
-                    </a>
-                        <p class="description-blog">You may be a skillful, effective employer but if you don't trust your personnel and the opposite, then the chances of improving.</p>
-            </div>
-
-            <div class="col-md-4 col-lg-4 blog-row1">
-                <div class="thumb">
-                    <img src="./img/xb/blog3.jpg" alt="" class="img-bar1">
+                <div class="down">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generated by IcoMoon.io -->
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                    <path fill="currentColor" d="M9.854 19.354l6-6c0.195-0.195 0.195-0.512 0-0.707s-0.512-0.195-0.707 0l-5.146 5.146v-16.293c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v16.293l-5.146-5.146c-0.195-0.195-0.512-0.195-0.707 0-0.098 0.098-0.146 0.226-0.146 0.354s0.049 0.256 0.146 0.354l6 6c0.195 0.195 0.512 0.195 0.707 0z"></path>
+                    </svg>
                 </div>
-                    <div class="information-bar">
-                        <div class="img-bar2">
-                            <img class="img" src="./img/xb/user.jpg" alt="">
-                            <a href="#"><span>Mark Wiens</span></a>
-                        </div>
-                        <div class="img-bar3">
-                            13th Dec
-                            <span class="fa fa-heart"></span> 15
-                            <span class="fa fa-comment"></span> 04 
-                        </div>
-                    </div>
-                    <a href="#">
-                        <h4 class="title-blog">DO DREAMS SERVE AS A PREMONITION</h4>
-                    </a>
-                        <p class="description-blog">So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved.</p>
             </div>
         </div>
     </section>
-    <!-- Latest Posts From Our Blog end -->
-
-    <!-- logos start -->
-    <section class="container logos-container">
-        <div class="row">
-            <!-- <div class="col-12 visible-grid logos-main-wrapper"> -->
-                <div class="col-12 visible-grid logos-main-container"></div>
-                <!-- <div class="logos-empty-container"></div> -->
-            <!-- </div> -->
-            <!-- <div class="col-12 logos-cover-container display-none"></div> -->
-        </div>
-    </section>
-
-    <!--  logos end -->
-
-
+    <!-- Client’s Feedback About Me end -->
     <!-- footer start -->
 
     <section class="container footer">

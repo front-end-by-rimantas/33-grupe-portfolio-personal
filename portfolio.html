@@ -7,7 +7,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
-    
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/featured.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@
                     <a href="./index.html">Home</a>
                     <a href="#">About</a>
                     <a href="./servises.html">Services</a>
-                    <a href="./portfolio.html">Portfolio</a>
+                    <a class="nav-current" href="./portfolio.html">Portfolio</a>
                     <a href="#">Pricing</a>
                     <div class="nav-flyout">
                         <div class="nav-subtitle"><a href="#">Blog</a></div>
@@ -61,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="nav-current" href="./contact.html">Contact</a>
+                    <a href="./contact.html">Contact</a>
                 </nav>
             </div>
         </div>
@@ -70,7 +71,7 @@
     <section class="container contact-us">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12">
-                <h1 class="contact-us-h1">Contact Us</h1>
+                <h1 class="contact-us-h1">Portfolio</h1>
                 <div class="contact-us-contact-us">
                     <a class="contact-us-a" href="./index.html">Home</a>
                     <div><?xml version="1.0" encoding="utf-8"?>
@@ -80,75 +81,23 @@
                         <path fill="#fff" d="M19.354 10.146l-6-6c-0.195-0.195-0.512-0.195-0.707 0s-0.195 0.512 0 0.707l5.146 5.146h-16.293c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h16.293l-5.146 5.146c-0.195 0.195-0.195 0.512 0 0.707 0.098 0.098 0.226 0.146 0.354 0.146s0.256-0.049 0.354-0.146l6-6c0.195-0.195 0.195-0.512 0-0.707z"></path>
                         </svg>
                     </div>
-                    <a class="contact-us-a" href="./contact.html">Contact Us</a>
+                    <a class="contact-us-a" href="./portfolio.html">Portfolio</a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="container map">
-        <div class="row">
-            <div class="col-12 map-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d193706.3637460204!2d-73.933244!3d40.659382!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6745ee72ec7a405d!2sKingsbrook%20Jewish%20Medical%20Center!5e0!3m2!1sen!2sus!4v1645539479357!5m2!1sen!2sus" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+    <!-- Our Latest Featured Projects start -->
+    <section class="container">
+        <div class="featured col-xs-1 col-md-2 col-3">
+            <p class="titleFeatured">Our Latest Featured Projects</p>
+                <p class="textFeatured">Who are in extremely love with eco friendly system.</p>
         </div>
-    </section>
-    <section class="container send">
-        <div class="row sendd">
-            <div class=" col-12 col-lg-4 send11">
-                <div class="send1">
-                    <div>
-                        <i class="fa fa-home fifa" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <h3 class="send-h3"> Binghamton, New York</h3>
-                        <p class="send-p">4343 Hinkle Deegan Lake Road</p>
-                    </div>
-                </div>
-                <div class="send1">
-                    <div>
-                        <i class="fa fa-phone fifa" aria-hidden="true"></i>
-                    </div>
-                    <div >
-                        <h3 class="send-h3"> 00 (958) 9865 562</h3>
-                        <p class="send-p">Mon to Fri 9am to 6 pm</p>
-                    </div>
-                </div>
-                <div class="send1">
-                    <div>
-                        <i class="fa fa-envelope fifa" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <h3 class="send-h3"> support@colorlib.com</h3>
-                        <p class="send-p">Send us your query anytime!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-8">
-                <form class="form0">
-                    <div class="form1">
-                        <div>
-                            <input class="email1" id="username" type="text" placeholder="Enter your name"  required>
-                        </div>
-                        <div>
-                            <input class="email1" id="username" type="email" placeholder="Enter email address"  required>
-                        </div>
-                        <div>
-                            <input class="email1" id="username" type="text" placeholder="Enter subject"  required>
-                        </div>
-                    </div>
-                    <div class="form2">
-                        <div>
-                            <textarea class="message" placeholder="Enter Message" id="msg_msg" cols="40" rows="10" required></textarea>
-                        </div>
-                        <div class="seand-message">
-                            <button class="form2-button" type="submit">Seand message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+        <div class="row gallery" id="portfolio"><div>
+            <ul class="filters flex flex-wrap content-center"></ul>
+            <div class="filters-content grid-container grid-gap col-xs-1 col-md-2 col-3"></div>
 
     </section>
+    <!-- Our Latest Featured Projects end -->
     <!-- footer start -->
 
     <section class="container footer">
@@ -193,6 +142,11 @@
 
     <!-- footer end -->
  <script src="./js/pages/home.js" defer></script>
+ <script src="./js/featured/data.js"></script>
+ <script src="./js/featured/functions.js"></script>
+ <script src="./js/featured/actions.js"></script>
+
 </body>
 
 </html>
+    
