@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // IMPORTS
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
@@ -17,38 +18,66 @@ document.addEventListener('scroll', headerShadow);
 
 /*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
-    /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
     const toggleOff = document.getElementById(`sidebar-main-off`);
-    const sidebar = document.getElementById(`nav-main`).cloneNode(true);
-    /* logic */
     toggleOn.style.display = `none`;
     toggleOff.style.display = `block`;
-    sidebar.id = `sidebar-nav`;
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    const sidebar = document.getElementById(`nav-main`).cloneNode(true);
+    sidebar.id = `sidebar-container`;
     sidebar.removeAttribute(`class`);
-    // sidebar.getElementById(`nav-main`).className = `sidebar-nav`;
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    const arrow = sidebar.getElementsByClassName(`fa-chevron-right`)[0];
+    arrow.removeAttribute(`class`);
+    arrow.setAttribute(`class`, `fa fa-chevron-down`);
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     while (sidebar.getElementsByClassName(`nav-flyout`).length > 0) {
-        sidebar.getElementsByClassName(
-            `nav-flyout`
-        )[0].className = `sidebar-nav-flyout`;
+        const dropdown = sidebar.getElementsByClassName(`nav-flyout`)[0];
+        dropdown.className = `sidebar-dropdown`;
     }
     while (sidebar.getElementsByClassName(`nav-submenu`).length > 0) {
-        sidebar.getElementsByClassName(
-            `nav-submenu`
-        )[0].className = `sidebar-nav-submenu`;
+        const submenu = sidebar.getElementsByClassName(`nav-submenu`)[0];
+        submenu.className = `sidebar-submenu`;
+        submenu.style.display = `none`;
+        submenu.style.transitionDuration = `2s`;
     }
+    while (sidebar.getElementsByClassName(`nav-subtitle`).length > 0) {
+        const subtitle = sidebar.getElementsByClassName(`nav-subtitle`)[0];
+        subtitle.className = `sidebar-subtitle`;
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        const icon = subtitle.getElementsByClassName(`fa`)[0];
+        const button = document.createElement(`button`);
+        button.className = icon.className;
+        button.addEventListener(`click`, sidebarExpander);
+        icon.parentNode.replaceChild(button, icon);
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     document.getElementsByTagName('body')[0].appendChild(sidebar);
 }
-
 function closeSideMenu() {
     /* variables */
     const toggleOn = document.getElementById(`sidebar-main-on`);
     const toggleOff = document.getElementById(`sidebar-main-off`);
-    const sidebarRemoval = document.getElementById(`sidebar-nav`);
-    /* logic */
     toggleOn.style.display = `block`;
     toggleOff.style.display = `none`;
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    const sidebarRemoval = document.getElementById(`sidebar-container`);
     sidebarRemoval.remove();
+}
+function sidebarExpander(event) {
+    const element = event.target;
+    const result = element.parentNode.parentNode.nextElementSibling;
+    if (result.style.display === `none`) {
+        result.style.display = `block`;
+        result.classList.add(`sidebar-submenu-open`);
+        element.classList.remove(`fa-chevron-down`);
+        element.classList.add(`fa-chevron-up`);
+    } else {
+        element.classList.add(`fa-chevron-down`);
+        element.classList.remove(`fa-chevron-up`);
+        result.classList.remove(`sidebar-submenu-open`);
+        result.style.display = `none`;
+    }
 }
 // function sidebarExpand () {
 // }
@@ -72,24 +101,20 @@ function closeSideMenu() {
 /* why choose us start */
 const counters = document.querySelectorAll('.counter');
 
-counters.forEach((counter) =>{
-    counter.innerText = '0'; 
-
+counters.forEach((counter) => {
+    counter.innerText = '0';
 
     const updateCounter = () => {
-        const target = +counter.getAttribute
-        ('data-target');
+        const target = +counter.getAttribute('data-target');
         const c = +counter.innerText;
 
-        const increment = target / 200;   
-
+        const increment = target / 200;
         if (c < target) {
-            counter.innerText = `${Math.ceil(c 
-            + increment)}`; 
+            counter.innerText = `${Math.ceil(c + increment)}`;
             setTimeout(updateCounter, 1);
-            }
-            };
-            updateCounter();
+        }
+    };
+    updateCounter();
 });
 /* why choose us end */
 
@@ -108,7 +133,6 @@ const logosMainCotainer = function () {
     const cont = document.getElementsByClassName(`logos-main-container`)[0];
     cont.style.left = `0px`;
     cont.style.transitionDuration = `.5s`;
-    // cont.classList.add(`left-0`);
     for (let i = 0; i < 2 * 5; i++) {
         const div = document.createElement(`div`);
         const img = document.createElement(`img`);
