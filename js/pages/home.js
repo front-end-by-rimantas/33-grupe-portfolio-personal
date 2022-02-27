@@ -128,19 +128,35 @@ counters.forEach((counter) => {
 
 function feedback() {
     // const feedback = document.getElementsByClassName(`feedback`)[0];
-    const slides = document.getElementsByClassName(`ceo`);
+    // const slides = document.getElementsByClassName(`ceo`);
+    let offset = 0;
     const buttons = document.getElementsByClassName(`feedback-button`);
     for (let i = 0; i < buttons.length; i++) {
         const button = buttons[i];
         button.addEventListener(`click`, () => {
-            const offset = button.classList.contains(`down`) ? 1 : -1;
-            const slides = button.parentElement.previousElementSibling; //.children;
-            const active = slides.getElementsByClassName(`feedback-active`)[0];
-            let index = [...slides.children].indexOf(active) + offset;
-            if (index < 0) index = slides.children.length - 1;
-            if (index >= slides.children.length) index = 0;
-            slides.children[index].classList.add(`feedback-active`);
-            active.classList.remove(`feedback-active`);
+            const direction = button.classList.contains(`down`) ? 1 : -1;
+            const slides = button.parentElement.previousElementSibling;
+            // const active = slides.getElementsByClassName(`ceo`)[0];
+            // const active = slides.getElementsByClassName(`feedback-active`)[0];
+            /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+            // let index = [...slides.children].indexOf(active) + offset;
+            // if (index < 0) index = slides.children.length - 1;
+            // if (index >= slides.children.length) index = 0;
+            // console.log(index, offset);
+            /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+            offset += direction;
+            offset %= 4;
+            // console.log(slides.children)
+            console.log(offset);
+            for (let i = 0; i < slides.children.length; i++) {
+                const slide = slides.children[i];
+                slide.style.transform = `translate(${100 * offset}%)`;
+            }
+
+            // slides.children[index].classList.add(`feedback-slide${index}`);
+            // slides.children[index].classList.add(`feedback-slide${index}`);
+            // slides.children[index].classList.add(`feedback-slide${index}`);
+            // slides.children[index].classList.add(`feedback-slide${index}`);
         });
     }
 }
