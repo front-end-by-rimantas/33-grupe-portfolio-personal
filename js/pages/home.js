@@ -3,18 +3,16 @@
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
 /* header start */
-/**
- * @description scroll down --> adds shadow box to the main menu.
- */
-const headerShadow = function () {
-    const header = document.getElementById(`nav-header`);
+
+document.addEventListener('scroll', () => {
+    const headerClass = document.getElementById(`nav-header`).classList;
     if (window.scrollY > 100) {
-        header.classList.add(`header-scrolled`);
-    } else if (header.classList.contains(`header-scrolled`)) {
-        header.classList.remove(`header-scrolled`);
+        headerClass.add(`header-shadow`);
+    } else if (headerClass.contains(`header-shadow`)) {
+        headerClass.remove(`header-shadow`);
     }
-};
-document.addEventListener('scroll', headerShadow);
+});
+// document.addEventListener('scroll', headerShadow);
 
 /*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
@@ -66,17 +64,19 @@ function closeSideMenu() {
 }
 function sidebarExpander(event) {
     const element = event.target;
-    const result = element.parentNode.parentNode.nextElementSibling;
-    if (result.style.display === `none`) {
-        result.style.display = `block`;
-        result.classList.add(`sidebar-submenu-open`);
+    const submenu = element.parentNode.parentNode.nextElementSibling;
+    if (submenu.style.display === `none`) {
+        submenu.style.display = `block`;
+        submenu.classList.add(`sidebar-submenu-open`);
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
         element.classList.remove(`fa-chevron-down`);
         element.classList.add(`fa-chevron-up`);
     } else {
         element.classList.add(`fa-chevron-down`);
         element.classList.remove(`fa-chevron-up`);
-        result.classList.remove(`sidebar-submenu-open`);
-        result.style.display = `none`;
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        submenu.classList.remove(`sidebar-submenu-open`);
+        submenu.style.display = `none`;
     }
 }
 // function sidebarExpand () {
@@ -124,8 +124,48 @@ counters.forEach((counter) => {
 /* blog start */
 /* blog end */
 
-/* testimonials start */
-/* testimonials end */
+/* feedback start */
+
+function feedback() {
+    // const feedback = document.getElementsByClassName(`feedback`)[0];
+    const slides = document.getElementsByClassName(`ceo`);
+    const buttons = document.getElementsByClassName(`feedback-button`);
+    for (let i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+        button.addEventListener(`click`, () => {
+            const offset = button.classList.contains(`down`) ? 1 : -1;
+            const slides = button.parentElement.previousElementSibling; //.children;
+            const active = slides.getElementsByClassName(`feedback-active`)[0];
+            let index = [...slides.children].indexOf(active) + offset;
+            if (index < 0) index = slides.children.length - 1;
+            if (index >= slides.children.length) index = 0;
+            slides.children[index].classList.add(`feedback-active`);
+            active.classList.remove(`feedback-active`);
+        });
+    }
+}
+feedback();
+// function feedback() {
+//     // const feedback = document.getElementsByClassName(`feedback`)[0];
+//     const slides = document.getElementsByClassName(`ceo`);
+//     const buttons = document.getElementsByClassName(`feedback-button`);
+//     for (let i = 0; i < buttons.length; i++) {
+//         const button = buttons[i];
+//         button.addEventListener(`click`, () => {
+//             const offset = button.classList.contains(`down`) ? 1 : -1;
+//             const slides = button.parentElement.previousElementSibling; //.children;
+//             const active = slides.getElementsByClassName(`feedback-active`)[0];
+//             let index = [...slides.children].indexOf(active) + offset;
+//             if (index < 0) index = slides.children.length - 1;
+//             if (index >= slides.children.length) index = 0;
+//             slides.children[index].classList.add(`feedback-active`);
+//             active.classList.remove(`feedback-active`);
+//         });
+//     }
+// }
+// feedback();
+
+/* feedback end */
 
 /* bottom logos start */
 
