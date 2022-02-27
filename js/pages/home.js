@@ -70,10 +70,12 @@ function sidebarExpander(event) {
     if (result.style.display === `none`) {
         result.style.display = `block`;
         result.classList.add(`sidebar-submenu-open`);
-        element.classList.add(`sidebar-arrow-trans`);
+        element.classList.remove(`fa-chevron-down`);
+        element.classList.add(`fa-chevron-up`);
     } else {
+        element.classList.add(`fa-chevron-down`);
+        element.classList.remove(`fa-chevron-up`);
         result.classList.remove(`sidebar-submenu-open`);
-        element.classList.remove(`sidebar-arrow-trans`);
         result.style.display = `none`;
     }
 }

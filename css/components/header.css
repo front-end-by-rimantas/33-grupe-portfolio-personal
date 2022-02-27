@@ -170,10 +170,6 @@
     border: none;
     background-color: black;
 }
-.sidebar-arrow-trans {
-    transform: rotate(180deg);
-}
-
 /*~~~~~~~~~Toggle nav icons~~~~~~~~~*/
 #sidebar-main-on {
     display: none;
@@ -193,6 +189,7 @@
     padding-left: calc(100% - 310px);
     padding-top: 20px;
     font-size: 30px;
+    font-weight: 100;
     opacity: 0.7;
     background-color: rgb(56, 51, 51);
 }
