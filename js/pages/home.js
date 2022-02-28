@@ -3,18 +3,15 @@
 // CODE EXECUTION BELOW THIS COMMENT LINE
 
 /* header start */
-/**
- * @description scroll down --> adds shadow box to the main menu.
- */
-const headerShadow = function () {
-    const header = document.getElementById(`nav-header`);
+
+document.addEventListener('scroll', () => {
+    const headerClass = document.getElementById(`nav-header`).classList;
     if (window.scrollY > 100) {
-        header.classList.add(`header-scrolled`);
-    } else if (header.classList.contains(`header-scrolled`)) {
-        header.classList.remove(`header-scrolled`);
+        headerClass.add(`header-shadow`);
+    } else if (headerClass.contains(`header-shadow`)) {
+        headerClass.remove(`header-shadow`);
     }
-};
-document.addEventListener('scroll', headerShadow);
+});
 
 /*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
@@ -66,17 +63,22 @@ function closeSideMenu() {
 }
 function sidebarExpander(event) {
     const element = event.target;
-    const result = element.parentNode.parentNode.nextElementSibling;
-    if (result.style.display === `none`) {
-        result.style.display = `block`;
-        result.classList.add(`sidebar-submenu-open`);
+    const submenu = element.parentNode.parentNode.nextElementSibling;
+    if (submenu.style.display === `none`) {
+        submenu.style.display = `block`;
+        submenu.classList.add(`sidebar-submenu-open`);
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
         element.classList.remove(`fa-chevron-down`);
         element.classList.add(`fa-chevron-up`);
     } else {
         element.classList.add(`fa-chevron-down`);
         element.classList.remove(`fa-chevron-up`);
-        result.classList.remove(`sidebar-submenu-open`);
-        result.style.display = `none`;
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        submenu.classList.remove(`sidebar-submenu-open`);
+        submenu.style.display = `none`;
+
+
     }
 }
 // function sidebarExpand () {
@@ -124,8 +126,48 @@ counters.forEach((counter) => {
 /* blog start */
 /* blog end */
 
-/* testimonials start */
-/* testimonials end */
+/* feedback start */
+function feedback() {
+    const buttons = document.getElementsByClassName(`feedback-button`);
+    let counter = 0;
+    for (let i = 0; i < buttons.length; i++) {
+        const button = buttons[i];
+        button.addEventListener(`click`, () => {
+            const direction = button.classList.contains(`down`) ? 1 : -1;
+            const slides = button.parentElement.previousElementSibling.children;
+            for (let i = 0; i < slides.length; i++) {
+                const slide = slides[i];
+                slide.style.left = `${
+                    Number(slide.style.left.replace('%', '')) + 50 * direction
+                }%`;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                const slide = slides[i];
+                if (direction < 0 && slide.classList.contains(`feedback-slide-first`)) {
+                    // slide.style.transitionDuration = `0ms`;
+                    slide.style.left = `${Number(slide.style.left.replace('%', '')) + 200}%`;
+                    slide.classList.add(`feedback-slide-last`);
+                    slide.classList.remove(`feedback-slide-first`);
+                    slides[(i + 1) % 4].classList.add(`feedback-slide-first`);
+                    slides[i > 0 ? i - 1 : 3].classList.remove(`feedback-slide-last`);
+                    break;
+                }
+                if (direction > 0 && slide.classList.contains(`feedback-slide-last`)) {
+                    // slide.style.transitionDuration = `0ms`;
+                    slide.style.left = `${Number(slide.style.left.replace('%', '')) - 200}%`;
+                    slide.classList.add(`feedback-slide-first`);
+                    slide.classList.remove(`feedback-slide-last`);
+                    slides[i > 0 ? i - 1 : 3].classList.add(`feedback-slide-last`);
+                    slides[(i + 1) % 4].classList.remove(`feedback-slide-first`);
+                    break;
+                }
+            }
+        });
+    }
+}
+feedback();
+
+/* feedback end */
 
 /* bottom logos start */
 
