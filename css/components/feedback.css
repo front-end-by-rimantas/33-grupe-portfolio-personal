@@ -2,8 +2,6 @@
     padding-top: 85px;
     padding-bottom: 120px;
     background-color: #F9F9FF;
-
-    /* overflow: visible; */
 }
 
 .feedback-h1 {
@@ -23,7 +21,7 @@
 .feedback-row > .big-ceo {
     display: flex;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     row-gap: 20px;
 }
 
@@ -41,21 +39,9 @@
     margin-left: 20px;
     padding: 30px;
     background-color: white;
-    transition-duration: 0.3s;
+    transition-duration: 0s;
+}
 
-}
-.feedback-slide0 {
-    background-color: royalblue;
-}
-.feedback-slide1 {
-    background-color: pink;
-}
-.feedback-slide2 {
-    background-color: brown;
-}
-.feedback-slide3 {
-    background-color: goldenrod;
-}
 .foto-face {
     grid-area: foto-fase;
     width: 35px;

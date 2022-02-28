@@ -125,9 +125,9 @@ counters.forEach((counter) => {
 /* blog end */
 
 /* feedback start */
-
 function feedback() {
     const buttons = document.getElementsByClassName(`feedback-button`);
+    let counter = 0;
     for (let i = 0; i < buttons.length; i++) {
         const button = buttons[i];
         button.addEventListener(`click`, () => {
@@ -142,6 +142,7 @@ function feedback() {
             for (let i = 0; i < slides.length; i++) {
                 const slide = slides[i];
                 if (direction < 0 && slide.classList.contains(`feedback-slide-first`)) {
+                    // slide.style.transitionDuration = `0ms`;
                     slide.style.left = `${Number(slide.style.left.replace('%', '')) + 200}%`;
                     slide.classList.add(`feedback-slide-last`);
                     slide.classList.remove(`feedback-slide-first`);
@@ -150,6 +151,7 @@ function feedback() {
                     break;
                 }
                 if (direction > 0 && slide.classList.contains(`feedback-slide-last`)) {
+                    // slide.style.transitionDuration = `0ms`;
                     slide.style.left = `${Number(slide.style.left.replace('%', '')) - 200}%`;
                     slide.classList.add(`feedback-slide-first`);
                     slide.classList.remove(`feedback-slide-last`);
@@ -162,54 +164,6 @@ function feedback() {
     }
 }
 feedback();
-// slides[slides.length - 1].style.left = `${
-//     Number(
-//         slides[slides.length - 1].style.left.replace('%', '')
-//     ) + 250
-// }%`;
-               // slide.style.transform = `translate(${100 * offset}%)`;
-                // if (direction > 0 && i === 0) {
-                    // slide.style.transform = `translate(${200 * direction}%)`;
-                // } else if (direction < 0 && i === slides.length - 1) {
-                    // slide.style.transform = `translate(${200 * direction}%)`;
-                // }
-            // }
-            // for (let i = 0; i < slides.length; i++) {
-            //     const slide = slides[i];
-            //     slide.style.transform = `translate(${100 * offset}%)`;
-            //     if (direction > 0 && i === 0) {
-            //         slide.style.transform = `translate(${200 * direction}%)`;
-            //     } else if (direction < 0 && i === slides.length - 1) {
-            //         slide.style.transform = `translate(${200 * direction}%)`;
-            //     }
-            // }
-            // for (let i = 0; i < slides.length; i++) {
-            //     const slide = slides[i];
-            //     console.log(offset,`+`, direction, `~~>`, slide.style.transform);
-            // }
-            // slides.children[index].classList.add(`feedback-slide${index}`);
-            // slides.children[index].classList.add(`feedback-slide${index}`);
-            // slides.children[index].classList.add(`feedback-slide${index}`);
-            // slides.children[index].classList.add(`feedback-slide${index}`);
-// function feedback() {
-//     // const feedback = document.getElementsByClassName(`feedback`)[0];
-//     const slides = document.getElementsByClassName(`ceo`);
-//     const buttons = document.getElementsByClassName(`feedback-button`);
-//     for (let i = 0; i < buttons.length; i++) {
-//         const button = buttons[i];
-//         button.addEventListener(`click`, () => {
-//             const offset = button.classList.contains(`down`) ? 1 : -1;
-//             const slides = button.parentElement.previousElementSibling; //.children;
-//             const active = slides.getElementsByClassName(`feedback-active`)[0];
-//             let index = [...slides.children].indexOf(active) + offset;
-//             if (index < 0) index = slides.children.length - 1;
-//             if (index >= slides.children.length) index = 0;
-//             slides.children[index].classList.add(`feedback-active`);
-//             active.classList.remove(`feedback-active`);
-//         });
-//     }
-// }
-// feedback();
 
 /* feedback end */
 
