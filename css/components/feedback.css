@@ -35,7 +35,6 @@
     'foto-fase ceo-h4'
     'foto-fase ceo-p2';
     gap: 10px;
-    /* left: -50%; */
     margin-left: 20px;
     padding: 30px;
     background-color: white;
@@ -69,11 +68,7 @@
     color: #777777;
 }
 
-@media (max-width: 767px){
-    .big-ceo {
-        flex-wrap: wrap;
-    }
-}
+
 
 .up, .down{
     cursor: pointer;
@@ -104,16 +99,6 @@
     color: #8490ff;
 }
 
-@media (max-width: 1000px) {
-    .feedback-buttons{
-        display: flex;
-        position: relative;
-        bottom: -10px;
-        width: 40px;
-        height: 40px;
-        margin-left:calc(50% - 75px);
-    }
-}
 
 @media (max-width: 1240px) {
     .feedback-buttons {
@@ -131,6 +116,9 @@
     .feedback-buttons {
         right: -35px;
     }
+    .ceo {
+        grid-template-columns: 50px 320px;
+    }
 }
 
 @media (max-width: 1050px) {
@@ -141,6 +129,46 @@
 
 @media (max-width: 1000px) {
     .feedback-buttons {
+        display: flex;
+        position: relative;
+        bottom: -10px;
+        width: 40px;
+        height: 40px;
+        margin-left:calc(50% - 75px);
+    }
+}
+@media (max-width: 991px) {
+    .feedback-buttons {
         right: -35px;
     }
+    .ceo {
+        grid-template-columns: 50px 205px;
+    }
+}
+@media (max-width: 767px){
+    .ceo {
+        grid-template-columns: 50px 410px;
+        transform: translate(40%);
+        
+    }
+    .feedback-slide-first, .feedback-slide-last {
+        display: none;
+    }
+    /*Responsive is not working for small screens and onclick function as well*/
+}
+@media (max-width: 575px){
+    .ceo {
+        grid-template-columns: 50px 360px;
+        /* transform: translate(30%); */
+        /* margin-left: 0; */
+    }
+    /*Responsive is not working for small screens and onclick function as well*/
+}
+@media (max-width: 350px){
+    .ceo {
+        grid-template-columns: 50px 180px;
+        /* transform: translate(30%); */
+        /* margin-left: 0; */
+    }
+    /*Responsive is not working for small screens and onclick function as well*/
 }
