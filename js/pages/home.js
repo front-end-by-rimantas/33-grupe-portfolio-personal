@@ -12,7 +12,6 @@ document.addEventListener('scroll', () => {
         headerClass.remove(`header-shadow`);
     }
 });
-// document.addEventListener('scroll', headerShadow);
 
 /*~~~~~~~~~Sidebar toggle~~~~~~~~~*/
 function openSideMenu() {
@@ -69,6 +68,7 @@ function sidebarExpander(event) {
         submenu.style.display = `block`;
         submenu.classList.add(`sidebar-submenu-open`);
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
         element.classList.remove(`fa-chevron-down`);
         element.classList.add(`fa-chevron-up`);
     } else {
@@ -77,6 +77,8 @@ function sidebarExpander(event) {
         /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
         submenu.classList.remove(`sidebar-submenu-open`);
         submenu.style.display = `none`;
+
+
     }
 }
 // function sidebarExpand () {
