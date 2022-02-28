@@ -1,0 +1,74 @@
+.aMe {
+    line-height: 1.625em;
+    font-size: 14px;
+    font-weight: 300;
+    color: #777777;
+}
+
+.ame {
+    display: grid;
+    gap: 20px;
+}
+
+.aboutM {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2em;
+    font-family: "Poppins",sans-serif;
+}
+
+@media (max-width: 990px){
+    .bar-bar-row {
+        display: grid !important;
+        gap: 30px !important;
+    }
+}
+
+.bar-bar {
+    display: grid;
+    gap: 30px;
+}
+
+.tools-bar {
+    display: grid;
+    gap: 5px;
+}
+
+.top {
+    display: flex;
+    justify-content: end;
+}
+
+.bottom {
+    width: 100%;
+    height: 14px;
+    background-color: #e2dede;
+    border-radius: 10px;
+    border: 3px solid #f5f2f2;
+   /* background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);*/
+}
+
+.tools-bar-loading {
+    background-color: transparent;
+    width: 90%;
+    height: 100%;
+}
+
+.tools-bar-loading > .loading {
+    background: linear-gradient(90deg, #8490ff 0%, #62bdfc 100%);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    animation-name: tools-bar-loading;
+    animation-duration: 1.5s;
+}
+
+@keyframes tools-bar-loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
