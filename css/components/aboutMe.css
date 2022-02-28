@@ -1,0 +1,19 @@
+.aMe {
+    line-height: 1.625em;
+    font-size: 14px;
+    font-weight: 300;
+    color: #777777;
+}
+
+.ame {
+    display: grid;
+    gap: 20px;
+}
+
+.aboutM {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2em;
+    font-family: "Poppins",sans-serif;
+}
