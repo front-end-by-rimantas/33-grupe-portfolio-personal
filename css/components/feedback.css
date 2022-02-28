@@ -25,60 +25,35 @@
     position: relative;
     /* overflow: hidden; */
     row-gap: 20px;
-    /* gap: 20px; */
-    /* background-color: cadetblue; */
-    /* transition-duration: 1s; */
 }
 
 .ceo {
     display: grid;
     position: relative;
     cursor: pointer;
-    /* grid-template-columns: 50px 1fr; */
     grid-template-columns: 50px 410px;
-    /* grid-template-columns: 50px 350px; */
     grid-template-areas: 
     'foto-fase ceo-p1'
     'foto-fase ceo-h4'
     'foto-fase ceo-p2';
     gap: 10px;
-    width: 50%;
-    /* width: 100%; */
+    /* left: -50%; */
+    margin-left: 20px;
     padding: 30px;
     background-color: white;
-    /* background-color: burlywood; */
-    /* transition-duration: 3s; */
-    margin-left: 20px;
-    /* left: -50%; */
-    transition-duration: 1s;
+    transition-duration: 0.3s;
+
 }
 .feedback-slide0 {
-    position: relative;
-    /* left: 0; */
-    /* left: calc(-50% - 20px); */
-    /* transition-duration: 3s; */
     background-color: royalblue;
 }
 .feedback-slide1 {
-    /* position: relative; */
-    /* left: 0%;  */
-    /* left: 0%;  */
-    /* transition-duration: 3s; */
     background-color: pink;
-    /* transform: translate(calc(-100% - 20px)); */
 }
 .feedback-slide2 {
-    /* position: relative; */
-    /* transition-duration: 3s; */
-    /* left: 0%; */
-    /* left: 0%; */
     background-color: brown;
 }
 .feedback-slide3 {
-    position: relative;
-    /* transition-duration: 3s; */
-    /* left: 100%;  */
-    /* left: 100%;  */
     background-color: goldenrod;
 }
 .foto-face {
