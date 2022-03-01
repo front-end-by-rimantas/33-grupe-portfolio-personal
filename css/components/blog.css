@@ -104,11 +104,11 @@
 .column-blog:hover .blog-row1 > .thumb > img {
     transform: scale(1.1)
 }
-@media (max-width: 959px) {
+/* @media (max-width: 959px) {
     .blog-row1{
         margin-bottom: 50% !important;
     }
-}
+} */
 @media (max-width: 757px) {
     .blog-row1{
         width: 100% !important;
